@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60A4972311D452E2004BFA8E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4972211D452E2004BFA8E /* Carbon.framework */; };
+		60CB0AA3124563DB00D62946 /* AnimaXmlDocumentRapidXml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CB0AA0124563DB00D62946 /* AnimaXmlDocumentRapidXml.cpp */; };
+		60CB0AA4124563DB00D62946 /* AnimaXmlElementRapidXml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CB0AA1124563DB00D62946 /* AnimaXmlElementRapidXml.cpp */; };
+		60CB0AA5124563DB00D62946 /* AnimaXmlManagerRapidXml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CB0AA2124563DB00D62946 /* AnimaXmlManagerRapidXml.cpp */; };
+		60CB0AAD1245643700D62946 /* AnimaXml.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CB0AA61245643700D62946 /* AnimaXml.h */; };
+		60CB0AAE1245643700D62946 /* AnimaXmlDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CB0AA71245643700D62946 /* AnimaXmlDocument.h */; };
+		60CB0AAF1245643700D62946 /* AnimaXmlDocumentRapidXml.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CB0AA81245643700D62946 /* AnimaXmlDocumentRapidXml.h */; };
+		60CB0AB01245643700D62946 /* AnimaXmlElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CB0AA91245643700D62946 /* AnimaXmlElement.h */; };
+		60CB0AB11245643700D62946 /* AnimaXmlElementRapidXml.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CB0AAA1245643700D62946 /* AnimaXmlElementRapidXml.h */; };
+		60CB0AB21245643700D62946 /* AnimaXmlManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CB0AAB1245643700D62946 /* AnimaXmlManager.h */; };
+		60CB0AB31245643700D62946 /* AnimaXmlManagerRapidXml.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CB0AAC1245643700D62946 /* AnimaXmlManagerRapidXml.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		600D825311C3F64E0029C527 /* libAnimaXML_d.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAnimaXML_d.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A4972211D452E2004BFA8E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		60CB0AA0124563DB00D62946 /* AnimaXmlDocumentRapidXml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimaXmlDocumentRapidXml.cpp; path = ../../Anima/source/AnimaXmlDocumentRapidXml.cpp; sourceTree = SOURCE_ROOT; };
+		60CB0AA1124563DB00D62946 /* AnimaXmlElementRapidXml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimaXmlElementRapidXml.cpp; path = ../../Anima/source/AnimaXmlElementRapidXml.cpp; sourceTree = SOURCE_ROOT; };
+		60CB0AA2124563DB00D62946 /* AnimaXmlManagerRapidXml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimaXmlManagerRapidXml.cpp; path = ../../Anima/source/AnimaXmlManagerRapidXml.cpp; sourceTree = SOURCE_ROOT; };
+		60CB0AA61245643700D62946 /* AnimaXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimaXml.h; path = ../../Anima/include/AnimaXml.h; sourceTree = SOURCE_ROOT; };
+		60CB0AA71245643700D62946 /* AnimaXmlDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimaXmlDocument.h; path = ../../Anima/include/AnimaXmlDocument.h; sourceTree = SOURCE_ROOT; };
+		60CB0AA81245643700D62946 /* AnimaXmlDocumentRapidXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimaXmlDocumentRapidXml.h; path = ../../Anima/include/AnimaXmlDocumentRapidXml.h; sourceTree = SOURCE_ROOT; };
+		60CB0AA91245643700D62946 /* AnimaXmlElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimaXmlElement.h; path = ../../Anima/include/AnimaXmlElement.h; sourceTree = SOURCE_ROOT; };
+		60CB0AAA1245643700D62946 /* AnimaXmlElementRapidXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimaXmlElementRapidXml.h; path = ../../Anima/include/AnimaXmlElementRapidXml.h; sourceTree = SOURCE_ROOT; };
+		60CB0AAB1245643700D62946 /* AnimaXmlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimaXmlManager.h; path = ../../Anima/include/AnimaXmlManager.h; sourceTree = SOURCE_ROOT; };
+		60CB0AAC1245643700D62946 /* AnimaXmlManagerRapidXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimaXmlManagerRapidXml.h; path = ../../Anima/include/AnimaXmlManagerRapidXml.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		600D825111C3F64E0029C527 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60A4972311D452E2004BFA8E /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* OgreProject */ = {
+			isa = PBXGroup;
+			children = (
+				600D824B11C3F5CE0029C527 /* include */,
+				600D824A11C3F5C10029C527 /* source */,
+				609F341E11C3F48000B723ED /* Products */,
+				60A4972211D452E2004BFA8E /* Carbon.framework */,
+			);
+			name = OgreProject;
+			sourceTree = "<group>";
+		};
+		600D824A11C3F5C10029C527 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				60CB0AA0124563DB00D62946 /* AnimaXmlDocumentRapidXml.cpp */,
+				60CB0AA1124563DB00D62946 /* AnimaXmlElementRapidXml.cpp */,
+				60CB0AA2124563DB00D62946 /* AnimaXmlManagerRapidXml.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		600D824B11C3F5CE0029C527 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				60CB0AA61245643700D62946 /* AnimaXml.h */,
+				60CB0AA71245643700D62946 /* AnimaXmlDocument.h */,
+				60CB0AA81245643700D62946 /* AnimaXmlDocumentRapidXml.h */,
+				60CB0AA91245643700D62946 /* AnimaXmlElement.h */,
+				60CB0AAA1245643700D62946 /* AnimaXmlElementRapidXml.h */,
+				60CB0AAB1245643700D62946 /* AnimaXmlManager.h */,
+				60CB0AAC1245643700D62946 /* AnimaXmlManagerRapidXml.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		609F341E11C3F48000B723ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				600D825311C3F64E0029C527 /* libAnimaXML_d.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		600D824F11C3F64E0029C527 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CB0AAD1245643700D62946 /* AnimaXml.h in Headers */,
+				60CB0AAE1245643700D62946 /* AnimaXmlDocument.h in Headers */,
+				60CB0AAF1245643700D62946 /* AnimaXmlDocumentRapidXml.h in Headers */,
+				60CB0AB01245643700D62946 /* AnimaXmlElement.h in Headers */,
+				60CB0AB11245643700D62946 /* AnimaXmlElementRapidXml.h in Headers */,
+				60CB0AB21245643700D62946 /* AnimaXmlManager.h in Headers */,
+				60CB0AB31245643700D62946 /* AnimaXmlManagerRapidXml.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		600D825211C3F64E0029C527 /* AnimaXML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600D825611C3F66D0029C527 /* Build configuration list for PBXNativeTarget "AnimaXML" */;
+			buildPhases = (
+				600D824F11C3F64E0029C527 /* Headers */,
+				600D825011C3F64E0029C527 /* Sources */,
+				600D825111C3F64E0029C527 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimaXML;
+			productName = AnimaAI;
+			productReference = 600D825311C3F64E0029C527 /* libAnimaXML_d.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = GameDev;
+			};
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "AnimaXML" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* OgreProject */;
+			productRefGroup = 609F341E11C3F48000B723ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				600D825211C3F64E0029C527 /* AnimaXML */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		600D825011C3F64E0029C527 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CB0AA3124563DB00D62946 /* AnimaXmlDocumentRapidXml.cpp in Sources */,
+				60CB0AA4124563DB00D62946 /* AnimaXmlElementRapidXml.cpp in Sources */,
+				60CB0AA5124563DB00D62946 /* AnimaXmlManagerRapidXml.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				LIBRARY_SEARCH_PATHS = "";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = YES;
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "../../Dependencies/rapidxml-1.13";
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				LIBRARY_SEARCH_PATHS = "";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = YES;
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "../../Dependencies/rapidxml-1.13";
+				VALID_ARCHS = i386;
+			};
+			name = Release;
+		};
+		600D825411C3F64F0029C527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = AnimaXML_d;
+			};
+			name = Debug;
+		};
+		600D825511C3F64F0029C527 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = AnimaXML;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "AnimaXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		600D825611C3F66D0029C527 /* Build configuration list for PBXNativeTarget "AnimaXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600D825411C3F64F0029C527 /* Debug */,
+				600D825511C3F64F0029C527 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

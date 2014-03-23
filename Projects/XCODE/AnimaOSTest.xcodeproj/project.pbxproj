@@ -1,0 +1,257 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6033BBD111D133970077C935 /* AnimaOSTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6033BBD011D133970077C935 /* AnimaOSTest.cpp */; };
+		606941021175848D0052E06B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606941011175848D0052E06B /* Carbon.framework */; };
+		60A4970811D4522D004BFA8E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4970711D4522D004BFA8E /* OpenGL.framework */; };
+		60A4971111D452BE004BFA8E /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A4971011D452BE004BFA8E /* AGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6033BBD011D133970077C935 /* AnimaOSTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimaOSTest.cpp; path = ../../AnimaTests/source/AnimaOSTest.cpp; sourceTree = SOURCE_ROOT; };
+		6033BBEE11D1353A0077C935 /* AnimaOSTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AnimaOSTest-Info.plist"; sourceTree = "<group>"; };
+		60550005113746DF0041DBBF /* AnimaOSTest_d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimaOSTest_d.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		606941011175848D0052E06B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		60A4970711D4522D004BFA8E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		60A4971011D452BE004BFA8E /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = System/Library/Frameworks/AGL.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60550003113746DF0041DBBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				606941021175848D0052E06B /* Carbon.framework in Frameworks */,
+				60A4970811D4522D004BFA8E /* OpenGL.framework in Frameworks */,
+				60A4971111D452BE004BFA8E /* AGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* OgreProject */ = {
+			isa = PBXGroup;
+			children = (
+				606B8B961138DA6E0050CC3B /* Include */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				606941011175848D0052E06B /* Carbon.framework */,
+				6033BBEE11D1353A0077C935 /* AnimaOSTest-Info.plist */,
+				60A4970711D4522D004BFA8E /* OpenGL.framework */,
+				60A4971011D452BE004BFA8E /* AGL.framework */,
+			);
+			name = OgreProject;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6033BBD011D133970077C935 /* AnimaOSTest.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60550005113746DF0041DBBF /* AnimaOSTest_d.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		606B8B961138DA6E0050CC3B /* Include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60550004113746DF0041DBBF /* AnimaOSTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6055000A113746DF0041DBBF /* Build configuration list for PBXNativeTarget "AnimaOSTest" */;
+			buildPhases = (
+				60550001113746DF0041DBBF /* Resources */,
+				60550002113746DF0041DBBF /* Sources */,
+				60550003113746DF0041DBBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimaOSTest;
+			productName = OgreProject;
+			productReference = 60550005113746DF0041DBBF /* AnimaOSTest_d.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "AnimaOSTest" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* OgreProject */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60550004113746DF0041DBBF /* AnimaOSTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60550001113746DF0041DBBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60550002113746DF0041DBBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6033BBD111D133970077C935 /* AnimaOSTest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = ../../Anima/include/;
+				LIBRARY_SEARCH_PATHS = ./build/Debug/;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lAnimaAI_d",
+					"-lAnimaMVC_d",
+					"-lAnimaOS_d",
+					"-lAnimaGraphics_d",
+				);
+				PREBINDING = YES;
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../Anima/include/;
+				LIBRARY_SEARCH_PATHS = ./build/Release/;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lAnimaAI",
+					"-lAnimaMVC",
+					"-lAnimaOS",
+					"-lAnimaGraphics",
+				);
+				PREBINDING = YES;
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = i386;
+			};
+			name = Release;
+		};
+		60550008113746DF0041DBBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "AnimaOSTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				PREBINDING = NO;
+				PRODUCT_NAME = AnimaOSTest_d;
+			};
+			name = Debug;
+		};
+		60550009113746DF0041DBBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "AnimaOSTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				PREBINDING = NO;
+				PRODUCT_NAME = AnimaOSTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "AnimaOSTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6055000A113746DF0041DBBF /* Build configuration list for PBXNativeTarget "AnimaOSTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60550008113746DF0041DBBF /* Debug */,
+				60550009113746DF0041DBBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

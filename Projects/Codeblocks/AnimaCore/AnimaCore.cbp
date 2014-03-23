@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AnimaCore" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../lib/libAnimaCore_d" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Debug Win32/AnimaCore" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-DAE_PLATFORM_ALLEGRO" />
+					<Add option="-DALLEGRO_STATICLINK" />
+					<Add option="-DOGRE_STATIC_LIB" />
+				</Compiler>
+				<Linker>
+					<Add directory="Libs" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="$(SolutionDir)Libs/libAnimaCore" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release Win32/AnimaCore" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add library="kernel32" />
+					<Add library="AnimaGraphics" />
+					<Add library="AnimaInput" />
+					<Add directory="Libs" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../../../Anima/include/AnimaConsole.h" />
+		<Unit filename="../../../Anima/include/AnimaConsoleDesc.h" />
+		<Unit filename="../../../Anima/include/AnimaConsoleShell.h" />
+		<Unit filename="../../../Anima/include/AnimaException.h" />
+		<Unit filename="../../../Anima/include/AnimaPlatform.h" />
+		<Unit filename="../../../Anima/include/AnimaPlugin.h" />
+		<Unit filename="../../../Anima/include/AnimaPluginGroup.h" />
+		<Unit filename="../../../Anima/include/AnimaPluginManager.h" />
+		<Unit filename="../../../Anima/include/AnimaPluginRoot.h" />
+		<Unit filename="../../../Anima/include/AnimaSingleton.h" />
+		<Unit filename="../../../Anima/include/AnimaStringUtf8.h" />
+		<Unit filename="../../../Anima/include/AnimaTypes.h" />
+		<Unit filename="../../../Anima/source/AnimaConsole.cpp" />
+		<Unit filename="../../../Anima/source/AnimaConsoleShell.cpp" />
+		<Unit filename="../../../Anima/source/AnimaPlugin.cpp" />
+		<Unit filename="../../../Anima/source/AnimaPluginGroup.cpp" />
+		<Unit filename="../../../Anima/source/AnimaPluginManager.cpp" />
+		<Unit filename="../../../Anima/source/AnimaPluginRoot.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

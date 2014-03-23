@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AnimaScene" />
+		<Option execution_dir="/opt/lila/trunk/Projects/VS2008/" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="$(SolutionDir)Libs/libAnimaScene_d" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Debug Win32/AnimaScene" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-O0" />
+				</Compiler>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release Win32/AnimaScene" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-W" />
+					<Add option="-O2" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Unit filename="../../Anima/include/AnimaSceneBindableNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneChildNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneEnums.h" />
+		<Unit filename="../../Anima/include/AnimaSceneFactory.h" />
+		<Unit filename="../../Anima/include/AnimaSceneFactoryX3D.h" />
+		<Unit filename="../../Anima/include/AnimaSceneGraph.h" />
+		<Unit filename="../../Anima/include/AnimaSceneGraphX3D.h" />
+		<Unit filename="../../Anima/include/AnimaSceneGroupingNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneIndexedTriangleSet.h" />
+		<Unit filename="../../Anima/include/AnimaSceneLayer.h" />
+		<Unit filename="../../Anima/include/AnimaSceneLayerSet.h" />
+		<Unit filename="../../Anima/include/AnimaSceneLayout.h" />
+		<Unit filename="../../Anima/include/AnimaSceneLayoutGroup.h" />
+		<Unit filename="../../Anima/include/AnimaSceneLayoutLayer.h" />
+		<Unit filename="../../Anima/include/AnimaSceneMovableNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneOrthoViewpoint.h" />
+		<Unit filename="../../Anima/include/AnimaSceneShape.h" />
+		<Unit filename="../../Anima/include/AnimaSceneShapeNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneTransformNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneTypedefs.h" />
+		<Unit filename="../../Anima/include/AnimaSceneViewpoint.h" />
+		<Unit filename="../../Anima/include/AnimaSceneViewpointNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneViewport.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DAppearance.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DClipPlane.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DCoordinate.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DFillProperties.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DIndexedLineSet.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DIndexedTriangleSet.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DLayer.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DLayerSet.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DLayout.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DLayoutGroup.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DLayoutLayer.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DLineProperties.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DMaterial.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DOrthoViewpoint.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DShape.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DTwoSidedMaterial.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DViewpoint.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3DViewport.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_AppearanceChildNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_AppearanceNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_BindableNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_BoundedObject.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_ChildNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_ColorNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_ComposedGeometryNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_CoordinateNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_GeometricPropertyNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_GeometryNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_GroupingNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_InfoNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_LayerNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_LayoutNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_MaterialNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_MetadataObject.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_NetworkSensorNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_Node.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_NormalNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_PrototypeInstance.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_SensorNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_ShaderNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_ShapeNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_TextureCoordinateNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_TextureNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_TextureTransformNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_Transform.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_TriangleSet.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_UrlObject.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_VertexAttributeNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_ViewpointNode.h" />
+		<Unit filename="../../Anima/include/AnimaSceneX3D_ViewportNode.h" />
+		<Unit filename="../../Anima/source/AnimaSceneChildNode.cpp" />
+		<Unit filename="../../Anima/source/AnimaSceneFactoryX3D.cpp" />
+		<Unit filename="../../Anima/source/AnimaSceneGraph.cpp" />
+		<Unit filename="../../Anima/source/AnimaSceneGroupingNode.cpp" />
+		<Unit filename="../../Anima/source/AnimaSceneLayer.cpp" />
+		<Unit filename="../../Anima/source/AnimaSceneLayerSet.cpp" />
+		<Unit filename="../../Anima/source/AnimaSceneShapeNode.cpp" />
+		<Unit filename="../../Anima/source/AnimaSceneViewpointNode.cpp" />
+		<Unit filename="../../Anima/source/AnimaSceneX3DLayerSet.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

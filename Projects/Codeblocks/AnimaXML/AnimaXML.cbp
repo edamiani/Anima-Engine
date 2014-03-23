@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AnimaXML" />
+		<Option execution_dir="/opt/lila/trunk/Projects/VS2008/" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="../lib/libAnimaXML_d" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../obj" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add directory="../../Dependencies/rapidxml-1.13" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../Dependencies/rapidxml-1.13" />
+				</ResourceCompiler>
+				<Linker>
+					<Add directory="C:/Documents and Settings/edamiani/Meus documentos/GameDev/_Lila/Dependencies/rapidxml-1.13" />
+				</Linker>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release Win32/AnimaXML" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add directory="../../Dependencies/rapidxml-1.13" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../Dependencies/rapidxml-1.13" />
+				</ResourceCompiler>
+				<Linker>
+					<Add directory="C:/Documents and Settings/edamiani/Meus documentos/GameDev/_Lila/Dependencies/rapidxml-1.13" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../../../Dependencies/rapidxml-1.13" />
+		</Compiler>
+		<Unit filename="../../../Anima/include/AnimaXml.h" />
+		<Unit filename="../../../Anima/include/AnimaXmlDocument.h" />
+		<Unit filename="../../../Anima/include/AnimaXmlDocumentFactory.h" />
+		<Unit filename="../../../Anima/include/AnimaXmlDocumentFactoryRapidXml.h" />
+		<Unit filename="../../../Anima/include/AnimaXmlDocumentRapidXml.h" />
+		<Unit filename="../../../Anima/include/AnimaXmlElement.h" />
+		<Unit filename="../../../Anima/include/AnimaXmlElementRapidXml.h" />
+		<Unit filename="../../../Anima/source/AnimaXmlDocumentFactory.cpp" />
+		<Unit filename="../../../Anima/source/AnimaXmlDocumentFactoryRapidXml.cpp" />
+		<Unit filename="../../../Anima/source/AnimaXmlDocumentRapidXml.cpp" />
+		<Unit filename="../../../Anima/source/AnimaXmlElementRapidXml.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AnimaUnitTest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../bin/AnimaUnitTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/usr/include/freetype2/" />
+				</Compiler>
+				<Linker>
+					<Add library="../lib/libAnimaGraphicsDevice_d.a" />
+					<Add library="../lib/libAnimaOSWindowManagerLinux_d.a" />
+					<Add library="../lib/libAnimaCore_d.a" />
+					<Add library="../lib/libAnimaGraphics_d.a" />
+					<Add library="../lib/libAnimaOS_d.a" />
+					<Add library="X11" />
+					<Add library="Xt" />
+					<Add library="Xaw" />
+					<Add library="GL" />
+					<Add library="GLU" />
+					<Add library="freetype" />
+					<Add library="libpng" />
+					<Add library="PocoFoundation" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/AnimaUnitTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../../../Anima/include" />
+		</Compiler>
+		<Linker>
+			<Add library="cpptest" />
+		</Linker>
+		<Unit filename="../../../AnimaTests/include/AnimaMVCTest.h" />
+		<Unit filename="../../../AnimaTests/include/AnimaMVCTest_WithSceneGraph.h" />
+		<Unit filename="../../../AnimaTests/source/AnimaConsoleTest.cpp" />
+		<Unit filename="../../../AnimaTests/source/AnimaImageTest.cpp" />
+		<Unit filename="../../../AnimaTests/source/AnimaPlotTest.cpp" />
+		<Unit filename="../../../AnimaTests/source/AnimaTestSuite.cpp" />
+		<Unit filename="../../../AnimaTests/source/AnimaTestSuite.h" />
+		<Unit filename="../../../AnimaTests/source/AnimaWindowAndContextTest.cpp" />
+		<Unit filename="../../../AnimaTests/source/AnimaWindowTest.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

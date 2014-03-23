@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Anima workspace">
+		<Project filename="AnimaOS/AnimaOS.cbp" />
+		<Project filename="AnimaAI/AnimaAI.cbp" />
+		<Project filename="AnimaOSTest/AnimaOSTest.cbp" active="1">
+			<Depends filename="AnimaOS/AnimaOS.cbp" />
+			<Depends filename="AnimaAI/AnimaAI.cbp" />
+			<Depends filename="AnimaGraphics/AnimaGraphics.cbp" />
+			<Depends filename="AnimaXML/AnimaXML.cbp" />
+			<Depends filename="AnimaInput/AnimaInput.cbp" />
+			<Depends filename="AnimaGui/AnimaGui.cbp" />
+		</Project>
+		<Project filename="AnimaGraphics/AnimaGraphics.cbp" />
+		<Project filename="AnimaXML/AnimaXML.cbp" />
+		<Project filename="AnimaInput/AnimaInput.cbp" />
+		<Project filename="AnimaGui/AnimaGui.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

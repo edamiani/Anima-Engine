@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AnimaGraphics" />
+		<Option execution_dir="/opt/lila/trunk/Projects/VS2008/" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../lib/libAnimaGraphics_d" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../obj" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DLIB" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add directory="../../Dependencies" />
+					<Add directory="../../Dependencies/freetype-2.4.3/include" />
+					<Add directory="../../../../allegro/include/allegro5" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../Dependencies" />
+					<Add directory="../../Dependencies/freetype-2.4.3/include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="allegro_font-static" />
+					<Add library="allegro_ttf-static" />
+					<Add library="allegro_image-static" />
+					<Add library="allegro_primitives-static" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="$(SolutionDir)Libs/libAnimaGraphics" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release Win32/AnimaGraphics" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add directory="../../Dependencies" />
+					<Add directory="../../Dependencies/freetype-2.4.3/include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../Dependencies" />
+					<Add directory="../../Dependencies/freetype-2.4.3/include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="d3d9" />
+					<Add library="d3dx9" />
+					<Add library="Opengl32" />
+					<Add library="glu32" />
+					<Add library="freetype-2.4.4-static-mt" />
+					<Add library="allegro_font-5.0.3-static-mt" />
+					<Add library="allegro_ttf-5.0.3-static-mt" />
+					<Add directory="Libs" />
+					<Add directory="../../Dependencies/Libs" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="/usr/include/freetype2/" />
+		</Compiler>
+		<Linker>
+			<Add library="freetype" />
+			<Add library="libpng" />
+		</Linker>
+		<Unit filename="../../../Anima/include/AnimaGraphicsAxesConvention2d.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsCamera.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsCamera2d.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsColor.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDevice.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDeviceContext.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDeviceContextDesc.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDeviceDriver.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDeviceManager.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDevicePipeline.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDevicePipelineInputState.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDevicePipelineRasterizerState.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDevicePipelineStage.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsDevicePipelineState.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsEnums.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsFont.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsFontFace.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsFontFaceDesc.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsFontFaceFT.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsFontFactory.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsFontFactoryFT.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsFontManager.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsFontManagerFT.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometry.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDesc.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescArc.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescCircle.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescDonut.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescEllipse.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescLine.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescPie.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescRectangle.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescSpline.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryDescTriangle.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsGeometryFactory.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsImage.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsImageFactory.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsIndexBuffer.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsManager.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsMesh.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsPrimitiveFactory.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsRasterFactory.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsSurface.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsSurfaceDesc.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsSurfaceFactory.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsSurfaceFactoryGL1_5.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsTypedefs.h" />
+		<Unit filename="../../../Anima/include/AnimaGraphicsVertexBuffer.h" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsAxesConvention2d.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsCamera.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsDeviceManager.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsFontFaceFT.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsFontFactory.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsFontFactoryFT.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsFontManager.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsFontManagerFT.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsGeometryFactory.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsImageFactory.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsImageLoaderPNG.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsManager.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsPrimitiveFactory.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsRasterFactory.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsSurfaceFactory.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsSurfaceFactoryGL1_5.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsSurfaceGL1_5.cpp" />
+		<Unit filename="../../../Anima/source/AnimaGraphicsViewport.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

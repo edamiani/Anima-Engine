@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AnimaInput" />
+		<Option execution_dir="/opt/lila/trunk/Projects/VS2008/" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="$(SolutionDir)Libs/libAnimaInput_d" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Debug Win32/AnimaInput" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-O0" />
+				</Compiler>
+				<Linker>
+					<Add library="dinput8" />
+					<Add library="dxguid" />
+					<Add directory="Libs" />
+				</Linker>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="$(SolutionDir)Libs/libAnimaInput" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release Win32/AnimaInput" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add library="dinput8" />
+					<Add library="dxguid" />
+					<Add directory="Libs" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../../../Anima/include/AnimaInputAxis.h" />
+		<Unit filename="../../../Anima/include/AnimaInputContext.h" />
+		<Unit filename="../../../Anima/include/AnimaInputDevice.h" />
+		<Unit filename="../../../Anima/include/AnimaInputEnums.h" />
+		<Unit filename="../../../Anima/include/AnimaInputEvents.h" />
+		<Unit filename="../../../Anima/include/AnimaInputJoystick.h" />
+		<Unit filename="../../../Anima/include/AnimaInputKeyInfo.h" />
+		<Unit filename="../../../Anima/include/AnimaInputKeyValueAllegro.h" />
+		<Unit filename="../../../Anima/include/AnimaInputKeyboard.h" />
+		<Unit filename="../../../Anima/include/AnimaInputMouse.h" />
+		<Unit filename="../../../Anima/include/AnimaInputMouseState.h" />
+		<Unit filename="../../../Anima/source/AnimaInputContext.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

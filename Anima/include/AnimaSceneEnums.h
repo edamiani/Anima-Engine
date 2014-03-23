@@ -1,0 +1,22 @@
+#ifndef __AE_SCENE_ENUMS__
+#define __AE_SCENE_ENUMS__
+
+namespace AE
+{
+	namespace Scene
+	{
+		enum MeshType
+		{
+			MT_INDEXED_LINE_SET,
+			MT_INDEXED_TRIANGLE_FAN_SET,
+			MT_INDEXED_TRIANGLE_SET,
+			MT_INDEXED_TRIANGLE_STRIP_SET,
+			MT_POINT_SET,
+			MT_TRIANGLE_FAN_SET,
+			MT_TRIANGLE_SET,
+			MT_TRIANGLE_STRIP_SET,
+		};
+	}
+}
+
+#endif
