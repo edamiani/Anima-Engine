@@ -1,2 +1,10 @@
-# Unity .gitignore file.
-Dependencies/
+/Dependencies/CppTest-1.1.1/win/
+/Dependencies/DirectX/
+/Dependencies/freetype-2.5.5/objs/
+/Dependencies/zlib-1.2.8/win32/
+/Old/
+/Projects/VS2013/Bin/
+/Projects/VS2013/Debug/
+/Projects/VS2013/Libs/
+/Projects/VS2013/Anima.opensdf
+/Projects/VS2013/Anima.sdf
