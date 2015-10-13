@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaBase", "AnimaBase.vcxp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaGraphicsDevice", "AnimaGraphicsDevice.vcxproj", "{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaGraphicsDeviceGL15", "AnimaGraphicsDeviceGL15.vcxproj", "{884207E1-63BE-45FD-97C0-6C1A214EB2BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -135,6 +137,14 @@ Global
 		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Release|Win32.Build.0 = Release|Win32
 		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Release|x64.ActiveCfg = Release|x64
 		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Release|x64.Build.0 = Release|x64
+		{884207E1-63BE-45FD-97C0-6C1A214EB2BD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{884207E1-63BE-45FD-97C0-6C1A214EB2BD}.Debug|Win32.Build.0 = Debug|Win32
+		{884207E1-63BE-45FD-97C0-6C1A214EB2BD}.Debug|x64.ActiveCfg = Debug|x64
+		{884207E1-63BE-45FD-97C0-6C1A214EB2BD}.Debug|x64.Build.0 = Debug|x64
+		{884207E1-63BE-45FD-97C0-6C1A214EB2BD}.Release|Win32.ActiveCfg = Release|Win32
+		{884207E1-63BE-45FD-97C0-6C1A214EB2BD}.Release|Win32.Build.0 = Release|Win32
+		{884207E1-63BE-45FD-97C0-6C1A214EB2BD}.Release|x64.ActiveCfg = Release|x64
+		{884207E1-63BE-45FD-97C0-6C1A214EB2BD}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

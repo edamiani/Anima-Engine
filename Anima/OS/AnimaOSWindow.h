@@ -1,9 +1,9 @@
 #ifndef __AE_OS_WINDOW__
 #define __AE_OS_WINDOW__
 
-#include "../Graphics/AnimaGraphicsDeviceContext.h"
 #include "AnimaOSWindowDesc.h"
-//#include "AnimaInputContext.h"
+
+#include "Anima/Graphics/Device/AnimaGraphicsDeviceContext.h"
 
 #include <string>
 

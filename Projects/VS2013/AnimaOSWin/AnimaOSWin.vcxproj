@@ -71,7 +71,7 @@
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Libs\</OutDir>
     <TargetName>$(ProjectName)_d</TargetName>
-    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -149,19 +149,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Anima\OS\Win32\AnimaOSEventQueueWin.h" />
-    <ClInclude Include="..\..\..\Anima\OS\Win32\AnimaOSWindowManagerWin.h" />
-    <ClInclude Include="..\..\..\Anima\OS\Win32\AnimaOSWindowWin.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\Anima\OS\Win32\AnimaOSEventQueueWin.cpp" />
-    <ClCompile Include="..\..\..\Anima\OS\Win32\AnimaOSWindowManagerWin.cpp" />
-    <ClCompile Include="..\..\..\Anima\OS\Win32\AnimaOSWindowWin.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AnimaOS.vcxproj">
       <Project>{0a55c928-c7d6-4950-b934-5f8e7b56f816}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSEventQueueWin.h" />
+    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSWindowManagerWin.h" />
+    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSWindowWin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSEventQueueWin.cpp" />
+    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSWindowManagerWin.cpp" />
+    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSWindowWin.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

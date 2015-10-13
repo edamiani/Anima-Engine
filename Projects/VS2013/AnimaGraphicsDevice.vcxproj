@@ -19,46 +19,46 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceColorBuffer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceColorBufferDesc.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceContext.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceContextDesc.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceDriver.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceFrameBuffer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceIndexBuffer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceIndexBufferFactory.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceManager.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDevicePipeline.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDevicePipelineInputState.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDevicePipelineRasterizerState.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDevicePipelineStage.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDevicePipelineStateGroup.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDevicePixelBuffer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDevicePixelBufferDesc.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDevicePixelBufferFactory.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceStage.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceStageClipping.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceStageClipping2d.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceStageInput2D.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceStagePixelOperations.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceStageRasterizer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceStageTransformation2d.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceStateGroup.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceSubpipeline.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceSubpipeline2d.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceSubpipeline3d.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceSubpipelineRasterizer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceTransformedColorBuffer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceTransformedPixelBuffer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceVertexBuffer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\AnimaGraphicsDeviceVertexBufferFactory.h" />
-    <ClInclude Include="T:\anima-engine\Anima\include\AnimaGraphicsDeviceIndexBufferDesc.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceColorBuffer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceColorBufferDesc.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContext.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextDesc.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceDriver.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceFrameBuffer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceGLHeaders.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceIndexBuffer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceIndexBufferFactory.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceManager.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipeline.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipelineInputState.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipelineRasterizerState.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipelineStage.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipelineStateGroup.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePixelBuffer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePixelBufferDesc.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePixelBufferFactory.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStage.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageClipping.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageClipping2d.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageInput2D.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStagePixelOperations.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageRasterizer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageTransformation2d.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStateGroup.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline2d.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline3d.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipelineRasterizer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceTransformedColorBuffer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceTransformedPixelBuffer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceVertexBuffer.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceVertexBufferFactory.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Anima\Graphics\AnimaGraphicsDeviceDriver.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\AnimaGraphicsDeviceManager.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\AnimaGraphicsDevicePipeline.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\AnimaGraphicsDeviceSubpipeline.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceDriver.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceManager.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipeline.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}</ProjectGuid>
@@ -107,7 +107,7 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Libs\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Libs\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(ProjectName)\</IntDir>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
