@@ -57,8 +57,8 @@ namespace AE
 				case AE::Graphics::CF_R5G6B5:
 					mColorDepth = 16;
 					break;
-                default:
-                    break;
+				default:
+					break;
 				}
 			}
 

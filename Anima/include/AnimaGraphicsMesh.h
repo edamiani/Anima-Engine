@@ -4,8 +4,8 @@
 #include <vector>
 
 #include "AnimaGraphicsGeometry.h"
-#include "AnimaGraphicsIndexBuffer.h"
-#include "AnimaGraphicsVertexBuffer.h"
+#include "AnimaGraphicsDeviceIndexBuffer.h"
+#include "AnimaGraphicsDeviceVertexBuffer.h"
 #include "AnimaMathVector3.h"
 
 namespace AE

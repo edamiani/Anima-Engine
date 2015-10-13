@@ -2,6 +2,7 @@
 #define __ANIMA_GRAPHICS_IMAGE_TGA__
 
 #include "AnimaGraphicsImage.h"
+#include "AnimaMathVector2.h"
 
 namespace AE
 {

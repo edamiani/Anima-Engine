@@ -1,5 +1,5 @@
-#ifndef __AE_OS_WINDOW_MANAGER_WIN__
-#define __AE_OS_WINDOW_MANAGER_WIN__
+#pragma once __AE_OS_WINDOW_MANAGER_WIN__
+//#define __AE_OS_WINDOW_MANAGER_WIN__
 
 #include "AnimaOSWindowManager.h"
 #include "AnimaPlatform.h"
@@ -36,4 +36,4 @@ namespace AE
 	}
 }
 
-#endif
+//#endif

@@ -4,6 +4,8 @@
 #include "AnimaGraphicsDeviceStage.h"
 
 #include "AnimaGraphicsColorBuffer.h"
+#include "AnimaGraphicsDeviceIndexBuffer.h"
+#include "AnimaGraphicsDeviceVertexBuffer.h"
 #include "AnimaGraphicsEnums.h"
 #include "AnimaGraphicsDeviceSubpipeline.h"
 #include "AnimaMathMatrix4.h"
@@ -26,9 +28,9 @@ namespace AE
 				virtual ~StageInput2d() {}
 
 				virtual void enqueueColorBuffer(AE::Graphics::ColorBuffer *colorBuffer) = 0;
-				virtual void enqueueIndexBuffer(AE::Graphics::IndexBuffer *indexBuffer) = 0;
+				virtual void enqueueIndexBuffer(AE::Graphics::Device::IndexBuffer *indexBuffer) = 0;
 				virtual void enqueueTransformedColorBuffer(AE::Graphics::ColorBuffer *colorBuffer, AE::Math::Matrix4 const &modelMatrix, bool resetModelMatrix) = 0;
-				virtual void enqueueVertexBuffer(AE::Graphics::VertexBuffer *vertexBuffer) = 0;
+				virtual void enqueueVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer) = 0;
 
 				/***** Inherited from AE::Graphics::Device::Stage
 				virtual void run() = 0;
