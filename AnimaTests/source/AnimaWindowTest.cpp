@@ -42,7 +42,7 @@ void ExampleTestSuite::windowTest()
 #endif
 
 	assert(windowManager);
-	windowManager->install(0);
+	pluginManager->getRoot()->attachAndInstall(windowManager, AE::NO_OPTIONS);
 
 	AE::OS::WindowDesc windowDesc;
 	windowDesc.dimensions = AE::Math::Point2<AE::uint>(640, 480);

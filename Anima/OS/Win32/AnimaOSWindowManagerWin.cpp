@@ -32,16 +32,16 @@ namespace AE
 
 		bool WindowManagerWin::install(AE::uint options)
 		{
-			//if(mParent != 0)
-			//{
+			if(mParent != 0)
+			{
 				mEventQueue = new AE::OS::EventQueueWin();
 
 				mIsInstalled = true;
 
 				return true;
-			//}
-			//else
-			//	return false;
+			}
+			else
+				return false;
 		}
 
 		bool WindowManagerWin::uninstall()
