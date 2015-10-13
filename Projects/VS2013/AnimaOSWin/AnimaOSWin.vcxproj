@@ -71,6 +71,7 @@
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Libs\</OutDir>
     <TargetName>$(ProjectName)_d</TargetName>
+    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -156,6 +157,11 @@
     <ClCompile Include="..\..\..\Anima\OS\Win32\AnimaOSEventQueueWin.cpp" />
     <ClCompile Include="..\..\..\Anima\OS\Win32\AnimaOSWindowManagerWin.cpp" />
     <ClCompile Include="..\..\..\Anima\OS\Win32\AnimaOSWindowWin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnimaOS.vcxproj">
+      <Project>{0a55c928-c7d6-4950-b934-5f8e7b56f816}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

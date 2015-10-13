@@ -65,7 +65,7 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Libs\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Libs\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
@@ -184,6 +184,11 @@
     <ClInclude Include="..\..\Anima\OS\AnimaOSWindowListener.h" />
     <ClInclude Include="..\..\Anima\OS\AnimaOSWindowManager.h" />
     <ClInclude Include="..\..\Anima\OS\AnimaOSWindowMetrics.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AnimaBase.vcxproj">
+      <Project>{78fb361b-71f0-419f-8066-e39feb87c387}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

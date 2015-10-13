@@ -17,6 +17,11 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\AnimaTests\source\AnimaTestSuite.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnimaOSWin\AnimaOSWin.vcxproj">
+      <Project>{bb1ce8db-75b6-4b15-a4a5-6efc6d48b09b}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>AnimaTestSuite</ProjectName>
     <ProjectGuid>{6FBF7594-03A8-4400-BD36-3F102FC42614}</ProjectGuid>

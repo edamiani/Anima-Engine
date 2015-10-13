@@ -1,8 +1,5 @@
 #include "AnimaOSWindowManagerWin.h"
 
-#include "../../Graphics/AnimaGraphicsDeviceContext.h"
-#include "../../Graphics/AnimaGraphicsDeviceDriver.h"
-#include "../../Graphics/AnimaGraphicsDeviceManager.h"
 #include "AnimaOSEventQueueWin.h"
 #include "AnimaOSWindowWin.h"
 
@@ -10,6 +7,11 @@
 
 namespace AE
 {
+	namespace Graphics
+	{
+
+	}
+
 	namespace OS
 	{
 		WindowManagerWin::WindowManagerWin() 
@@ -52,19 +54,25 @@ namespace AE
 			return true;
 		}
 
-		AE::OS::Window* WindowManagerWin::createWindow(const std::string &windowTitle, AE::OS::WindowDesc &windowDesc, AE::Graphics::Device::Driver *deviceDriver)
+		AE::OS::Window* WindowManagerWin::createWindow(const std::string &windowTitle, AE::OS::WindowDesc &windowDesc)
 		{
 			AE::OS::Window *window = new AE::OS::WindowWin(windowTitle, windowDesc);
 			mWindows.push_back(window);
 
-			AE::Graphics::Device::ContextDesc contextDesc;
+			/*AE::Graphics::Device::ContextDesc contextDesc;
 			contextDesc.dimensions = window->getDimensions();
 			contextDesc.fullScreen = windowDesc.fullScreen;
 			contextDesc.parentWindow = window;
-			contextDesc.setColorFormat(windowDesc.getColorFormat());
+			contextDesc.setColorFormat(windowDesc.getColorFormat());*/
 
-			//AE::Graphics::Device::Context *deviceContext = AE::Graphics::Device::Manager::getInstance()->getDeviceDriver(windowDesc.deviceDriverNumber)->createDeviceContext(contextDesc);
-			//AE::Graphics::Device::Context *deviceContext = deviceDriver->createDeviceContext(contextDesc);
+			return window;
+		}
+
+		AE::OS::Window* WindowManagerWin::createWindow(const std::string &windowTitle, AE::OS::WindowDesc &windowDesc, AE::Graphics::Device::Context *deviceContext)
+		{
+			AE::OS::Window *window = createWindow(windowTitle, windowDesc);
+
+			window->attachDeviceContext(deviceContext);
 
 			return window;
 		}

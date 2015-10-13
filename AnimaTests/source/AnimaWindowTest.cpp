@@ -47,7 +47,7 @@ void ExampleTestSuite::windowTest()
 	AE::OS::WindowDesc windowDesc;
 	windowDesc.dimensions = AE::Math::Point2<AE::uint>(640, 480);
 	windowDesc.position = AE::Math::Point2<AE::int32>(0, 0);
-	AE::OS::Window *window = windowManager->createWindow("Window Test", windowDesc, 0);
+	AE::OS::Window *window = windowManager->createWindow("Window Test", windowDesc);
 
 	MyWindowListener myWindowListener;
 	AE::OS::EventQueue *eventQueue = windowManager->getEventQueue();

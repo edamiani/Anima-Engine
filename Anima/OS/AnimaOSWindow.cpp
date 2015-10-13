@@ -1,4 +1,6 @@
-#include "../include/AnimaOSWindow.h"
+#include "AnimaOSWindow.h"
+
+#include "Graphics/AnimaGraphicsDeviceContext.h"
 
 #include <cassert>
 
@@ -16,8 +18,8 @@ namespace AE
 
 		void Window::attachDeviceContext(AE::Graphics::Device::Context *deviceContext)
 		{
-		    mDeviceContext = deviceContext;
-		    mDeviceContext->setParentWindow(this);
-        }
+			mDeviceContext = deviceContext;
+			mDeviceContext->setParentWindow(this);
+		}
 	}
 }

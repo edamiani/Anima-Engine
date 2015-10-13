@@ -2,7 +2,7 @@
 #define __AE_OS_WINDOW_MANAGER__
 
 #include "AnimaOSEventQueue.h"
-#include "../Graphics/AnimaGraphicsEnums.h"
+//#include "../Graphics/AnimaGraphicsEnums.h"
 #include "../Math/AnimaMathPoint2.h"
 #include "AnimaOSEnums.h"
 #include "AnimaOSWindowDesc.h"
@@ -38,7 +38,8 @@ namespace AE
 			//virtual bool					initialize(AE::uint options) = 0;
 			//virtual bool					shutdown() = 0;
 
-			virtual AE::OS::Window*			createWindow(const std::string &windowTitle, AE::OS::WindowDesc &windowDesc, AE::Graphics::Device::Driver *deviceDriver) = 0;
+			virtual AE::OS::Window*			createWindow(const std::string &windowTitle, AE::OS::WindowDesc &windowDesc) = 0;
+			virtual AE::OS::Window*			createWindow(const std::string &windowTitle, AE::OS::WindowDesc &windowDesc, AE::Graphics::Device::Context *deviceContext) = 0;
 			virtual void 					destroyWindow(AE::OS::Window *window) = 0;
 			AE::OS::EventQueue*				getEventQueue() { return mEventQueue; }
 			std::list<AE::OS::Window *>&	getWindowList() { return mWindows; }
