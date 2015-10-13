@@ -1,4 +1,4 @@
-#include "../include/AnimaGraphicsDeviceDriver.h"
+#include "AnimaGraphicsDeviceDriver.h"
 
 namespace AE
 {

@@ -1,9 +1,9 @@
 #ifndef __AE_GRAPHICS_DEVICE_DRIVER__
 #define __AE_GRAPHICS_DEVICE_DRIVER__
 
-#include "AnimaGraphicsDeviceContextDesc.h"
-#include "AnimaGraphicsEnums.h"
-#include "../Math/AnimaMathPoint2.h"
+#include "Anima/Graphics/AnimaGraphicsDeviceContextDesc.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Math/AnimaMathPoint2.h"
 
 #include <list>
 #include <string>

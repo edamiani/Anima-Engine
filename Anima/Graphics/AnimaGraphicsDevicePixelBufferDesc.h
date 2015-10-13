@@ -1,10 +1,9 @@
 #ifndef __ANIMA_GRAPHICS_DEVICE_PIXEL_BUFFER_DESC__
 #define __ANIMA_GRAPHICS_DEVICE_PIXEL_BUFFER_DESC__
 
-#include "AnimaGraphicsColorBufferDesc.h"
-
-#include "AnimaGraphicsColor.h"
-#include "AnimaGraphicsEnums.h"
+#include "Anima/Graphics/AnimaGraphicsColorBufferDesc.h"
+#include "Anima/Graphics/AnimaGraphicsColor.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
 
 namespace AE
 {

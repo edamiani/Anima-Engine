@@ -1,9 +1,9 @@
 #ifndef __AE_GRAPHICS_DEVICE_MANAGER__
 #define __AE_GRAPHICS_DEVICE_MANAGER__
 
-#include "AnimaGraphicsEnums.h"
-#include "../Math/AnimaMathPoint2.h"
-#include "../AnimaPlugin.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Math/AnimaMathPoint2.h"
+#include "Anima/AnimaPlugin.h"
 
 #include <map>
 

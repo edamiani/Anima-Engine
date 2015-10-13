@@ -1,7 +1,7 @@
 #ifndef __AE_GRAPHICS_DEVICE_TRANSFORMED_COLOR_BUFFER__
 #define __AE_GRAPHICS_DEVICE_TRANSFORMED_COLOR_BUFFER__
 
-#include "../Math/AnimaMathMatrix4.h"
+#include "Anima/Math/AnimaMathMatrix4.h"
 
 namespace AE
 {

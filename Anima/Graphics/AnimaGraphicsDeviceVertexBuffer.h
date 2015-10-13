@@ -1,11 +1,11 @@
 #ifndef __AE_GRAPHICS_DEVICE_VERTEX_BUFFER__
 #define __AE_GRAPHICS_DEVICE_VERTEX_BUFFER__
 
-#include "../AnimaTypes.h"
-#include "AnimaGraphicsColor.h"
-#include "AnimaGraphicsEnums.h"
-#include "../Math/AnimaMathVector2.h"
-#include "../Math/AnimaMathVector3.h"
+#include "Anima/AnimaTypes.h"
+#include "Anima/Graphics/AnimaGraphicsColor.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Math/AnimaMathVector2.h"
+#include "Anima/Math/AnimaMathVector3.h"
 
 #include <vector>
 

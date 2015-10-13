@@ -1,4 +1,4 @@
-#include "../include/AnimaGraphicsDeviceManager.h"
+#include "AnimaGraphicsDeviceManager.h"
 
 AE::Graphics::Device::Manager* AE::Graphics::Device::Manager::mInstance = 0;
 

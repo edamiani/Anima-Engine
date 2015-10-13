@@ -1,15 +1,15 @@
 #ifndef __AE_GRAPHICS_DEVICE_STAGE_INPUT2D__
 #define __AE_GRAPHICS_DEVICE_STAGE_INPUT2D__
 
-#include "AnimaGraphicsDeviceStage.h"
-
-#include "AnimaGraphicsColorBuffer.h"
 #include "AnimaGraphicsDeviceIndexBuffer.h"
-#include "AnimaGraphicsDeviceVertexBuffer.h"
-#include "AnimaGraphicsEnums.h"
+#include "AnimaGraphicsDeviceStage.h"
 #include "AnimaGraphicsDeviceSubpipeline.h"
-#include "../Math/AnimaMathMatrix4.h"
-#include "../Math/AnimaMathPoint2.h"
+#include "AnimaGraphicsDeviceVertexBuffer.h"
+
+#include "Anima/Graphics/AnimaGraphicsColorBuffer.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Math/AnimaMathMatrix4.h"
+#include "Anima/Math/AnimaMathPoint2.h"
 
 namespace AE
 {

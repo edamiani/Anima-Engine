@@ -1,10 +1,10 @@
 #ifndef __ANIMA_GRAPHICS_DEVICE_COLOR_BUFFER_DESC__
 #define __ANIMA_GRAPHICS_DEVICE_COLOR_BUFFER_DESC__
 
-#include "../AnimaTypes.h"
-#include "AnimaGraphicsColor.h"
-#include "AnimaGraphicsEnums.h"
-#include "../Math/AnimaMathPoint2.h"
+#include "Anima/Graphics/AnimaGraphicsColor.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/AnimaTypes.h"
+#include "Anima/Math/AnimaMathPoint2.h"
 
 namespace AE
 {
@@ -18,7 +18,7 @@ namespace AE
 			{
 				AE::Graphics::ColorFormat				colorFormat;
 				void *									data;
-				AE::Math::Point2						dimensions;
+				AE::Math::Point2<AE::int32>				dimensions;
 				//AE::Graphics::RowOrder					rowOrder;
 				AE::Graphics::Image						*sourceImage;
 				AE::Graphics::Device::BufferUsage		usage;

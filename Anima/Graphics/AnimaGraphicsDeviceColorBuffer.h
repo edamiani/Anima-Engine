@@ -2,8 +2,9 @@
 #define __AE_GRAPHICS_DEVICE_COLOR_BUFFER__
 
 #include "AnimaGraphicsDeviceColorBufferDesc.h"
-#include "AnimaGraphicsEnums.h"
-#include "../Math/AnimaMathPoint2.h"
+
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Math/AnimaMathPoint2.h"
 
 namespace AE
 {
@@ -26,7 +27,7 @@ namespace AE
 				}
 
 				virtual void*		getData() = 0;
-				AE::Math::Point2	getDimensions() { return mDimensions; }
+				AE::Math::Point2<AE::int32>	getDimensions() { return mDimensions; }
 				/*AE::Graphics::RowOrder
 									getRowOrder() { return mRowOrder; }*/
 
@@ -43,7 +44,7 @@ namespace AE
 				AE::Graphics::ColorFormat			mColorFormat;
 				//ColorStructure						mColorStructure;
 				void								*mData;
-				AE::Math::Point2					mDimensions;
+				AE::Math::Point2<AE::int32>			mDimensions;
 				//AE::Graphics::RowOrder				mRowOrder;
 				AE::Graphics::Device::BufferUsage	mUsage;
 			};

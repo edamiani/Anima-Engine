@@ -3,7 +3,7 @@
 
 #include "AnimaGraphicsDeviceStage.h"
 
-#include "AnimaGraphicsEnums.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
 
 namespace AE
 {

@@ -1,7 +1,7 @@
 #ifndef __AE_GRAPHICS_DEVICE_PIPELINE_STAGE__
 #define __AE_GRAPHICS_DEVICE_PIPELINE_STAGE__
 
-#include "AnimaGraphicsEnums.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
 
 #include <string>
 

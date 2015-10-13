@@ -2,7 +2,7 @@
 #define __AE_GRAPHICS_DEVICE_TRANSFORMED_PIXEL_BUFFER__
 
 #include "AnimaGraphicsTransformation2dDesc.h"
-#include "../Math/AnimaMathPoint2.h"
+#include "Anima/Math/AnimaMathPoint2.h"
 
 namespace AE
 {

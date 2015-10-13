@@ -2,11 +2,11 @@
 #define __AE_GRAPHICS_DEVICE_STAGE_PIXEL_OPERATIONS__
 
 #include "AnimaGraphicsDeviceStage.h"
-
 #include "AnimaGraphicsDevicePixelBuffer.h"
-#include "AnimaGraphicsEnums.h"
-#include "../Math/AnimaMathPoint2.h"
-#include "../Math/AnimaMathRectangle.h"
+
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Math/AnimaMathPoint2.h"
+#include "Anima/Math/AnimaMathRectangle.h"
 
 namespace AE
 {

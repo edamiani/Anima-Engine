@@ -1,12 +1,12 @@
 #ifndef __AE_GRAPHICS_DEVICE_PIXEL_BUFFER__
 #define __AE_GRAPHICS_DEVICE_PIXEL_BUFFER__
 
-#include "AnimaGraphicsColor.h"
-#include "AnimaGraphicsColorBuffer.h"
-#include "AnimaGraphicsDevicePixelBufferDesc.h"
-#include "AnimaGraphicsEnums.h"
-#include "../Math/AnimaMathPoint2.h"
-#include "../Math/AnimaMathRectangle.h"
+#include "Anima/Graphics/AnimaGraphicsColor.h"
+#include "Anima/Graphics/AnimaGraphicsColorBuffer.h"
+#include "Anima/Graphics/AnimaGraphicsDevicePixelBufferDesc.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Math/AnimaMathPoint2.h"
+#include "Anima/Math/AnimaMathRectangle.h"
 
 #include <list>
 

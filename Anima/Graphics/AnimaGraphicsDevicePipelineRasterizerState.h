@@ -1,7 +1,7 @@
 #ifndef __AE_GRAPHICS_DEVICE_PIPELINE_RASTERIZER_STATE__
 #define __AE_GRAPHICS_DEVICE_PIPELINE_RASTERIZER_STATE__
 
-#include "../AnimaTypes.h"
+#include "Anima/AnimaTypes.h"
 
 namespace AE
 {

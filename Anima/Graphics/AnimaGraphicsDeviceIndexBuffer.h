@@ -1,8 +1,8 @@
 #ifndef __ANIMA_GRAPHICS_DEVICE_INDEX_BUFFER__
 #define __ANIMA_GRAPHICS_DEVICE_INDEX_BUFFER__
 
-#include "../AnimaTypes.h"
-#include "AnimaGraphicsEnums.h"
+#include "Anima/AnimaTypes.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
 
 #include <cassert>
 

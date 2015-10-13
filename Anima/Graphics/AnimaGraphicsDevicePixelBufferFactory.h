@@ -2,10 +2,11 @@
 #define __AE_GRAPHICS_DEVICE_PIXEL_BUFFER_FACTORY__
 
 #include "AnimaGraphicsDevicePixelBufferDesc.h"
-#include "AnimaGraphicsEnums.h"
-#include "AnimaGraphicsSurfaceDesc.h"
-#include "../Math/AnimaMathPoint2.h"
-#include "../AnimaTypes.h"
+
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Graphics/AnimaGraphicsSurfaceDesc.h"
+#include "Anima/Math/AnimaMathPoint2.h"
+#include "Anima/AnimaTypes.h"
 
 namespace AE
 {

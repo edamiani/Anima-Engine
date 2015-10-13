@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaOS", "AnimaOS.vcxproj", "{0A55C928-C7D6-4950-B934-5F8E7B56F816}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaMath", "AnimaMath.vcxproj", "{CC00C515-0075-4714-AA56-077408F709B3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaBase", "AnimaBase.vcxproj", "{78FB361B-71F0-419F-8066-E39FEB87C387}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaGraphicsDevice", "AnimaGraphicsDevice.vcxproj", "{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +127,14 @@ Global
 		{78FB361B-71F0-419F-8066-E39FEB87C387}.Release|Win32.ActiveCfg = Release|Win32
 		{78FB361B-71F0-419F-8066-E39FEB87C387}.Release|Win32.Build.0 = Release|Win32
 		{78FB361B-71F0-419F-8066-E39FEB87C387}.Release|x64.ActiveCfg = Release|Win32
+		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Debug|Win32.Build.0 = Debug|Win32
+		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Debug|x64.ActiveCfg = Debug|x64
+		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Debug|x64.Build.0 = Debug|x64
+		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Release|Win32.ActiveCfg = Release|Win32
+		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Release|Win32.Build.0 = Release|Win32
+		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Release|x64.ActiveCfg = Release|x64
+		{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

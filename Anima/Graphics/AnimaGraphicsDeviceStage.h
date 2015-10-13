@@ -2,8 +2,9 @@
 #define __AE_GRAPHICS_DEVICE_STAGE__
 
 #include "AnimaGraphicsDeviceSubpipeline.h"
-#include "AnimaGraphicsEnums.h"
-#include "AnimaGraphicsTransformedColorBuffer.h"
+
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Graphics/AnimaGraphicsTransformedColorBuffer.h"
 
 #include <list>
 #include <string>

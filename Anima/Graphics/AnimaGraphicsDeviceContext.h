@@ -1,8 +1,8 @@
 #ifndef __AE_GRAPHICS_DEVICE_CONTEXT__
 #define __AE_GRAPHICS_DEVICE_CONTEXT__
 
-#include "../AnimaTypes.h"
-#include "AnimaGraphicsSurface.h"
+#include "Anima/AnimaTypes.h"
+#include "Anima/Graphics/AnimaGraphicsSurface.h"
 
 #include <vector>
 

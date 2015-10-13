@@ -1,7 +1,8 @@
-#include "../include/AnimaGraphicsDevicePipeline.h"
+#include "AnimaGraphicsDevicePipeline.h"
 
-#include "../include/AnimaException.h"
-#include "../include/AnimaGraphicsDeviceSubpipeline.h"
+#include "AnimaGraphicsDeviceSubpipeline.h"
+
+#include "Anima/AnimaException.h"
 
 namespace AE
 {

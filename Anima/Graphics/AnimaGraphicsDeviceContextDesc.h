@@ -1,9 +1,9 @@
 #ifndef __AE_GRAPHICS_DEVICE_CONTEXT_DESC__
 #define __AE_GRAPHICS_DEVICE_CONTEXT_DESC__
 
-#include "AnimaGraphicsEnums.h"
-#include "../Math/AnimaMathPoint2.h"
-#include "../AnimaTypes.h"
+#include "Anima/AnimaTypes.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
+#include "Anima/Math/AnimaMathPoint2.h"
 
 namespace AE
 {

@@ -1,9 +1,9 @@
 #ifndef __AE_GRAPHICS_DEVICE_SUBPIPELINE__
 #define __AE_GRAPHICS_DEVICE_SUBPIPELINE__
 
-#include "../AnimaEnums.h"
-#include "AnimaGraphicsEnums.h"
-#include "../AnimaTypes.h"
+#include "Anima/AnimaEnums.h"
+#include "Anima/AnimaTypes.h"
+#include "Anima/Graphics/AnimaGraphicsEnums.h"
 
 #include <memory>
 

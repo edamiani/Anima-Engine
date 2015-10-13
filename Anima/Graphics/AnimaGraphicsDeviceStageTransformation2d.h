@@ -3,9 +3,9 @@
 
 #include "AnimaGraphicsDeviceStage.h"
 
-#include "AnimaGraphicsImage.h"
-#include "../Math/AnimaMathMatrix4.h"
-#include "../Math/AnimaMathPoint2.h"
+#include "Anima/Graphics/AnimaGraphicsImage.h"
+#include "Anima/Math/AnimaMathMatrix4.h"
+#include "Anima/Math/AnimaMathPoint2.h"
 
 //#include <string>
 
