@@ -1,18 +1,18 @@
-#include "cpptest.h"
+#include "CppTest-1.1.1\src\cpptest.h"
 
 class ExampleTestSuite : public Test::Suite
 {
 public:
 	ExampleTestSuite()
 	{
-		//TEST_ADD(ExampleTestSuite::windowTest);
+		TEST_ADD(ExampleTestSuite::windowTest);
 		//TEST_ADD(ExampleTestSuite::windowAndContextTest);
 		//TEST_ADD(ExampleTestSuite::plotTest);
 		//TEST_ADD(ExampleTestSuite::simpleImageTest);
 		//TEST_ADD(ExampleTestSuite::imageTest);
 		//TEST_ADD(ExampleTestSuite::consoleTest);
 		//TEST_ADD(ExampleTestSuite::drawingTest);
-		TEST_ADD(ExampleTestSuite::sceneHierarchyTest);
+		//TEST_ADD(ExampleTestSuite::sceneHierarchyTest);
 		//TEST_ADD(ExampleTestSuite::MVCTest);
 		//TEST_ADD(ExampleTestSuite::paintingTest);
 		//TEST_ADD(ExampleTestSuite::gpuTest);
@@ -23,19 +23,19 @@ public:
 	~ExampleTestSuite(){}
 
 private:
-	void consoleTest();
+	void windowTest();
+	//void consoleTest();
 	//void drawingTest();
 	//void gpuTest();
 	//void guiTest();
-	void imageTest();
+	//void imageTest();
 	//void monitorAndVideoInfoTest();
-	void MVCTest();
-	void paintingTest();
-	void plotTest();
-	void scalingTest();
-	void sceneHierarchyTest();
-	void simpleImageTest();
-	void windowAndContextTest();
-	void windowTest();
-	void windowToViewportTest();
+	//void MVCTest();
+	//void paintingTest();
+	//void plotTest();
+	//void scalingTest();
+	//void sceneHierarchyTest();
+	//void simpleImageTest();
+	//void windowAndContextTest();
+	//void windowToViewportTest();
 };

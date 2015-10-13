@@ -1,11 +1,11 @@
 #include "AnimaTestSuite.h"
 
 #include "AnimaException.h"
-#include "AnimaMathPoint2.h"
-#include "AnimaOSWindowListener.h"
+#include "Math\AnimaMathPoint2.h"
+#include "OS\AnimaOSWindowListener.h"
 
 #ifdef AE_PLATFORM_WIN32
-#	include "AnimaOSWindowManagerWin.h"
+#	include "OS\Win32\AnimaOSWindowManagerWin.h"
 #elif defined AE_PLATFORM_LINUX
 #	include "AnimaOSWindowManagerLinux.h"
 #endif
@@ -60,7 +60,7 @@ void ExampleTestSuite::windowTest()
 		eventQueue->getNextEvent(0);
 	}
 
-    windowManager->uninstall();
+	windowManager->uninstall();
 
 	pluginManager->shutdown();
 }
