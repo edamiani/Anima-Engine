@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceGLHeaders.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL15.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceFrameBufferGL15.h" />
@@ -50,6 +51,11 @@
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceContextGL15_Win.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceManagerGL15_Win.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AnimaGraphicsDevice.vcxproj">
+      <Project>{7ecfcf1b-73a3-4685-8d4a-dc96a6a7ddb8}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{884207E1-63BE-45FD-97C0-6C1A214EB2BD}</ProjectGuid>
@@ -115,11 +121,11 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies;..\..\Dependencies\freetype-2.4.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName)_d.pdb</ProgramDataBaseFileName>
@@ -129,9 +135,9 @@
     </ClCompile>
     <Lib>
       <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>%(AdditionalDependencies);AnimaMath_d.lib</AdditionalDependencies>
+      <AdditionalDependencies>glew32sd.lib;opengl32.lib;glu32.lib;AnimaMath_d.lib;AnimaGraphicsDevice_d.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);Libs;..\..\Dependencies\Libs</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>Libs;..\..\Dependencies\Libs</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

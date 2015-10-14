@@ -2,7 +2,7 @@
 #define __AE_OS_EVENT_QUEUE_WIN__
 
 #include "../AnimaOSEventQueue.h"
-#include "AnimaPlatform.h"
+#include "Anima/AnimaPlatform.h"
 
 #include <list>
 

@@ -27,9 +27,6 @@
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceFrameBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceGLHeaders.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceIndexBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>

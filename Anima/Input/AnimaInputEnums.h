@@ -1,17 +1,17 @@
 #ifndef __AE_INPUT_ENUMS__
 #define __AE_INPUT_ENUMS__
 
-#include "AnimaPlatform.h"
+#include "Anima/AnimaPlatform.h"
 
 //#ifdef AE_PLATFORM_ALLEGRO
 //#	include "AnimaInputKeyValueAllegro.h"
 //#else
 #	ifdef AE_PLATFORM_WIN32
-#		include "Input/Win32/AnimaInputKeyValueWin32.h"
+#		include "Anima/Input/Win32/AnimaInputKeyValueWin32.h"
 #	elif defined(AE_PLATFORM_OSX)
-#		include "AnimaInputKeyValueOSX.h"
+#		include "Anima/Input/AnimaInputKeyValueOSX.h"
 #	elif defined(AE_PLATFORM_LINUX)
-#		include "AnimaInputKeyValueLinux.h"
+#		include "Anima/Input/AnimaInputKeyValueLinux.h"
 #	endif
 //#endif
 

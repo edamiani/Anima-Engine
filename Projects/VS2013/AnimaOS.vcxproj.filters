@@ -26,9 +26,6 @@
     <ClCompile Include="..\..\Anima\OS\AnimaOSEventQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\OS\AnimaOSApplication.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Anima\OS\AnimaOSApplication.h">

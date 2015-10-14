@@ -25,7 +25,6 @@
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextDesc.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceDriver.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceFrameBuffer.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceGLHeaders.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceIndexBuffer.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceIndexBufferFactory.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceManager.h" />
@@ -59,6 +58,11 @@
     <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceManager.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipeline.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AnimaGraphics.vcxproj">
+      <Project>{006808a9-29da-4c65-b001-ccb86bdb9c83}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7ECFCF1B-73A3-4685-8D4A-DC96A6A7DDB8}</ProjectGuid>
@@ -128,7 +132,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName)_d.pdb</ProgramDataBaseFileName>
@@ -138,7 +142,7 @@
     </ClCompile>
     <Lib>
       <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>%(AdditionalDependencies);AnimaMath_d.lib</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);AnimaMath_d.lib;AnimaGraphics_d.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);Libs;..\..\Dependencies\Libs</AdditionalLibraryDirectories>
     </Lib>

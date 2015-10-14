@@ -17,6 +17,9 @@
     <ClCompile Include="..\..\..\AnimaTests\source\AnimaWindowTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\AnimaTests\source\AnimaWindowAndContextTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\AnimaTests\source\AnimaTestSuite.h">

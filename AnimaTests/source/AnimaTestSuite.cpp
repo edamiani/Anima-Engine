@@ -1,5 +1,6 @@
-#include "AnimaPlatform.h"
 #include "AnimaTestSuite.h"
+
+#include "Anima/AnimaPlatform.h"
 
 #include <stdlib.h>
 #include <fstream>

@@ -1,5 +1,5 @@
-#include "AnimaPlatform.h"
-#include "OS/AnimaOSApplication.h"
+#include "Anima/AnimaPlatform.h"
+#include "Anima/OS/AnimaOSApplication.h"
 
 #ifdef AE_PLATFORM_WIN32
 	#include "OS/Win32/AnimaOSApplicationWin32.h"

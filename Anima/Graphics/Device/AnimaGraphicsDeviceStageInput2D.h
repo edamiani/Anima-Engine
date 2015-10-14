@@ -26,9 +26,9 @@ namespace AE
 				virtual ~StageInput2d() {}
 
 				virtual void enqueueColorBuffer(AE::Graphics::ColorBuffer *colorBuffer) = 0;
-				virtual void enqueueIndexBuffer(AE::Graphics::Device::IndexBuffer *indexBuffer) = 0;
+				//virtual void enqueueIndexBuffer(AE::Graphics::Device::IndexBuffer *indexBuffer) = 0;
 				virtual void enqueueTransformedColorBuffer(AE::Graphics::ColorBuffer *colorBuffer, AE::Math::Matrix4 const &modelMatrix, bool resetModelMatrix) = 0;
-				virtual void enqueueVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer) = 0;
+				//virtual void enqueueVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer) = 0;
 
 				/***** Inherited from AE::Graphics::Device::Stage
 				virtual void run() = 0;

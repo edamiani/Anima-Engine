@@ -3,8 +3,8 @@
 
 #include "../AnimaOSWindowManager.h"
 
-#include "AnimaPlatform.h"
-#include "AnimaTypes.h"
+#include "Anima/AnimaPlatform.h"
+#include "Anima/AnimaTypes.h"
 
 #include <list>
 

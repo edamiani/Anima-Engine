@@ -12,12 +12,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\AnimaTests\source\AnimaTestSuite.cpp" />
+    <ClCompile Include="..\..\..\AnimaTests\source\AnimaWindowAndContextTest.cpp" />
     <ClCompile Include="..\..\..\AnimaTests\source\AnimaWindowTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\AnimaTests\source\AnimaTestSuite.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AnimaGraphicsDeviceGL15.vcxproj">
+      <Project>{884207e1-63be-45fd-97c0-6c1a214eb2bd}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
     <ProjectReference Include="..\AnimaOSWin\AnimaOSWin.vcxproj">
       <Project>{bb1ce8db-75b6-4b15-a4a5-6efc6d48b09b}</Project>
     </ProjectReference>
@@ -69,18 +78,20 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\Anima;..\..\..\Dependencies</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\;..\..\..\Dependencies</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName)_d.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies);AnimaOSWin_d.lib;cpptest_d.lib</AdditionalDependencies>
+      <AdditionalDependencies>AnimaOSWin_d.lib;AnimaGraphicsDeviceGL15_d.lib;cpptest_d.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)_d.exe</OutputFile>
       <AdditionalLibraryDirectories>..\Libs;..\..\..\Dependencies\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>

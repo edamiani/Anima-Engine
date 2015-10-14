@@ -28,9 +28,9 @@ namespace AE
 				/***** Inherited from AE::Graphics::Device::StageInput2d *****/
 				void drawColorBuffer(AE::Graphics::ColorBuffer *colorBuffer);
 				void enqueueColorBuffer(AE::Graphics::ColorBuffer *colorBuffer);
-				void enqueueIndexBuffer(AE::Graphics::Device::IndexBuffer *indexBuffer);
+				//void enqueueIndexBuffer(AE::Graphics::Device::IndexBuffer *indexBuffer);
 				void enqueueTransformedColorBuffer(AE::Graphics::ColorBuffer *colorBuffer, AE::Math::Matrix4 const &modelMatrix, bool resetModelMatrix);
-				void enqueueVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer);
+				//void enqueueVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer);
 				
 				/***** Inherited from AE::Graphics::Device::Stage *****/
 				void run();

@@ -40,9 +40,9 @@ namespace AE
 					}
 				}
 
-				AE::Math::Point2<AE::uint> dimensions;
-				bool fullScreen;
-				AE::OS::Window *parentWindow;
+				AE::Math::Point2<AE::uint>	dimensions;
+				bool						fullScreen;
+				AE::OS::Window				*parentWindow;
 
 				ContextDesc & operator=(ContextDesc &rhs)
 				{

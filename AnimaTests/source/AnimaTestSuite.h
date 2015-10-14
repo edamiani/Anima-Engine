@@ -6,7 +6,7 @@ public:
 	ExampleTestSuite()
 	{
 		TEST_ADD(ExampleTestSuite::windowTest);
-		//TEST_ADD(ExampleTestSuite::windowAndContextTest);
+		TEST_ADD(ExampleTestSuite::windowAndContextTest);
 		//TEST_ADD(ExampleTestSuite::plotTest);
 		//TEST_ADD(ExampleTestSuite::simpleImageTest);
 		//TEST_ADD(ExampleTestSuite::imageTest);
@@ -24,6 +24,7 @@ public:
 
 private:
 	void windowTest();
+	void windowAndContextTest();
 	//void consoleTest();
 	//void drawingTest();
 	//void gpuTest();
@@ -36,6 +37,5 @@ private:
 	//void scalingTest();
 	//void sceneHierarchyTest();
 	//void simpleImageTest();
-	//void windowAndContextTest();
 	//void windowToViewportTest();
 };

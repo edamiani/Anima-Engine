@@ -1,16 +1,16 @@
 #include "AnimaTestSuite.h"
 
-#include "AnimaException.h"
-#include "Math\AnimaMathPoint2.h"
-#include "OS\AnimaOSWindowListener.h"
+#include "Anima/AnimaException.h"
+#include "Anima/Math/AnimaMathPoint2.h"
+#include "Anima/OS/AnimaOSWindowListener.h"
 
 #ifdef AE_PLATFORM_WIN32
-#	include "OS\Win32\AnimaOSWindowManagerWin.h"
+#	include "Anima/OS/Win/AnimaOSWindowManagerWin.h"
 #elif defined AE_PLATFORM_LINUX
 #	include "AnimaOSWindowManagerLinux.h"
 #endif
 
-#include "AnimaPluginManager.h"
+#include "Anima/AnimaPluginManager.h"
 
 #include <cassert>
 

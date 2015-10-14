@@ -60,6 +60,9 @@
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceManagerGL15_Win.h">
       <Filter>Header Files\Win</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceGLHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.cpp">

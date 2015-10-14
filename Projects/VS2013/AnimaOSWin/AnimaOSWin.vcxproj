@@ -82,7 +82,7 @@
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeaderFile />
       <PrecompiledHeaderOutputFile />
-      <AdditionalIncludeDirectories>..\..\..\Anima</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -90,7 +90,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>AnimaOS_d.lib</AdditionalDependencies>
+      <AdditionalDependencies>AnimaOS_d.lib;kernel32.lib;user32.lib;gdi32.lib;oleaut32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Libs</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
