@@ -23,6 +23,8 @@ namespace AE
 			{
 				mDeviceContextHandle = ::GetDC(static_cast<AE::OS::WindowWin *>(contextDesc.parentWindow)->_getWindowHandle());
 
+				contextDesc.parentWindow->attachDeviceContext(this);
+
 				AE::int8 redBits = 0, redShift = 0, greenBits = 0, greenShift = 0, blueBits = 0, blueShift = 0, alphaBits = 0, alphaShift = 0;
 				AE::Graphics::ColorFormat colorFormat = contextDesc.getColorFormat();
 				switch(colorFormat)
@@ -112,8 +114,9 @@ namespace AE
 				BOOL result = ::wglMakeCurrent(mDeviceContextHandle, mRenderingContext);
 				assert(result);
 
-				// TODO EBD: This is wrong; isFullScreen() should belong to the device context
-				if(contextDesc.parentWindow->isFullScreen())
+				mIsFullScreen = contextDesc.fullScreen;
+
+				if(mIsFullScreen)
 				{
 					DEVMODE dm;
 					dm.dmSize = sizeof(DEVMODE);
@@ -310,6 +313,28 @@ namespace AE
 
 			void ContextGL15::render()
 			{
+			}
+
+			void ContextGL15::setFullScreen(bool isFullScreen)
+			{
+				if(mIsFullScreen)
+				{
+					/*DEVMODE dm;
+					dm.dmSize = sizeof(DEVMODE);
+					dm.dmPelsWidth = mParentWindow->getDimensions().x;
+					dm.dmPelsHeight = mParentWindow->getDimensions().y;
+					dm.dmBitsPerPel = contextDesc.getColorDepth();
+					dm.dmDisplayFrequency = 60;
+					dm.dmFields = DM_BITSPERPEL | DM_PELSWIDTH | DM_PELSHEIGHT | DM_DISPLAYFREQUENCY;
+					ChangeDisplaySettings(&dm, CDS_FULLSCREEN);*/
+				}
+			}
+
+			void ContextGL15::setParentWindow(AE::OS::Window *parentWindow)
+			{
+				mParentWindow = parentWindow;
+
+				mDeviceContextHandle = ::GetDC(static_cast<AE::OS::WindowWin *>(mParentWindow)->_getWindowHandle());
 			}
 		}
 	}

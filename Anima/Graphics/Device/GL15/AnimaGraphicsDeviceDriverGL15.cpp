@@ -26,8 +26,8 @@ namespace AE
 			{
 				AE::Graphics::Device::Context *deviceContext = new AE::Graphics::Device::ContextGL15(contextDesc, this);
 
-				if (contextDesc.parentWindow) 
-					contextDesc.parentWindow->attachDeviceContext(deviceContext);
+				/*if (contextDesc.parentWindow) 
+					contextDesc.parentWindow->attachDeviceContext(deviceContext);*/
 
 				mDeviceContexts.push_back(deviceContext);
 

@@ -61,12 +61,12 @@ void ExampleTestSuite::windowAndContextTest()
 	AE::Graphics::Device::Driver *deviceDriver;
 
 #ifdef AE_PLATFORM_WIN32
-	deviceManager = static_cast<AE::Graphics::Device::Manager *>(pluginManager->registerPlugin("deviceManagerGL1_5", new AE::Graphics::Device::ManagerGL15()));
-	deviceManager->install(0);
+	deviceManager = static_cast<AE::Graphics::Device::Manager *>(pluginManager->registerPlugin("deviceManagerGL15", new AE::Graphics::Device::ManagerGL15()));
+	pluginManager->getRoot()->attachAndInstall(deviceManager, AE::NO_OPTIONS);
 	deviceDriver = deviceManager->acquireDeviceDriver(0, AE::Graphics::Device::DT_GL_15);
 #else
-	deviceManager = static_cast<AE::Graphics::Device::Manager *>(pluginManager->registerPlugin("deviceManagerGL1_5", new AE::Graphics::Device::ManagerGL15()));
-	deviceManager->install(0);
+	deviceManager = static_cast<AE::Graphics::Device::Manager *>(pluginManager->registerPlugin("deviceManagerGL15", new AE::Graphics::Device::ManagerGL15()));
+	pluginManager->getRoot()->attachAndInstall(deviceManager, AE::NO_OPTIONS);
 	deviceDriver = deviceManager->acquireDeviceDriver(0, AE::Graphics::Device::DT_OPENGL1_5);
 #endif
 
@@ -74,10 +74,8 @@ void ExampleTestSuite::windowAndContextTest()
 	contextDesc.dimensions = window->getDimensions();
 	contextDesc.fullScreen = false;
 	contextDesc.parentWindow = window;
-	//contextDesc.setSurfaceFormat(AE::Graphics::SF_R8G8B8A8);
 
 	AE::Graphics::Device::Context *deviceContext = deviceDriver->createDeviceContext(contextDesc);
-	window->attachDeviceContext(deviceContext);
 
 	window->show();
 

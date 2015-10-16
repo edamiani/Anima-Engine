@@ -28,6 +28,8 @@ namespace AE
 				//AE::Graphics::Surface* createOffscreenSurface(const AE::Math::Point2 &dimensions, AE::Graphics::SurfaceFormat surfaceFormat, bool usesVideoMemory);
 				void endRendering();
 				void render();
+				void setFullScreen(bool isFullScreen);
+				void setParentWindow(AE::OS::Window *parentWindow);
 
 			protected:
 				void _setDeviceContext(HDC hdc) { mDeviceContextHandle = hdc; }

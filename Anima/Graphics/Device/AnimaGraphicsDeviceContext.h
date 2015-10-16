@@ -36,14 +36,17 @@ namespace AE
 				AE::Graphics::Device::FrameBuffer*	getFrameBuffer() { return mFrameBuffer; }
 				AE::OS::Window*						getParentWindow() { return mParentWindow; }
 				AE::Graphics::Device::Pipeline*		getPipeline() { return mPipeline; }
+				bool								isFullScreen() { return mIsFullScreen; }
 				virtual void						render() = 0;
-				void								setParentWindow(AE::OS::Window *parentWindow) { mParentWindow = parentWindow; }
+				virtual void						setFullScreen(bool isFullScreen) = 0;
+				virtual void						setParentWindow(AE::OS::Window *parentWindow) { mParentWindow = parentWindow; }
 				void								setViewport(AE::Graphics::Viewport *viewport) { mViewport = viewport; }
 
 
 			protected:
 				AE::Graphics::Device::Driver		*mDeviceDriver;
 				AE::Graphics::Device::FrameBuffer	*mFrameBuffer;
+				bool								mIsFullScreen;
 				AE::Graphics::Viewport				*mViewport;
 				AE::OS::Window						*mParentWindow;
 				AE::Graphics::Device::Pipeline		*mPipeline;
