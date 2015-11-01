@@ -148,6 +148,17 @@ namespace AE
 				return 0;
 			}
 
+			void FrameBufferGL15::plot(const AE::Graphics::Color &color, const AE::Math::Point2<AE::int32> &position)
+			{
+
+			}
+
+			void FrameBufferGL15::plot32(const AE::uint32 color, const AE::Math::Point2<AE::int32> &position)
+			{
+				glWindowPos2i(position.x, position.y);
+				glDrawPixels(1, 1, mPixelFormatGL, mTypeGL, &color);
+			}
+
 			void FrameBufferGL15::unlock()
 			{
 				glMatrixMode(GL_PROJECTION);

@@ -5,9 +5,9 @@ class ExampleTestSuite : public Test::Suite
 public:
 	ExampleTestSuite()
 	{
-		TEST_ADD(ExampleTestSuite::windowTest);
-		TEST_ADD(ExampleTestSuite::windowAndContextTest);
-		//TEST_ADD(ExampleTestSuite::plotTest);
+		//TEST_ADD(ExampleTestSuite::windowTest);
+		//TEST_ADD(ExampleTestSuite::windowAndContextTest);
+		TEST_ADD(ExampleTestSuite::plotTest);
 		//TEST_ADD(ExampleTestSuite::simpleImageTest);
 		//TEST_ADD(ExampleTestSuite::imageTest);
 		//TEST_ADD(ExampleTestSuite::consoleTest);
@@ -33,7 +33,7 @@ private:
 	//void monitorAndVideoInfoTest();
 	//void MVCTest();
 	//void paintingTest();
-	//void plotTest();
+	void plotTest();
 	//void scalingTest();
 	//void sceneHierarchyTest();
 	//void simpleImageTest();
