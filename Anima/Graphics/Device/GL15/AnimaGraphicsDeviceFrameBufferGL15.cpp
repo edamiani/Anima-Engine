@@ -24,7 +24,11 @@ namespace AE
 				{
 				case CF_X8R8G8B8:
 					mPixelFormatGL = GL_RGB;
-					mTypeGL = GL_UNSIGNED_INT_8_8_8_8_REV;
+//#ifdef AE_LITTLE_ENDIAN
+//					mTypeGL = GL_UNSIGNED_INT_8_8_8_8_REV;
+//#else
+					mTypeGL = GL_UNSIGNED_INT_8_8_8_8;
+//#endif
 					break;
 				case CF_R8G8B8:
 					mPixelFormatGL = GL_RGB;
@@ -37,14 +41,21 @@ namespace AE
 					break;
 				case CF_R5G6B5:
 					mPixelFormatGL = GL_RGB;
-					mTypeGL = GL_UNSIGNED_SHORT_5_6_5_REV;
+//#ifdef AE_LITTLE_ENDIAN
+//					mTypeGL = GL_UNSIGNED_SHORT_5_6_5_REV;
+//#else
+					mTypeGL = GL_UNSIGNED_SHORT_5_6_5;
+//#endif
 					break;
 				case CF_A8R8G8B8:
 				case CF_R8G8B8A8:
-				case CF_R8G8B8X8:
 				default:
 					mPixelFormatGL = GL_RGBA;
-					mTypeGL = GL_UNSIGNED_INT_8_8_8_8_REV;
+//#ifdef AE_LITTLE_ENDIAN
+//					mTypeGL = GL_UNSIGNED_INT_8_8_8_8_REV;
+//#else
+					mTypeGL = GL_UNSIGNED_INT_8_8_8_8;
+//#endif
 					break;
 				}
 			}
@@ -148,9 +159,10 @@ namespace AE
 				return 0;
 			}
 
-			void FrameBufferGL15::plot(const AE::Graphics::Color &color, const AE::Math::Point2<AE::int32> &position)
+			void FrameBufferGL15::plot(const AE::uint32 color, const AE::Math::Point2<AE::int32> &position)
 			{
-
+				glWindowPos2i(position.x, position.y);
+				glDrawPixels(1, 1, mPixelFormatGL, mTypeGL, &color);
 			}
 
 			void FrameBufferGL15::plot32(const AE::uint32 color, const AE::Math::Point2<AE::int32> &position)

@@ -26,7 +26,7 @@ namespace AE
 				void							blitFrom(AE::Graphics::ColorBuffer *source, AE::Math::Point2<AE::uint> srcOffset, AE::Math::Point2<AE::uint> srcDimensions, AE::Math::Point2<AE::int32> const &destPosition);
 				void*							getData();
 				void*							lock(AE::Graphics::LockType lockType) { return 0; }
-				void							plot(const AE::Graphics::Color &color, const AE::Math::Point2<AE::int32> &position) {}
+				void							plot(const AE::uint32 color, const AE::Math::Point2<AE::int32> &position) {}
 				void							plot32(const AE::uint32 color, const AE::Math::Point2<AE::int32> &position) {}
 				void							unlock() {}
 

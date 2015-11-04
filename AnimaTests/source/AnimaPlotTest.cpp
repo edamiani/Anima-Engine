@@ -76,7 +76,9 @@ void drawLine(AE::Graphics::Device::PixelBuffer *pixelBuffer, AE::Graphics::Colo
 	AE::int32 x = begin.x;
 	AE::int32 y = begin.y;
 
-	//surface->plot32(color.get32Bit(), AE::Math::Point2(x, y));
+	AE::uint32 colorInt = color.getRGBA();
+
+	pixelBuffer->plot(colorInt, AE::Math::Point2<AE::int32>(x, y));
 
 	if(deltaX > deltaY) // Is the line wider than taller?
 	{
@@ -84,7 +86,7 @@ void drawLine(AE::Graphics::Device::PixelBuffer *pixelBuffer, AE::Graphics::Colo
 
 		for(int i = 0; i <= deltaX; i++)
 		{
-			//pixelBuffer->plot32(color.get32Bit(), AE::Math::Point2(x, y));
+			pixelBuffer->plot(colorInt, AE::Math::Point2<AE::int32>(x, y));
 
 			if(error >= 0)
 			{
@@ -102,7 +104,7 @@ void drawLine(AE::Graphics::Device::PixelBuffer *pixelBuffer, AE::Graphics::Colo
 
 		for(int i = 0; i <= deltaY; i++)
 		{
-			//pixelBuffer->plot32(color.get32Bit(), AE::Math::Point2(x, y));
+			pixelBuffer->plot(colorInt, AE::Math::Point2<AE::int32>(x, y));
 
 			if(error >= 0)
 			{
@@ -513,10 +515,10 @@ void ExampleTestSuite::plotTest()
 		frameBuffer->lock(AE::Graphics::LT_DISCARD);
 		//frameBuffer->clear(red);
 
-		frameBuffer->plot32(green.get32Bit(), AE::Math::Point2<AE::int32>(100, 100));
-		//drawLine(frameBuffer, white, AE::Math::Point2<AE::int32>(50, 50), AE::Math::Point2<AE::int32>(100, 50));
-		//drawLine(frameBuffer, red, AE::Math::Point2<AE::int32>(101, 51), AE::Math::Point2<AE::int32>(150, 100));
-		//drawLine(frameBuffer, green, AE::Math::Point2<AE::int32>(151, 101), AE::Math::Point2<AE::int32>(250, 50));
+		frameBuffer->plot(green.getRGBA(), AE::Math::Point2<AE::int32>(100, 100));
+		drawLine(frameBuffer, white, AE::Math::Point2<AE::int32>(50, 50), AE::Math::Point2<AE::int32>(100, 50));
+		drawLine(frameBuffer, red, AE::Math::Point2<AE::int32>(101, 51), AE::Math::Point2<AE::int32>(150, 100));
+		drawLine(frameBuffer, blue, AE::Math::Point2<AE::int32>(151, 101), AE::Math::Point2<AE::int32>(250, 50));
 
 		//std::vector<AE::Math::Point2<AE::int32>> points;
 		//points.push_back(AE::Math::Point2<AE::int32>(400, 200));

@@ -32,7 +32,7 @@ namespace AE
 
 				virtual void					blitFrom(AE::Graphics::ColorBuffer *source, AE::Math::Point2<AE::uint> srcOffset, AE::Math::Point2<AE::uint> dimensions, AE::Math::Point2<AE::int32> const &destPosition) = 0;
 				virtual void*					lock(AE::Graphics::LockType lockType) = 0;
-				virtual void					plot(AE::Graphics::Color const &color, AE::Math::Point2<AE::int32> const &position) = 0;
+				virtual void					plot(const AE::uint32 color, AE::Math::Point2<AE::int32> const &position) = 0;
 				virtual void					plot32(AE::uint32 const color, AE::Math::Point2<AE::int32> const &position) = 0;
 				virtual void					unlock() = 0;
 

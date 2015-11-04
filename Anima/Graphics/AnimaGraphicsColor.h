@@ -23,6 +23,16 @@ namespace AE
 				return ((A << 24) + (R << 16) + (G << 8) + B);
 			}
 
+			AE::uint32 getARGB()
+			{
+				return ((A << 24) + (R << 16) + (G << 8) + B);
+			}
+
+			AE::uint32 getRGBA()
+			{
+				return ((R << 24) + (G << 16) + (B << 8) + A);
+			}
+
 			AE::uint8 R;
 			AE::uint8 G;
 			AE::uint8 B;
