@@ -1,7 +1,7 @@
 #ifndef __ANIMA_GRAPHICS_DEVICE_INDEX_BUFFER_GL__
 #define __ANIMA_GRAPHICS_DEVICE_INDEX_BUFFER_GL__
 
-#include "AnimaGraphicsDeviceIndexBuffer.h"
+#include "../AnimaGraphicsDeviceIndexBuffer.h"
 
 #include <vector>
 
@@ -10,7 +10,7 @@
 	#include <Wingdi.h>
 	#include <gl/GL.h>
 	
-	#include "AnimaGraphicsOpenGLExtensions.h"
+	#include "../../AnimaGraphicsOpenGLExtensions.h"
 #endif
 
 namespace AE

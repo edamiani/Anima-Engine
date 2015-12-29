@@ -1,4 +1,4 @@
-#include "../include/AnimaGraphicsDeviceIndexBufferGL.h"
+#include "AnimaGraphicsDeviceIndexBufferGL.h"
 
 namespace AE
 {

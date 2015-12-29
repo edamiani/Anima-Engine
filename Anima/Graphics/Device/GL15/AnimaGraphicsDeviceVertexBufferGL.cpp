@@ -1,5 +1,5 @@
-#include "../include/AnimaGraphicsDeviceVertexBufferGL.h"
-#include "../include/AnimaMathVector3.h"
+#include "AnimaGraphicsDeviceVertexBufferGL.h"
+#include "Anima/Math/AnimaMathVector3.h"
 
 namespace AE
 {

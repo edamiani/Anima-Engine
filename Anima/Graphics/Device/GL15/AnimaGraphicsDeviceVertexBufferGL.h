@@ -1,14 +1,14 @@
 #ifndef __ANIMA_GRAPHICS_DEVICE_VERTEX_BUFFER_GL__
 #define __ANIMA_GRAPHICS_DEVICE_VERTEX_BUFFER_GL__
 
-#include "AnimaGraphicsDeviceVertexBuffer.h"
+#include "../AnimaGraphicsDeviceVertexBuffer.h"
 
 #ifdef WIN32
 	#include <windows.h>
 	#include <Wingdi.h>
 	#include <gl/GL.h>
 	
-	#include "AnimaGraphicsOpenGLExtensions.h"
+	#include "../../AnimaGraphicsOpenGLExtensions.h"
 #endif
 
 #define AE_GL_BUFFER_OFFSET(i) ((char*)NULL + (i))
@@ -35,12 +35,12 @@ namespace AE
 				GLuint		_getVertexBuffer() { return mBufferId; }
 
 			private:
-				GLuint mBufferId;
-				size_t mNumberOfVertices;
-				size_t mOffset;
-				size_t mOffsetBlendWeight0, mOffsetBlendWeight1, mOffsetBlendWeight2, mOffsetBlendWeight3,
-					mOffsetNormal, mOffsetDiffuse, mOffsetSpecular, mOffsetTextureCoordinate0, mOffsetTextureCoordinate1,
-					mOffsetTextureCoordinate2, mOffsetTextureCoordinate3;
+				GLuint		mBufferId;
+				size_t		mNumberOfVertices;
+				size_t		mOffset;
+				size_t		mOffsetBlendWeight0, mOffsetBlendWeight1, mOffsetBlendWeight2, mOffsetBlendWeight3,
+							mOffsetNormal, mOffsetDiffuse, mOffsetSpecular, mOffsetTextureCoordinate0, mOffsetTextureCoordinate1,
+							mOffsetTextureCoordinate2, mOffsetTextureCoordinate3;
 			};
 		}
 	}
