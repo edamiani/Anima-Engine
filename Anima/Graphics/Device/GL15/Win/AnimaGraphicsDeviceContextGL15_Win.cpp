@@ -164,6 +164,8 @@ namespace AE
 				stageInput2d->setNextStage(stageTransformation2d);
 				stageTransformation2d->setNextStage(stageRasterizer);
 				// End of pipeline creation
+
+				glEnableClientState(GL_VERTEX_ARRAY);
 			}
 
 			ContextGL15::~ContextGL15()
@@ -238,6 +240,11 @@ namespace AE
 				glClearDepth(1.0f);
 
 				glShadeModel(GL_SMOOTH);
+
+				AE::Math::Point2<AE::uint> dimensions = mParentWindow->getDimensions();
+
+				gluOrtho2D(0, dimensions.x, 0, dimensions.y);
+				//glViewport(0, 0, dimensions.x, dimensions.y);
 
 				/*AE::Math::Matrix4 viewMatrix = mViewport->getCamera()->getViewMatrix();
 				AE::Math::Matrix4 projectionMatrix = mViewport->getProjectionMatrix();

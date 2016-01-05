@@ -10,8 +10,8 @@
 #include <cassert>
 #include <string.h>
 
-/*#ifndef AE_PLATFORM_LINUX
-// GL_EXT_draw_range_eelments (1.2)
+#ifndef AE_PLATFORM_LINUX
+// GL_EXT_draw_range_elements (1.2)
 PFNGLDRAWRANGEELEMENTSPROC		glDrawRangeElements;
 #endif
 
@@ -38,7 +38,7 @@ PFNGLGETBUFFERPOINTERVPROC		glGetBufferPointerv;
 PFNGLGETBUFFERSUBDATAPROC		glGetBufferSubData;
 PFNGLISBUFFERPROC				glIsBuffer;
 PFNGLMAPBUFFERPROC				glMapBuffer;
-PFNGLUNMAPBUFFERPROC			glUnmapBuffer;*/
+PFNGLUNMAPBUFFERPROC			glUnmapBuffer;
 
 namespace AE
 {
@@ -118,7 +118,7 @@ namespace AE
 
 			void ManagerGL15::_initializeExtensions()
 			{
-				/*if(_checkOpenGLExtension("GL_EXT_draw_range_elements"))
+				if(_checkOpenGLExtension("GL_EXT_draw_range_elements"))
 				{
 					glDrawRangeElements = (PFNGLDRAWRANGEELEMENTSPROC) wglGetProcAddress("glDrawRangeElementsEXT");
 				}
@@ -152,7 +152,7 @@ namespace AE
 					glUnmapBuffer = (PFNGLUNMAPBUFFERPROC) wglGetProcAddress("glUnmapBufferARB");
 					glGetBufferParameteriv = (PFNGLGETBUFFERPARAMETERIVPROC) wglGetProcAddress("glGetBufferParameterivARB");
 					glGetBufferPointerv = (PFNGLGETBUFFERPOINTERVPROC) wglGetProcAddress("glGetBufferPointervARB");
-				}*/
+				}
 			}
 		}
 	}

@@ -51,8 +51,10 @@ namespace AE
 				// Buffer filling process
 				AE::uchar *pIndices = (AE::uchar *)glMapBuffer(GL_ELEMENT_ARRAY_BUFFER, GL_WRITE_ONLY);
 				{
-					for(AE::uint i = 0; i < indices.size(); i++)
+					for (AE::uint i = 0; i < indices.size(); i++)
+					{
 						*pIndices++ = indices[i];
+					}
 
 					glUnmapBuffer(GL_ELEMENT_ARRAY_BUFFER);
 				}

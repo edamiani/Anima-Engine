@@ -507,6 +507,65 @@ void ExampleTestSuite::plotTest()
 	AE::Graphics::Color black(0, 0, 0);
 	AE::Graphics::Color white(255, 255, 255);
 
+#define VERTICES 0 
+#define INDICES 1 
+#define NUM_BUFFERS 2
+
+#define BUFFER_OFFSET(i) ((void*)(i))
+
+	GLuint buffers[NUM_BUFFERS];
+	/*GLfloat vertices[][3] =
+	{
+	{ -1.0, -1.0, -1.0 },
+	{ 1.0, -1.0, -1.0 },
+	{ 1.0, 1.0, -1.0 },
+	{ -1.0, 1.0, -1.0 },
+	{ -1.0, -1.0, 1.0 },
+	{ 1.0, -1.0, 1.0 },
+	{ 1.0, 1.0, 1.0},
+	{ -1.0, 1.0, 1.0 },
+	};*/
+	GLfloat vertices[][3] =
+	{
+		{ 100.0, 100.0, 0.0 },
+		{ 100.0, 200.0, 0.0 },
+		{ 0.0, 200.0, 0.0 },
+		{ 0.0, 100.0, 0.0}
+	};
+
+	/*GLubyte indices[][4] =
+	{
+	{ 0, 1, 2, 3 },
+	{ 4, 7, 6, 5 },
+	{ 0, 4, 5, 1 },
+	{ 3, 2, 6, 7 },
+	{ 0, 3, 7, 4 },
+	{ 1, 5, 6, 2 }
+	};*/
+
+	GLubyte indices[] =
+	{
+		0, 1, 2, 2, 3, 0
+	};
+
+	GLfloat colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0, };
+
+	glEnable(GL_TEXTURE_2D);
+	glEnable(GL_COLOR_MATERIAL);
+
+	glGenBuffers(NUM_BUFFERS, buffers);
+
+	glBindBuffer(GL_ARRAY_BUFFER, buffers[VERTICES]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, buffers[INDICES]);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
 	while(myWindowListener.isRunning())
 	{
 		deviceContext->beginRendering(black);
@@ -519,6 +578,26 @@ void ExampleTestSuite::plotTest()
 		drawLine(frameBuffer, white, AE::Math::Point2<AE::int32>(50, 50), AE::Math::Point2<AE::int32>(100, 50));
 		drawLine(frameBuffer, red, AE::Math::Point2<AE::int32>(101, 51), AE::Math::Point2<AE::int32>(150, 100));
 		drawLine(frameBuffer, blue, AE::Math::Point2<AE::int32>(151, 101), AE::Math::Point2<AE::int32>(250, 50));
+		
+		//glBegin(GL_POLYGON);            // These vertices form a closed polygon
+		//glColor3f(1.0f, 1.0f, 0.0f); // Yellow
+		//glVertex2f(300.f, 100.f);
+		//glVertex2f(300.f, 300.f);
+		//glVertex2f(100, 100);
+		//glEnd();
+
+		glBindBuffer(GL_ARRAY_BUFFER, buffers[VERTICES]);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, buffers[INDICES]);
+		glEnableClientState(GL_VERTEX_ARRAY);
+		glVertexPointer(3, GL_FLOAT, 0, BUFFER_OFFSET(0));
+
+		//glDrawElements(GL_QUADS, 1, GL_UNSIGNED_BYTE, BUFFER_OFFSET(0));
+		//glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawElements(GL_TRIANGLES, sizeof(indices), GL_UNSIGNED_BYTE, 0);
+
+		glDisableClientState(GL_VERTEX_ARRAY);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
 		//std::vector<AE::Math::Point2<AE::int32>> points;
 		//points.push_back(AE::Math::Point2<AE::int32>(400, 200));

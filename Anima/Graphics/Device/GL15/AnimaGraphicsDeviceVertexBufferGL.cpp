@@ -218,6 +218,7 @@ namespace AE
 							}
 						}
 					}
+
 					mNumberOfVertices = vertexBufferDesc.positions->size();
 
 					glUnmapBuffer(GL_ARRAY_BUFFER);
