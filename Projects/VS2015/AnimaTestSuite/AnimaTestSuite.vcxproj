@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\AnimaTests\source\Anima3DTest.cpp" />
     <ClCompile Include="..\..\..\AnimaTests\source\AnimaPlotTest.cpp" />
     <ClCompile Include="..\..\..\AnimaTests\source\AnimaTestSuite.cpp" />
     <ClCompile Include="..\..\..\AnimaTests\source\AnimaWindowAndContextTest.cpp" />
