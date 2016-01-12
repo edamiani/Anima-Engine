@@ -49,13 +49,13 @@ void ExampleTestSuite::windowTest()
 	windowDesc.position = AE::Math::Point2<AE::int32>(0, 0);
 	AE::OS::Window *window = windowManager->createWindow("Window Test", windowDesc);
 
-	MyWindowListener myWindowListener;
+	MyWindowListener *myWindowListener = new MyWindowListener();
 	AE::OS::EventQueue *eventQueue = windowManager->getEventQueue();
-	eventQueue->registerWindowListener(&myWindowListener);
+	eventQueue->registerWindowListener(myWindowListener);
 
 	window->show();
 
-	while(myWindowListener.isRunning())
+	while(myWindowListener->isRunning())
 	{
 		eventQueue->getNextEvent(0);
 	}
@@ -63,4 +63,6 @@ void ExampleTestSuite::windowTest()
 	windowManager->uninstall();
 
 	pluginManager->shutdown();
+
+	delete myWindowListener;
 }

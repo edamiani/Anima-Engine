@@ -44,20 +44,47 @@ namespace AE
 				AE::uint							vertexElements;
 			};
 
+			struct VertexDesc
+			{
+				VertexDesc() :
+					blendWeight0(0), blendWeight1(0), blendWeight2(0), blendWeight3(0),
+					diffuseColor(0), normal(AE::Math::Vector3::ZERO), position(AE::Math::Vector3::ZERO), specularColor(0),
+					textureCoordinate0(AE::Math::Vector2::ZERO), textureCoordinate1(AE::Math::Vector2::ZERO), 
+					textureCoordinate2(AE::Math::Vector2::ZERO), textureCoordinate3(AE::Math::Vector2::ZERO)
+					{ }
+
+				~VertexDesc() { }
+
+				AE::Real				blendWeight0;
+				AE::Real				blendWeight1;
+				AE::Real				blendWeight2;
+				AE::Real				blendWeight3;
+				AE::Graphics::RGBA		diffuseColor;
+				AE::Math::Vector3		normal;
+				AE::Math::Vector3		position;
+				AE::Graphics::RGBA		specularColor;
+				AE::Math::Vector2		textureCoordinate0;
+				AE::Math::Vector2		textureCoordinate1;
+				AE::Math::Vector2		textureCoordinate2;
+				AE::Math::Vector2		textureCoordinate3;
+			};
+
 			class VertexBuffer
 			{
 			public:
 				VertexBuffer() : mVertexDeclaration(0) { }
 				virtual ~VertexBuffer() { }
 
-				virtual size_t getOffset() = 0;
-				virtual size_t getSize() = 0;
-				virtual size_t getStrideInBytes() = 0;
-				AE::uint getVertexDeclaration() { return mVertexDeclaration; }
-				virtual AE::uchar* getVertexElement(VertexElement elementType) = 0;
+				virtual void		addVertex(const VertexDesc &vertex) = 0;
+
+				virtual size_t		getOffset() = 0;
+				virtual size_t		getSize() = 0;
+				virtual size_t		getStrideInBytes() = 0;
+				AE::uint			getVertexDeclaration() { return mVertexDeclaration; }
+				virtual AE::uchar*	getVertexElement(VertexElement elementType) = 0;
 
 			protected:
-				AE::uint mVertexDeclaration;
+				AE::uint			mVertexDeclaration;
 			};
 		}
 	}

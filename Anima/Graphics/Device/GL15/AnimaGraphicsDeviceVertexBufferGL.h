@@ -25,6 +25,8 @@ namespace AE
 				VertexBufferGL(VertexBufferDesc &vertexBufferDesc);
 				virtual ~VertexBufferGL() { glDeleteBuffers(1, &mBufferId); }
 
+				void		addVertex(const VertexDesc &vertex);
+
 				size_t		getOffset() { return mOffset; }
 				size_t		getSize() { return mNumberOfVertices; }
 				size_t		getStrideInBytes() { return mOffset; }
@@ -41,6 +43,10 @@ namespace AE
 				size_t		mOffsetBlendWeight0, mOffsetBlendWeight1, mOffsetBlendWeight2, mOffsetBlendWeight3,
 							mOffsetNormal, mOffsetDiffuse, mOffsetSpecular, mOffsetTextureCoordinate0, mOffsetTextureCoordinate1,
 							mOffsetTextureCoordinate2, mOffsetTextureCoordinate3;
+
+				std::vector<GLubyte>			mDiffuseColors;
+				std::vector<AE::Math::Vector3>	mNormals;
+				std::vector<AE::Math::Vector3>	mPositions;
 			};
 		}
 	}

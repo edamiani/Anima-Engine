@@ -24,11 +24,11 @@
 #include <map>
 #include <vector>
 
-class MyWindowListener : public AE::OS::WindowListener, AE::OS::KeyListener
+class Test3DListener : public AE::OS::WindowListener, AE::OS::KeyListener
 {
 public:
-	MyWindowListener() : mIsRunning(true) {}
-	~MyWindowListener() {}
+	Test3DListener() : mIsRunning(true) {}
+	~Test3DListener() {}
 
 	bool isRunning() { return mIsRunning; }
 
@@ -41,7 +41,7 @@ protected:
 	bool mIsRunning;
 };
 
-void ExampleTestSuite::Test3D()
+void ExampleTestSuite::test3D()
 {
 	/*AE::PluginManager *pluginManager = AE::PluginManager::getInstance();
 
@@ -126,9 +126,9 @@ void ExampleTestSuite::Test3D()
 	AE::OS::WindowDesc windowDesc;
 	windowDesc.dimensions = AE::Math::Point2<AE::uint>(640, 480);
 	windowDesc.position = AE::Math::Point2<AE::int32>(100, 100);
-	AE::OS::Window *window = windowManager->createWindow("Plot Test", windowDesc);
+	AE::OS::Window *window = windowManager->createWindow("3D Test", windowDesc);
 
-	MyWindowListener myWindowListener;
+	Test3DListener myWindowListener;
 	AE::OS::EventQueue *eventQueue = windowManager->getEventQueue();
 	eventQueue->registerWindowListener(&myWindowListener);
 
@@ -229,9 +229,6 @@ void ExampleTestSuite::Test3D()
 		//frameBuffer->clear(red);
 
 		frameBuffer->plot(green.getRGBA(), AE::Math::Point2<AE::int32>(100, 100));
-		drawLine(frameBuffer, white, AE::Math::Point2<AE::int32>(50, 50), AE::Math::Point2<AE::int32>(100, 50));
-		drawLine(frameBuffer, red, AE::Math::Point2<AE::int32>(101, 51), AE::Math::Point2<AE::int32>(150, 100));
-		drawLine(frameBuffer, blue, AE::Math::Point2<AE::int32>(151, 101), AE::Math::Point2<AE::int32>(250, 50));
 		
 		//glBegin(GL_POLYGON);            // These vertices form a closed polygon
 		//glColor3f(1.0f, 1.0f, 0.0f); // Yellow
@@ -252,44 +249,6 @@ void ExampleTestSuite::Test3D()
 		glDisableClientState(GL_VERTEX_ARRAY);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-
-		//std::vector<AE::Math::Point2<AE::int32>> points;
-		//points.push_back(AE::Math::Point2<AE::int32>(400, 200));
-		//points.push_back(AE::Math::Point2<AE::int32>(403, 200));
-		//points.push_back(AE::Math::Point2<AE::int32>(406, 203));
-		//points.push_back(AE::Math::Point2<AE::int32>(403, 206));
-		//points.push_back(AE::Math::Point2<AE::int32>(400, 206));
-		//points.push_back(AE::Math::Point2<AE::int32>(397, 203));
-		//drawPolygon(frameBuffer, white, points);
-
-		//std::vector<AE::Math::Point2<AE::int32>> points2;
-		///*points2.push_back(AE::Math::Point2(2, 3));
-		//points2.push_back(AE::Math::Point2(7, 1));
-		//points2.push_back(AE::Math::Point2(13, 5));
-		//points2.push_back(AE::Math::Point2(13, 11));
-		//points2.push_back(AE::Math::Point2(7, 7));
-		//points2.push_back(AE::Math::Point2(2, 9));*/
-		///*points2.push_back(AE::Math::Point2(50, 50));
-		//points2.push_back(AE::Math::Point2(30, 30));
-		//points2.push_back(AE::Math::Point2(70, 30));*/
-		//points2.push_back(AE::Math::Point2<AE::int32>(200, 200));
-		//points2.push_back(AE::Math::Point2<AE::int32>(300, 200));
-		//points2.push_back(AE::Math::Point2<AE::int32>(350, 275));
-		//points2.push_back(AE::Math::Point2<AE::int32>(300, 350));
-		//points2.push_back(AE::Math::Point2<AE::int32>(200, 350));
-		//points2.push_back(AE::Math::Point2<AE::int32>(150, 275));
-		//drawFilledPolygon(frameBuffer, white, points2);
-
-		//drawCircle(frameBuffer, blue, AE::Math::Point2<AE::int32>(320, 240), AE::int32(5) );
-		//drawCircle(frameBuffer, red, AE::Math::Point2<AE::int32>(320, 240), AE::int32(10));
-		//drawCircle(frameBuffer, red, AE::Math::Point2<AE::int32>(320, 240), AE::int32(15));
-		//drawCircle(frameBuffer, red, AE::Math::Point2<AE::int32>(320, 240), AE::int32(20));
-		//drawCircle(frameBuffer, red, AE::Math::Point2<AE::int32>(320, 240), AE::int32(25));
-		//drawCircle(frameBuffer, red, AE::Math::Point2<AE::int32>(320, 240), AE::int32(30));
-		//drawCircle(frameBuffer, red, AE::Math::Point2<AE::int32>(320, 240), AE::int32(35));
-		//drawCircle(frameBuffer, red, AE::Math::Point2<AE::int32>(320, 240), AE::int32(40));
-		//drawCircle(frameBuffer, red, AE::Math::Point2<AE::int32>(320, 240), AE::int32(45));
-		//drawCircle(frameBuffer, blue, AE::Math::Point2<AE::int32>(320, 240), AE::int32(50));
 
 		frameBuffer->unlock();
 

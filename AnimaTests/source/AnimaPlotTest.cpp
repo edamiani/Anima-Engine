@@ -24,11 +24,11 @@
 #include <map>
 #include <vector>
 
-class MyWindowListener : public AE::OS::WindowListener
+class PlotTestListener : public AE::OS::WindowListener
 {
 public:
-	MyWindowListener() : mIsRunning(true) {}
-	~MyWindowListener() {}
+	PlotTestListener() : mIsRunning(true) {}
+	~PlotTestListener() {}
 
 	bool isRunning() { return mIsRunning; }
 
@@ -474,7 +474,7 @@ void ExampleTestSuite::plotTest()
 	windowDesc.position = AE::Math::Point2<AE::int32>(100, 100);
 	AE::OS::Window *window = windowManager->createWindow("Plot Test", windowDesc);
 
-	MyWindowListener myWindowListener;
+	PlotTestListener myWindowListener;
 	AE::OS::EventQueue *eventQueue = windowManager->getEventQueue();
 	eventQueue->registerWindowListener(&myWindowListener);
 

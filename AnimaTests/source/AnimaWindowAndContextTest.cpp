@@ -17,11 +17,11 @@
 
 #include <cassert>
 
-class MyWindowListener : public AE::OS::WindowListener
+class WindowAndContextListener : public AE::OS::WindowListener
 {
 public:
-	MyWindowListener() : mIsRunning(true) {}
-	~MyWindowListener() {}
+	WindowAndContextListener() : mIsRunning(true) {}
+	~WindowAndContextListener() {}
 
 	bool isRunning() { return mIsRunning; }
 
@@ -53,7 +53,7 @@ void ExampleTestSuite::windowAndContextTest()
 
 	AE::OS::Window *window = windowManager->createWindow("Window Test", windowDesc);
 
-	MyWindowListener myWindowListener;
+	WindowAndContextListener myWindowListener;
 	AE::OS::EventQueue *eventQueue = windowManager->getEventQueue();
 	eventQueue->registerWindowListener(&myWindowListener);
 

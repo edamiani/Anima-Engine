@@ -227,6 +227,24 @@ namespace AE
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
 			}
 
+			void VertexBufferGL::addVertex(const VertexDesc &vertex)
+			{
+				if (mVertexDeclaration & VE_POSITION)
+				{
+					mPositions.push_back(vertex.position);
+				}
+
+				if (mVertexDeclaration & VE_NORMAL)
+				{
+					mNormals.push_back(vertex.normal);
+				}
+
+				if (mVertexDeclaration & VE_DIFFUSE)
+				{
+					mDiffuseColors.push_back(vertex.diffuseColor);
+				}
+			}
+
 			AE::uchar* VertexBufferGL::getVertexElement(VertexElement elementType)
 			{
 				size_t offset = 0;
