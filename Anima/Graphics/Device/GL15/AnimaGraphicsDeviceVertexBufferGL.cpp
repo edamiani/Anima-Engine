@@ -242,6 +242,7 @@ namespace AE
 				if (mVertexDeclaration & VE_DIFFUSE)
 				{
 					mDiffuseColors.push_back(vertex.diffuseColor);
+
 				}
 			}
 
