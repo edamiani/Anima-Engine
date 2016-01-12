@@ -7,8 +7,13 @@ namespace AE
 	{
 		namespace Device
 		{
-		VertexBufferGL::VertexBufferGL(VertexBufferDesc &vertexBufferDesc) 
-			: mOffset(0)
+			VertexBufferGL::VertexBufferGL()
+			{
+
+			}
+
+			VertexBufferGL::VertexBufferGL(VertexBufferDesc &vertexBufferDesc) 
+				: mOffset(0)
 			{
 				mOffsetBlendWeight0 = mOffsetBlendWeight1 = mOffsetBlendWeight2 = mOffsetBlendWeight3 =
 					mOffsetNormal = mOffsetDiffuse = mOffsetSpecular = mOffsetTextureCoordinate0 = mOffsetTextureCoordinate1 = 
@@ -227,6 +232,27 @@ namespace AE
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
 			}
 
+			void VertexBufferGL::addDiffuseColor(const AE::Graphics::Color &diffuseColor)
+			{
+				GLubyte colorChannels[4];
+				colorChannels[0] = diffuseColor.R;
+				colorChannels[1] = diffuseColor.G;
+				colorChannels[2] = diffuseColor.B;
+				colorChannels[3] = diffuseColor.A;
+
+				mDiffuseColors.push_back(colorChannels);
+			}
+
+			void VertexBufferGL::addNormal(const AE::Math::Vector3 &normal)
+			{
+				mNormals.push_back(normal);
+			}
+
+			void VertexBufferGL::addPosition(const AE::Math::Vector3 &position)
+			{
+				mPositions.push_back(position);
+			}
+
 			void VertexBufferGL::addVertex(const VertexDesc &vertex)
 			{
 				if (mVertexDeclaration & VE_POSITION)
@@ -241,8 +267,13 @@ namespace AE
 
 				if (mVertexDeclaration & VE_DIFFUSE)
 				{
-					mDiffuseColors.push_back(vertex.diffuseColor);
+					GLubyte colorChannels[4];
+					colorChannels[0] = vertex.diffuseColor.R;
+					colorChannels[1] = vertex.diffuseColor.G;
+					colorChannels[2] = vertex.diffuseColor.B;
+					colorChannels[3] = vertex.diffuseColor.A;
 
+					mDiffuseColors.push_back(colorChannels);
 				}
 			}
 

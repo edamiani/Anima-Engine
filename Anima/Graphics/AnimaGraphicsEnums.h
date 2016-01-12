@@ -150,6 +150,7 @@ namespace AE
 			RT_NONE,
 			RT_DIRECT3D9,
 			RT_DIRECT3D10,
+			RT_DIRECT3D11,
 			RT_OPENGL
 		};
 

@@ -1,6 +1,8 @@
 #ifndef __AE_GRAPHICS_DEVICE_CONTEXT__
 #define __AE_GRAPHICS_DEVICE_CONTEXT__
 
+#include "AnimaGraphicsDeviceVertexBuffer.h"
+
 #include "Anima/AnimaTypes.h"
 #include "Anima/Graphics/AnimaGraphicsSurface.h"
 
@@ -31,6 +33,7 @@ namespace AE
 
 				virtual bool						beginRendering() = 0;
 				virtual bool						beginRendering(const AE::Graphics::Color &clearColor) = 0;
+				virtual void						draw3dObject(AE::Graphics::RenderOperationType operationType, AE::Graphics::Device::VertexBuffer *vertexBuffer) = 0;
 				virtual void						endRendering() = 0;
 				AE::Graphics::Device::Driver*		getDeviceDriver() { return mDeviceDriver; }
 				AE::Graphics::Device::FrameBuffer*	getFrameBuffer() { return mFrameBuffer; }

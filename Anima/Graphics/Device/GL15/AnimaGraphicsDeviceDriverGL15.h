@@ -15,10 +15,9 @@ namespace AE
 				DriverGL15(AE::uint deviceId);
 				~DriverGL15();
 
-				AE::Graphics::Device::Context* createDeviceContext(AE::Graphics::Device::ContextDesc &contextDesc, const std::string &contextName = "");
-
-			protected:
-
+				AE::Graphics::Device::Context*		createDeviceContext(AE::Graphics::Device::ContextDesc &contextDesc, const std::string &contextName = "");
+				AE::Graphics::Device::VertexBuffer*	createEmptyVertexBuffer();
+				void								destroyVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer);
 			};
 		}
 	}

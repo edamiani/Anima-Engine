@@ -6,6 +6,7 @@
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceFrameBuffer.h"
 #include "Anima/Graphics/Device/GL15/AnimaGraphicsDeviceManagerGL15.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDevicePixelBuffer.h"
+#include "Anima/Graphics/Device/AnimaGraphicsDeviceVertexBuffer.h"
 #include "Anima/Math/AnimaMathPoint2.h"
 #include "Anima/OS/AnimaOSWindowListener.h"
 
@@ -219,6 +220,16 @@ void ExampleTestSuite::test3D()
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
+	AE::Graphics::Device::VertexBuffer *vertexBuffer = deviceDriver->createEmptyVertexBuffer();
+	vertexBuffer->addPosition(AE::Math::Vector3(100, 100, 0));
+	vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 1));
+	vertexBuffer->addPosition(AE::Math::Vector3(100, 200, 0));
+	vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 0));
+	vertexBuffer->addPosition(AE::Math::Vector3(0, 200, 0));
+	vertexBuffer->addDiffuseColor(AE::Graphics::Color(0, 1, 1));
+
+
 
 	while(myWindowListener.isRunning())
 	{

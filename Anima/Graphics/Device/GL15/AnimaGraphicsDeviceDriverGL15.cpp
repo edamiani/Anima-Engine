@@ -1,5 +1,6 @@
 #include "AnimaGraphicsDeviceDriverGL15.h"
 #include "AnimaGraphicsDeviceContextGL15.h"
+#include "AnimaGraphicsDeviceVertexBufferGL.h"
 
 #include "Anima/Graphics/AnimaGraphicsAxesConvention2d.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceContextDesc.h"
@@ -32,6 +33,18 @@ namespace AE
 				mDeviceContexts.push_back(deviceContext);
 
 				return deviceContext;
+			}
+
+			AE::Graphics::Device::VertexBuffer* DriverGL15::createEmptyVertexBuffer()
+			{
+				AE::Graphics::Device::VertexBuffer *vertexBuffer = new AE::Graphics::Device::VertexBufferGL();
+
+				return vertexBuffer;
+			}
+
+			void destroyVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer)
+			{
+				delete vertexBuffer;
 			}
 		}
 	}

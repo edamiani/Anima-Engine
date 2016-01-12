@@ -2,6 +2,7 @@
 #define __AE_GRAPHICS_DEVICE_DRIVER__
 
 #include "AnimaGraphicsDeviceContextDesc.h"
+#include "AnimaGraphicsDeviceVertexBuffer.h"
 
 #include "Anima/Graphics/AnimaGraphicsEnums.h"
 #include "Anima/Math/AnimaMathPoint2.h"
@@ -29,20 +30,23 @@ namespace AE
 			{
 			public:
 				Driver(AE::uint deviceId, AE::Graphics::Device::DriverType driverType) 
-					: mDeviceId(deviceId), mType(driverType), mRenderablePixelBufferId(0) {}
+					: mBufferIdCount(-1), mDeviceId(deviceId), mType(driverType), mRenderablePixelBufferId(0) {}
 				~Driver() {}
 
-				virtual AE::Graphics::Device::Context*	createDeviceContext(AE::Graphics::Device::ContextDesc &contextDesc, const std::string &contextName = "") = 0;
-				AE::Graphics::Device::Context*			getDeviceContext(AE::uint index) { return mDeviceContexts[index]; }
-				AE::uint								getDeviceId() { return mDeviceId; }
-				AE::Graphics::Device::DriverType		getType() { return mType; }
+				virtual AE::Graphics::Device::Context*		createDeviceContext(AE::Graphics::Device::ContextDesc &contextDesc, const std::string &contextName = "") = 0;
+				virtual AE::Graphics::Device::VertexBuffer*	createEmptyVertexBuffer() = 0;
+				virtual void								destroyVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer) = 0;
+				AE::Graphics::Device::Context*				getDeviceContext(AE::uint index) { return mDeviceContexts[index]; }
+				AE::uint									getDeviceId() { return mDeviceId; }
+				AE::Graphics::Device::DriverType			getType() { return mType; }
 
 			protected:
+				AE::int32									mBufferIdCount;
 				std::vector<AE::Graphics::Device::Context *> 
-														mDeviceContexts;
-				AE::uint								mDeviceId;
-				AE::uint								mRenderablePixelBufferId;
-				AE::Graphics::Device::DriverType		mType;
+															mDeviceContexts;
+				AE::uint									mDeviceId;
+				AE::uint									mRenderablePixelBufferId;
+				AE::Graphics::Device::DriverType			mType;
 			};
 		}
 	}

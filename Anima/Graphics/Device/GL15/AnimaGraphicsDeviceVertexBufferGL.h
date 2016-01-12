@@ -22,9 +22,13 @@ namespace AE
 			class VertexBufferGL : public VertexBuffer
 			{
 			public:
+				VertexBufferGL();
 				VertexBufferGL(VertexBufferDesc &vertexBufferDesc);
-				virtual ~VertexBufferGL() { glDeleteBuffers(1, &mBufferId); }
+				~VertexBufferGL() { glDeleteBuffers(1, &mBufferId); }
 
+				void		addDiffuseColor(const AE::Graphics::Color &diffuseColor);
+				void		addNormal(const AE::Math::Vector3 &normal);
+				void		addPosition(const AE::Math::Vector3 &position);
 				void		addVertex(const VertexDesc &vertex);
 
 				size_t		getOffset() { return mOffset; }
@@ -44,7 +48,7 @@ namespace AE
 							mOffsetNormal, mOffsetDiffuse, mOffsetSpecular, mOffsetTextureCoordinate0, mOffsetTextureCoordinate1,
 							mOffsetTextureCoordinate2, mOffsetTextureCoordinate3;
 
-				std::vector<GLubyte>			mDiffuseColors;
+				std::vector<GLubyte *>			mDiffuseColors;
 				std::vector<AE::Math::Vector3>	mNormals;
 				std::vector<AE::Math::Vector3>	mPositions;
 			};

@@ -32,10 +32,10 @@ namespace AE
 				std::vector<AE::Real>				*blendWeights3;
 				AE::Graphics::BufferChangeFrequency	bufferChangeFrequency;
 				AE::Graphics::BufferUsage			bufferUsage;
-				std::vector<AE::Graphics::RGBA>		*diffuseColors;
+				std::vector<AE::Graphics::Color>	*diffuseColors;
 				std::vector<AE::Math::Vector3>		*normals;
 				std::vector<AE::Math::Vector3>		*positions;
-				std::vector<AE::Graphics::RGBA>		*specularColors;
+				std::vector<AE::Graphics::Color>	*specularColors;
 				std::vector<AE::Math::Vector2>		*textureCoordinates0;
 				std::vector<AE::Math::Vector2>		*textureCoordinates1;
 				std::vector<AE::Math::Vector2>		*textureCoordinates2;
@@ -48,7 +48,8 @@ namespace AE
 			{
 				VertexDesc() :
 					blendWeight0(0), blendWeight1(0), blendWeight2(0), blendWeight3(0),
-					diffuseColor(0), normal(AE::Math::Vector3::ZERO), position(AE::Math::Vector3::ZERO), specularColor(0),
+					diffuseColor(AE::Graphics::Color(0, 0, 0, 0)), normal(AE::Math::Vector3::ZERO), 
+					position(AE::Math::Vector3::ZERO), specularColor(AE::Graphics::Color(0, 0, 0, 0)),
 					textureCoordinate0(AE::Math::Vector2::ZERO), textureCoordinate1(AE::Math::Vector2::ZERO), 
 					textureCoordinate2(AE::Math::Vector2::ZERO), textureCoordinate3(AE::Math::Vector2::ZERO)
 					{ }
@@ -59,10 +60,10 @@ namespace AE
 				AE::Real				blendWeight1;
 				AE::Real				blendWeight2;
 				AE::Real				blendWeight3;
-				AE::Graphics::RGBA		diffuseColor;
+				AE::Graphics::Color		diffuseColor;
 				AE::Math::Vector3		normal;
 				AE::Math::Vector3		position;
-				AE::Graphics::RGBA		specularColor;
+				AE::Graphics::Color		specularColor;
 				AE::Math::Vector2		textureCoordinate0;
 				AE::Math::Vector2		textureCoordinate1;
 				AE::Math::Vector2		textureCoordinate2;
@@ -75,6 +76,9 @@ namespace AE
 				VertexBuffer() : mVertexDeclaration(0) { }
 				virtual ~VertexBuffer() { }
 
+				virtual void		addDiffuseColor(const AE::Graphics::Color &diffuseColor) = 0;
+				virtual void		addNormal(const AE::Math::Vector3 &normal) = 0;
+				virtual void		addPosition(const AE::Math::Vector3 &position) = 0;
 				virtual void		addVertex(const VertexDesc &vertex) = 0;
 
 				virtual size_t		getOffset() = 0;
@@ -89,6 +93,5 @@ namespace AE
 		}
 	}
 }
-
 
 #endif

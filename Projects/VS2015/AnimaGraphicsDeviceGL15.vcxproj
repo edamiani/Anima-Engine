@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextGL_Base.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceGLHeaders.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL15.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.h" />
@@ -39,6 +40,7 @@
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceManagerGL15_Win.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextGL_Base.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceFrameBufferGL15.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.cpp" />

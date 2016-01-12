@@ -69,6 +69,9 @@
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextGL_Base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.cpp">
@@ -117,6 +120,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextGL_Base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
