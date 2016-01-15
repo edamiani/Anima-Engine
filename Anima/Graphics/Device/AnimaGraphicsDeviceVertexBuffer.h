@@ -76,19 +76,24 @@ namespace AE
 				VertexBuffer() : mVertexDeclaration(0) { }
 				virtual ~VertexBuffer() { }
 
-				virtual void		addDiffuseColor(const AE::Graphics::Color &diffuseColor) = 0;
-				virtual void		addNormal(const AE::Math::Vector3 &normal) = 0;
-				virtual void		addPosition(const AE::Math::Vector3 &position) = 0;
-				virtual void		addVertex(const VertexDesc &vertex) = 0;
+				virtual void				addDiffuseColor(const AE::Graphics::Color &diffuseColor) = 0;
+				virtual void				addNormal(const AE::Math::Vector3 &normal) = 0;
+				virtual void				addPosition(const AE::Math::Vector3 &position) = 0;
+				virtual void				addVertex(const VertexDesc &vertex) = 0;
+				virtual void				lock() = 0;
+				virtual void				unlock() = 0;
 
-				virtual size_t		getOffset() = 0;
-				virtual size_t		getSize() = 0;
-				virtual size_t		getStrideInBytes() = 0;
-				AE::uint			getVertexDeclaration() { return mVertexDeclaration; }
-				virtual AE::uchar*	getVertexElement(VertexElement elementType) = 0;
+				virtual size_t				getOffset() = 0;
+				virtual size_t				getSize() = 0;
+				virtual size_t				getStrideInBytes() = 0;
+				AE::uint					getVertexDeclaration() { return mVertexDeclaration; }
+				virtual AE::uchar*			getVertexElement(VertexElement elementType) = 0;
 
 			protected:
-				AE::uint			mVertexDeclaration;
+				AE::Graphics::BufferUsage	mBufferUsage;
+				AE::Graphics::BufferChangeFrequency 
+											mBufferChangeFrequency;
+				AE::uint					mVertexDeclaration;
 			};
 		}
 	}

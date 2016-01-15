@@ -12,6 +12,13 @@ namespace AE
 
 			}
 
+			VertexBufferGL::VertexBufferGL(GLuint id, AE::uint vertexDeclaration, AE::Graphics::BufferUsage bufferUsage, AE::Graphics::BufferChangeFrequency bufferChangeFrequency)
+			{
+				mBufferId = id;
+				mVertexDeclaration = vertexDeclaration;
+				mBufferUsage = bufferUsage;
+			}
+
 			VertexBufferGL::VertexBufferGL(VertexBufferDesc &vertexBufferDesc) 
 				: mOffset(0)
 			{
@@ -255,17 +262,17 @@ namespace AE
 
 			void VertexBufferGL::addVertex(const VertexDesc &vertex)
 			{
-				if (mVertexDeclaration & VE_POSITION)
+				if(mVertexDeclaration & VE_POSITION)
 				{
 					mPositions.push_back(vertex.position);
 				}
 
-				if (mVertexDeclaration & VE_NORMAL)
+				if(mVertexDeclaration & VE_NORMAL)
 				{
 					mNormals.push_back(vertex.normal);
 				}
 
-				if (mVertexDeclaration & VE_DIFFUSE)
+				if(mVertexDeclaration & VE_DIFFUSE)
 				{
 					GLubyte colorChannels[4];
 					colorChannels[0] = vertex.diffuseColor.R;
@@ -275,6 +282,55 @@ namespace AE
 
 					mDiffuseColors.push_back(colorChannels);
 				}
+			}
+
+			void VertexBufferGL::lock()
+			{
+				glBindBuffer(GL_ARRAY_BUFFER, mBufferId);
+			}
+
+			void VertexBufferGL::unlock()
+			{
+				// First, find the vertex data's total size and properly set the offsets
+				AE::uint currentOffset = 0;
+
+				AE::uint dataSize = sizeof(AE::Math::Vector3) * mPositions.size();
+
+				if(mVertexDeclaration | AE::Graphics::VE_NORMAL)
+				{
+					mOffsetNormal = currentOffset;
+					currentOffset += sizeof(AE::Math::Vector3) * mPositions.size();
+
+					dataSize += sizeof(AE::Math::Vector3) * mPositions.size();
+				}
+
+				if(mVertexDeclaration | AE::Graphics::VE_DIFFUSE)
+				{
+					mOffsetDiffuse = currentOffset;
+					currentOffset += 4 * sizeof(GLubyte) * mDiffuseColors.size();
+
+					dataSize += 4 * sizeof(GLubyte) * mDiffuseColors.size();
+				}
+
+				// Now allocate the correct size in the buffer
+				glBufferData(GL_ARRAY_BUFFER, dataSize, 0, GL_STREAM_READ);
+
+				// Fill in buffer data
+				glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(AE::Math::Vector3) * mPositions.size(), mPositions.data());
+
+				currentOffset = sizeof(AE::Math::Vector3) * mPositions.size();
+
+				if(mVertexDeclaration | AE::Graphics::VE_NORMAL)
+				{
+					glBufferSubData(GL_ARRAY_BUFFER, currentOffset, sizeof(AE::Math::Vector3) * mNormals.size(), mNormals.data());
+				}
+
+				if(mVertexDeclaration | AE::Graphics::VE_DIFFUSE)
+				{
+					glBufferSubData(GL_ARRAY_BUFFER, currentOffset, sizeof(AE::Math::Vector3) * mDiffuseColors.size(), mDiffuseColors.data());
+				}
+
+				glBindBuffer(GL_ARRAY_BUFFER, 0);
 			}
 
 			AE::uchar* VertexBufferGL::getVertexElement(VertexElement elementType)

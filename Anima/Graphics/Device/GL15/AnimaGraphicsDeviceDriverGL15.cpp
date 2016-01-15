@@ -35,14 +35,14 @@ namespace AE
 				return deviceContext;
 			}
 
-			AE::Graphics::Device::VertexBuffer* DriverGL15::createEmptyVertexBuffer()
+			AE::Graphics::Device::VertexBuffer* DriverGL15::createEmptyVertexBuffer(AE::uint vertexDeclaration, AE::Graphics::BufferUsage bufferUsage, AE::Graphics::BufferChangeFrequency bufferChangeFrequency)
 			{
-				AE::Graphics::Device::VertexBuffer *vertexBuffer = new AE::Graphics::Device::VertexBufferGL();
+				AE::Graphics::Device::VertexBuffer *vertexBuffer = new AE::Graphics::Device::VertexBufferGL(++mBufferIdCount, vertexDeclaration, bufferUsage, bufferChangeFrequency);
 
 				return vertexBuffer;
 			}
 
-			void destroyVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer)
+			void DriverGL15::destroyVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer)
 			{
 				delete vertexBuffer;
 			}

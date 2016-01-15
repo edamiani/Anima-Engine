@@ -10,35 +10,35 @@
 #include <cassert>
 #include <string.h>
 
-#ifndef AE_PLATFORM_LINUX
-// GL_EXT_draw_range_elements (1.2)
-PFNGLDRAWRANGEELEMENTSPROC		glDrawRangeElements;
-#endif
-
-// GL_EXT_multi_draw_arrays (1.4)
-PFNGLMULTIDRAWARRAYSPROC		glMultiDrawArrays;
-PFNGLMULTIDRAWELEMENTSPROC		glMultiDrawElements;
-
-#ifndef AE_PLATFORM_LINUX
-// GL_ARB_multitexture (1.4)
-PFNGLCLIENTACTIVETEXTUREPROC	glClientActiveTexture;
-#endif
-
-// GL_ARB_window_pos (1.4)
-PFNGLWINDOWPOS2IPROC			glWindowPos2i;
-
-// GL_ARB_vertex_buffer_object (1.5)
-PFNGLBINDBUFFERPROC				glBindBuffer;
-PFNGLBUFFERDATAPROC				glBufferData;
-PFNGLBUFFERSUBDATAPROC			glBufferSubData;
-PFNGLDELETEBUFFERSPROC			glDeleteBuffers;
-PFNGLGENBUFFERSPROC				glGenBuffers;
-PFNGLGETBUFFERPARAMETERIVPROC	glGetBufferParameteriv;
-PFNGLGETBUFFERPOINTERVPROC		glGetBufferPointerv;
-PFNGLGETBUFFERSUBDATAPROC		glGetBufferSubData;
-PFNGLISBUFFERPROC				glIsBuffer;
-PFNGLMAPBUFFERPROC				glMapBuffer;
-PFNGLUNMAPBUFFERPROC			glUnmapBuffer;
+//#ifndef AE_PLATFORM_LINUX
+//// GL_EXT_draw_range_elements (1.2)
+//PFNGLDRAWRANGEELEMENTSPROC		glDrawRangeElements;
+//#endif
+//
+//// GL_EXT_multi_draw_arrays (1.4)
+//PFNGLMULTIDRAWARRAYSPROC		glMultiDrawArrays;
+//PFNGLMULTIDRAWELEMENTSPROC		glMultiDrawElements;
+//
+//#ifndef AE_PLATFORM_LINUX
+//// GL_ARB_multitexture (1.4)
+//PFNGLCLIENTACTIVETEXTUREPROC	glClientActiveTexture;
+//#endif
+//
+//// GL_ARB_window_pos (1.4)
+//PFNGLWINDOWPOS2IPROC			glWindowPos2i;
+//
+//// GL_ARB_vertex_buffer_object (1.5)
+//PFNGLBINDBUFFERPROC				glBindBuffer;
+//PFNGLBUFFERDATAPROC				glBufferData;
+//PFNGLBUFFERSUBDATAPROC			glBufferSubData;
+//PFNGLDELETEBUFFERSPROC			glDeleteBuffers;
+//PFNGLGENBUFFERSPROC				glGenBuffers;
+//PFNGLGETBUFFERPARAMETERIVPROC	glGetBufferParameteriv;
+//PFNGLGETBUFFERPOINTERVPROC		glGetBufferPointerv;
+//PFNGLGETBUFFERSUBDATAPROC		glGetBufferSubData;
+//PFNGLISBUFFERPROC				glIsBuffer;
+//PFNGLMAPBUFFERPROC				glMapBuffer;
+//PFNGLUNMAPBUFFERPROC			glUnmapBuffer;
 
 namespace AE
 {
@@ -141,7 +141,7 @@ namespace AE
 
 				if(_checkOpenGLExtension("GL_ARB_vertex_buffer_object"))
 				{
-					glBindBuffer = (PFNGLBINDBUFFERPROC) wglGetProcAddress("glBindBufferARB");
+					glBindBuffer = (PFNGLBINDBUFFERPROC) wglGetProcAddress("glBindBuffer123");
 					glDeleteBuffers = (PFNGLDELETEBUFFERSPROC) wglGetProcAddress("glDeleteBuffersARB");
 					glGenBuffers = (PFNGLGENBUFFERSPROC) wglGetProcAddress("glGenBuffersARB");
 					glIsBuffer = (PFNGLISBUFFERPROC) wglGetProcAddress("glIsBufferARB");

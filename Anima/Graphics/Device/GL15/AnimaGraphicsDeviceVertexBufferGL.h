@@ -23,6 +23,7 @@ namespace AE
 			{
 			public:
 				VertexBufferGL();
+				VertexBufferGL(GLuint id, AE::uint vertexDeclaration, AE::Graphics::BufferUsage bufferUsage, AE::Graphics::BufferChangeFrequency bufferChangeFrequency);
 				VertexBufferGL(VertexBufferDesc &vertexBufferDesc);
 				~VertexBufferGL() { glDeleteBuffers(1, &mBufferId); }
 
@@ -30,6 +31,8 @@ namespace AE
 				void		addNormal(const AE::Math::Vector3 &normal);
 				void		addPosition(const AE::Math::Vector3 &position);
 				void		addVertex(const VertexDesc &vertex);
+				void		lock();
+				void		unlock();
 
 				size_t		getOffset() { return mOffset; }
 				size_t		getSize() { return mNumberOfVertices; }

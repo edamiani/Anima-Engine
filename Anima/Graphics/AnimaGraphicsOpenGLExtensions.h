@@ -19,17 +19,17 @@
 	extern PFNGLWINDOWPOS2IPROC				glWindowPos2i;
 
 	// GL_ARB_vertex_buffer_object(1.5)
-	extern PFNGLBINDBUFFERPROC				glBindBuffer;
-	extern PFNGLBUFFERDATAPROC				glBufferData;
-	extern PFNGLBUFFERSUBDATAPROC			glBufferSubData;
-	extern PFNGLDELETEBUFFERSPROC			glDeleteBuffers;
-	extern PFNGLGENBUFFERSPROC				glGenBuffers;
-	extern PFNGLGETBUFFERPARAMETERIVPROC	glGetBufferParameteriv;
-	extern PFNGLGETBUFFERPOINTERVPROC		glGetBufferPointerv;
-	extern PFNGLGETBUFFERSUBDATAPROC		glGetBufferSubData;
-	extern PFNGLISBUFFERPROC				glIsBuffer;
-	extern PFNGLMAPBUFFERPROC				glMapBuffer;
-	extern PFNGLUNMAPBUFFERPROC				glUnmapBuffer;
+	extern "C" PFNGLBINDBUFFERPROC				glBindBuffer;
+	extern "C" PFNGLBUFFERDATAPROC				glBufferData;
+	extern "C" PFNGLBUFFERSUBDATAPROC			glBufferSubData;
+	extern "C" PFNGLDELETEBUFFERSPROC			glDeleteBuffers;
+	extern "C" PFNGLGENBUFFERSPROC				glGenBuffers;
+	extern "C" PFNGLGETBUFFERPARAMETERIVPROC	glGetBufferParameteriv;
+	extern "C" PFNGLGETBUFFERPOINTERVPROC		glGetBufferPointerv;
+	extern "C" PFNGLGETBUFFERSUBDATAPROC		glGetBufferSubData;
+	extern "C" PFNGLISBUFFERPROC				glIsBuffer;
+	extern "C" PFNGLMAPBUFFERPROC				glMapBuffer;
+	extern "C" PFNGLUNMAPBUFFERPROC				glUnmapBuffer;
 
 #elif defined AE_PLATFORM_OSX
 	#include "../../Dependencies/gl/glext.h"
@@ -60,6 +60,7 @@
 	extern PFNGLISBUFFERPROC				glIsBuffer;
 	extern PFNGLMAPBUFFERPROC				glMapBuffer;
 	extern PFNGLUNMAPBUFFERPROC				glUnmapBuffer;
+
 #elif defined AE_PLATFORM_LINUX
 	#include "../../Dependencies/gl/glext.h"
 

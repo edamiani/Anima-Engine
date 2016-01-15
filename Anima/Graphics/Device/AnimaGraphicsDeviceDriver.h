@@ -34,7 +34,7 @@ namespace AE
 				~Driver() {}
 
 				virtual AE::Graphics::Device::Context*		createDeviceContext(AE::Graphics::Device::ContextDesc &contextDesc, const std::string &contextName = "") = 0;
-				virtual AE::Graphics::Device::VertexBuffer*	createEmptyVertexBuffer() = 0;
+				virtual AE::Graphics::Device::VertexBuffer*	createEmptyVertexBuffer(AE::uint vertexDeclaration, AE::Graphics::BufferUsage bufferUsage, AE::Graphics::BufferChangeFrequency bufferChangeFrequency) = 0;
 				virtual void								destroyVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer) = 0;
 				AE::Graphics::Device::Context*				getDeviceContext(AE::uint index) { return mDeviceContexts[index]; }
 				AE::uint									getDeviceId() { return mDeviceId; }

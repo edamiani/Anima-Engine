@@ -221,13 +221,18 @@ void ExampleTestSuite::test3D()
 
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
-	AE::Graphics::Device::VertexBuffer *vertexBuffer = deviceDriver->createEmptyVertexBuffer();
-	vertexBuffer->addPosition(AE::Math::Vector3(100, 100, 0));
-	vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 1));
-	vertexBuffer->addPosition(AE::Math::Vector3(100, 200, 0));
-	vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 0));
-	vertexBuffer->addPosition(AE::Math::Vector3(0, 200, 0));
-	vertexBuffer->addDiffuseColor(AE::Graphics::Color(0, 1, 1));
+	AE::Graphics::Device::VertexBuffer *vertexBuffer = deviceDriver->createEmptyVertexBuffer(AE::Graphics::VE_POSITION | AE::Graphics::VE_DIFFUSE, AE::Graphics::BU_USER_READ, AE::Graphics::BCF_STREAM);
+	
+	vertexBuffer->lock();
+	{
+		vertexBuffer->addPosition(AE::Math::Vector3(100, 100, 0));
+		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 1));
+		vertexBuffer->addPosition(AE::Math::Vector3(100, 200, 0));
+		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 0));
+		vertexBuffer->addPosition(AE::Math::Vector3(0, 200, 0));
+		vertexBuffer->addDiffuseColor(AE::Graphics::Color(0, 1, 1));
+	}
+	vertexBuffer->unlock();
 
 
 
