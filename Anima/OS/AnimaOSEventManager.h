@@ -4,7 +4,7 @@
 #include "AnimaOSKeyListener.h"
 #include "AnimaOSMouseListener.h"
 #include "AnimaOSWindowMetrics.h"
-#include "AnimaPlatform.h"
+#include "Anima/AnimaPlatform.h"
 
 #include <list>
 

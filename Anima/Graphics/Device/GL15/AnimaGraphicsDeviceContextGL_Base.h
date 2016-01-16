@@ -1,11 +1,11 @@
-#ifndef __AE_GRAPHICS_DEVICE_CONTEXT_GL15_WIN__
-#define __AE_GRAPHICS_DEVICE_CONTEXT_GL15_WIN__
+#ifndef __AE_GRAPHICS_DEVICE_CONTEXT_GL_BASE__
+#define __AE_GRAPHICS_DEVICE_CONTEXT_GL_BASE__
 
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceContext.h"
 
 #include "Anima/AnimaPlatform.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceContextDesc.h"
-#include "../AnimaGraphicsDeviceGLHeaders.h"
+#include "AnimaGraphicsDeviceGLHeaders.h"
 #include "Anima/OS/AnimaOSWindow.h"
 
 #include <vector>
@@ -16,11 +16,11 @@ namespace AE
 	{
 		namespace Device
 		{
-			class ContextGL15 : public AE::Graphics::Device::Context
+			class ContextGL_Base : public AE::Graphics::Device::Context
 			{
 			public:
-				ContextGL15(AE::Graphics::Device::ContextDesc &contextDesc, AE::Graphics::Device::Driver *deviceDriver);
-				virtual ~ContextGL15();
+				ContextGL_Base(AE::Graphics::Device::Driver *deviceDriver);
+				virtual ~ContextGL_Base();
 
 				bool beginRendering();
 				bool beginRendering(const AE::Graphics::Color &clearColor);
@@ -29,14 +29,8 @@ namespace AE
 				void draw3dObject(AE::Graphics::RenderOperationType operationType, AE::Graphics::Device::VertexBuffer *vertexBuffer);
 				void endRendering();
 				void render();
-				void setFullScreen(bool isFullScreen);
-				void setParentWindow(AE::OS::Window *parentWindow);
-
-			protected:
-				void _setDeviceContext(HDC hdc) { mDeviceContextHandle = hdc; }
-
-				HDC mDeviceContextHandle;
-				HGLRC mRenderingContext;
+				virtual void setFullScreen(bool isFullScreen) = 0;
+				virtual void setParentWindow(AE::OS::Window *parentWindow) = 0;
 			};
 		}
 	}

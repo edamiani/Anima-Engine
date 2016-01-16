@@ -2,7 +2,7 @@
 
 #include "AnimaGraphicsDevicePipelineGL15.h"
 
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceGLHeaders.h"
+#include "AnimaGraphicsDeviceGLHeaders.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDevicePixelBuffer.h"
 
 namespace AE

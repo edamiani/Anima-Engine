@@ -3,12 +3,12 @@
 
 #include "../AnimaGraphicsDeviceVertexBuffer.h"
 
+#include "AnimaGraphicsDeviceGLHeaders.h"
+
 #ifdef WIN32
 	#include <windows.h>
 	#include <Wingdi.h>
 	#include <gl/GL.h>
-	
-	#include "../../AnimaGraphicsOpenGLExtensions.h"
 #endif
 
 #define AE_GL_BUFFER_OFFSET(i) ((char*)NULL + (i))

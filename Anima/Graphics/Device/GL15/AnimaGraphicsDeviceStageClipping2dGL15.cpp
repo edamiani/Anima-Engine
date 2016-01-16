@@ -1,6 +1,6 @@
 #include "AnimaGraphicsDeviceStageClipping2dGL15.h"
 
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceGLHeaders.h"
+#include "AnimaGraphicsDeviceGLHeaders.h"
 
 namespace AE
 {

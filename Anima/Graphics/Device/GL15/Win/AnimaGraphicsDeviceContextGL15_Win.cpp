@@ -289,6 +289,11 @@ namespace AE
 				return newSurface;
 			}*/
 
+			void ContextGL15::draw3dObject(AE::Graphics::RenderOperationType operationType, AE::Graphics::Device::VertexBuffer *vertexBuffer)
+			{
+
+			}
+
 			void ContextGL15::endRendering()
 			{
 				/*for(AE::uint i = 0; i < mWindows.size(); i++)

@@ -4,7 +4,7 @@
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceFrameBuffer.h"
 
 #include "Anima/AnimaPlatform.h"
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceGLHeaders.h"
+#include "AnimaGraphicsDeviceGLHeaders.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDevicePixelBufferDesc.h"
 
 namespace AE

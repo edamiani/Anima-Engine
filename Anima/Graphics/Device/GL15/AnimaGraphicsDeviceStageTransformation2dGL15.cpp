@@ -1,7 +1,7 @@
 #include "AnimaGraphicsDeviceStageTransformation2dGL15.h"
 
 #include "Anima/Graphics/AnimaGraphicsAxesConvention2d.h"
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceGLHeaders.h"
+#include "AnimaGraphicsDeviceGLHeaders.h"
 #include "Anima/Math/AnimaMath.h"
 
 namespace AE

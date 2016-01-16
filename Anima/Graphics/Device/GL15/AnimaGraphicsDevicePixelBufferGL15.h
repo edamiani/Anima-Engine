@@ -4,7 +4,7 @@
 #include "Anima/Graphics/Device/AnimaGraphicsDevicePixelBuffer.h"
 
 #include "Anima/AnimaPlatform.h"
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceGLHeaders.h"
+#include "AnimaGraphicsDeviceGLHeaders.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceManager.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDevicePixelBufferDesc.h"
 

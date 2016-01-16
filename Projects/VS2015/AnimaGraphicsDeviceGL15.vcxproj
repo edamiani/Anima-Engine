@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextGL_Base.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceGLHeaders.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceFrameBufferGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceGLHeaders.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceManagerGL15.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferFactoryGL15.h" />
@@ -40,7 +40,7 @@
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceManagerGL15_Win.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextGL_Base.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceFrameBufferGL15.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.cpp" />
@@ -171,20 +171,19 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\Dependencies;..\..\Dependencies\freetype-2.4.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4006;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
     </ClCompile>
     <Lib>
       <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;Opengl32.lib;glu32.lib;freetype243.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32s.lib;opengl32.lib;glu32.lib;AnimaMath.lib;AnimaGraphicsDevice.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
       <AdditionalLibraryDirectories>Libs;..\..\Dependencies\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>

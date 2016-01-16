@@ -1,7 +1,7 @@
 #include "AnimaGraphicsDeviceStageRasterizerGL15.h"
 
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceContext.h"
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceGLHeaders.h"
+#include "AnimaGraphicsDeviceGLHeaders.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceFrameBuffer.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceSubpipeline.h"
 

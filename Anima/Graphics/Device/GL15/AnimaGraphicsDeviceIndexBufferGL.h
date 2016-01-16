@@ -5,12 +5,11 @@
 
 #include <vector>
 
+#include "AnimaGraphicsDeviceGLHeaders.h"
+
 #ifdef WIN32
 	#include <windows.h>
 	#include <Wingdi.h>
-	#include <gl/GL.h>
-	
-	#include "../../AnimaGraphicsOpenGLExtensions.h"
 #endif
 
 namespace AE
