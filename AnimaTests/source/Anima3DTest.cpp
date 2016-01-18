@@ -225,11 +225,17 @@ void ExampleTestSuite::test3D()
 	
 	vertexBuffer->lock();
 	{
-		vertexBuffer->addPosition(AE::Math::Vector3(100, 100, 0));
+		vertexBuffer->addPosition(AE::Math::Vector3(300, 300, 0));
 		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 1));
-		vertexBuffer->addPosition(AE::Math::Vector3(100, 200, 0));
+		vertexBuffer->addPosition(AE::Math::Vector3(300, 400, 0));
 		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 0));
-		vertexBuffer->addPosition(AE::Math::Vector3(0, 200, 0));
+		vertexBuffer->addPosition(AE::Math::Vector3(200, 300, 0));
+		vertexBuffer->addDiffuseColor(AE::Graphics::Color(0, 1, 1));
+		vertexBuffer->addPosition(AE::Math::Vector3(300, 400, 0));
+		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 1));
+		vertexBuffer->addPosition(AE::Math::Vector3(300, 500, 0));
+		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 0));
+		vertexBuffer->addPosition(AE::Math::Vector3(200, 400, 0));
 		vertexBuffer->addDiffuseColor(AE::Graphics::Color(0, 1, 1));
 	}
 	vertexBuffer->unlock();
@@ -265,6 +271,8 @@ void ExampleTestSuite::test3D()
 		glDisableClientState(GL_VERTEX_ARRAY);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
+		deviceContext->draw3dObject(AE::Graphics::ROT_TRIANGLE_LIST, vertexBuffer);
 
 		frameBuffer->unlock();
 

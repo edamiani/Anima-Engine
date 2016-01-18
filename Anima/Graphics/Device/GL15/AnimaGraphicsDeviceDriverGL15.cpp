@@ -37,7 +37,15 @@ namespace AE
 
 			AE::Graphics::Device::VertexBuffer* DriverGL15::createEmptyVertexBuffer(AE::uint vertexDeclaration, AE::Graphics::BufferUsage bufferUsage, AE::Graphics::BufferChangeFrequency bufferChangeFrequency)
 			{
-				AE::Graphics::Device::VertexBuffer *vertexBuffer = new AE::Graphics::Device::VertexBufferGL(++mBufferIdCount, vertexDeclaration, bufferUsage, bufferChangeFrequency);
+				AE::uint id;
+				glGenBuffers(1, (GLuint *)&id);
+
+				glBindBuffer(GL_ARRAY_BUFFER, id);
+				glBufferData(GL_ARRAY_BUFFER, 0, 0, GL_STREAM_READ);
+
+				AE::Graphics::Device::VertexBuffer *vertexBuffer = new AE::Graphics::Device::VertexBufferGL(id, vertexDeclaration, bufferUsage, bufferChangeFrequency);
+
+				glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 				return vertexBuffer;
 			}

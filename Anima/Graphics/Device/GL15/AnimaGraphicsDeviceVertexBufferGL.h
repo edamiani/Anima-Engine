@@ -41,7 +41,8 @@ namespace AE
 
 				void		_activateBufferStates();
 				void		_deactivateBufferStates();
-				GLuint		_getVertexBuffer() { return mBufferId; }
+				GLuint		_getBufferId() { return mBufferId; }
+				std::vector<AE::Math::Vector3> & _getPositions() { return mPositions; }
 
 			private:
 				GLuint		mBufferId;

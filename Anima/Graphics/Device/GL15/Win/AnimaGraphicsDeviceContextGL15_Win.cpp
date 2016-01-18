@@ -4,6 +4,7 @@
 #include "../AnimaGraphicsDevicePipelineGL15.h"
 #include "../AnimaGraphicsDeviceFrameBufferGL15.h"
 #include "../AnimaGraphicsDeviceStageInput2dGL15.h"
+#include "../AnimaGraphicsDeviceVertexBufferGL.h"
 
 #include "Anima/AnimaPlatform.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDevicePixelBufferDesc.h"
@@ -291,7 +292,21 @@ namespace AE
 
 			void ContextGL15::draw3dObject(AE::Graphics::RenderOperationType operationType, AE::Graphics::Device::VertexBuffer *vertexBuffer)
 			{
+				AE::Graphics::Device::VertexBufferGL *vb = static_cast<AE::Graphics::Device::VertexBufferGL *>(vertexBuffer);
 
+				int bufferId = vb->_getBufferId();
+
+				glBindBuffer(GL_ARRAY_BUFFER, bufferId);
+				glEnableClientState(GL_VERTEX_ARRAY);
+
+				glVertexPointer(3, GL_FLOAT, 0, 0);
+
+				std::vector<AE::Math::Vector3> positions = vb->_getPositions();
+
+				glDrawArrays(GL_TRIANGLES, 0, positions.size());
+
+				glDisableClientState(GL_VERTEX_ARRAY);
+				glBindBuffer(GL_ARRAY_BUFFER, 0);
 			}
 
 			void ContextGL15::endRendering()
