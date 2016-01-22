@@ -4,6 +4,8 @@
 #include "../AnimaOSEventQueue.h"
 #include "Anima/AnimaPlatform.h"
 
+#include "SDL.h"
+
 #include <list>
 
 namespace AE
@@ -21,11 +23,8 @@ namespace AE
 			void registerWindowListener(AE::OS::WindowListener *windowListener);
 			bool waitNextEvent();
 
-			static LRESULT WINAPI MsgProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-
 		private:
-			//void _dispatchEvent(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-			AE::OS::Event* _translateEvent(UINT msg);
+			void onEvent(SDL_Event *event);
 		};
 	}
 }

@@ -14,6 +14,8 @@ namespace AE
 
 			mWindow = SDL_CreateWindow(windowTitle.c_str(), windowDesc.position.x, windowDesc.position.y,
 									   windowDesc.dimensions.x, windowDesc.dimensions.y, SDL_WINDOW_HIDDEN);
+
+			SDL_SetWindowData(mWindow, "AnimaWindow", this);
 		}
 
 		WindowSdl::~WindowSdl()
