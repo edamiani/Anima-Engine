@@ -1,0 +1,9 @@
+﻿Build started 20/01/2016 17:17:08.
+     1>Project "D:\GameDev\SDL2-2.0.4\VisualC\SDL\SDL.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         SDL.vcxproj -> D:\GameDev\SDL2-2.0.4\VisualC\x64\Release\SDL2.lib
+     1>Done Building Project "D:\GameDev\SDL2-2.0.4\VisualC\SDL\SDL.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.15

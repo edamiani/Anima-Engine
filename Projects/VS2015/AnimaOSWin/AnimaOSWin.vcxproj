@@ -78,6 +78,11 @@
     <OutDir>$(SolutionDir)Libs\</OutDir>
     <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Libs\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)_x64_d</TargetName>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -97,6 +102,7 @@
     <Lib>
       <AdditionalDependencies>AnimaOS_d.lib;kernel32.lib;user32.lib;gdi32.lib;oleaut32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Libs</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -110,11 +116,18 @@
       </PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>
       </PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>..\..\..\</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>AnimaOS_x64_d.lib;kernel32.lib;user32.lib;gdi32.lib;oleaut32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Libs</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)$(ProjectName)_x64_d.lib</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

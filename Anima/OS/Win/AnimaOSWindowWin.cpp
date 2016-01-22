@@ -47,7 +47,7 @@ namespace AE
 				::GetDesktopWindow(), NULL, wc.hInstance, NULL);
 
 			::SetWindowLongPtr(mWindowHandle, GWLP_USERDATA, (ULONG_PTR)this);
-			mHInstance = (HINSTANCE)(::GetWindowLongPtr(mWindowHandle, GWL_HINSTANCE));
+			mHInstance = (HINSTANCE)(::GetWindowLongPtr(mWindowHandle, GWLP_HINSTANCE));
 
 			//Releases the Unicode string
 			::SysFreeString(unicodeStr);
