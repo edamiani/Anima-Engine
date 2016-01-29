@@ -7,11 +7,11 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{bf05fea6-b48c-4b56-96f7-e70f4b3d78ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Win">
-      <UniqueIdentifier>{7db76271-9e82-48fb-8e4c-8a57c21bbbed}</UniqueIdentifier>
+    <Filter Include="Header Files\Sdl">
+      <UniqueIdentifier>{6360ac08-af9a-4426-bcaa-f135a5ccee21}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Win">
-      <UniqueIdentifier>{2aa481b1-9a31-417c-ae43-d6580dc2e96b}</UniqueIdentifier>
+    <Filter Include="Source Files\Sdl">
+      <UniqueIdentifier>{06b187ea-d56e-4ca6-bbdc-a9e6a1a63bc1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -54,12 +54,6 @@
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceContextGL15_Win.h">
-      <Filter>Header Files\Win</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceManagerGL15_Win.h">
-      <Filter>Header Files\Win</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceVertexBufferGL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -71,6 +65,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceContextGL15_Sdl.h">
+      <Filter>Header Files\Sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceManagerGL15_Sdl.h">
+      <Filter>Header Files\Sdl</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -110,12 +110,6 @@
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceContextGL15_Win.cpp">
-      <Filter>Source Files\Win</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceManagerGL15_Win.cpp">
-      <Filter>Source Files\Win</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceVertexBufferGL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -124,6 +118,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceContextGL15_Sdl.cpp">
+      <Filter>Source Files\Sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceManagerGL15_Sdl.cpp">
+      <Filter>Source Files\Sdl</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

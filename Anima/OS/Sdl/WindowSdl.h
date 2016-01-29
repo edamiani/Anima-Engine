@@ -33,6 +33,7 @@ namespace AE
 
 			HWND _getWindowHandle() { return mWindowHandle; }
 			HINSTANCE _getHInstance() { return mHInstance; }
+			SDL_Window* _getSdlWindow() { return mWindow; }
 
 		protected:
 			HWND	mWindowHandle;

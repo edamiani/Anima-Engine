@@ -52,8 +52,15 @@ namespace AE
 			delete mEventQueue;
 			mEventQueue = 0;
 
-			SDL_QuitSubSystem(SDL_INIT_VIDEO);
-			SDL_QuitSubSystem(SDL_INIT_EVENTS);
+			if(SDL_WasInit(SDL_INIT_VIDEO))
+			{
+				SDL_QuitSubSystem(SDL_INIT_VIDEO);
+			}
+
+			if(SDL_WasInit(SDL_INIT_EVENTS))
+			{
+				SDL_QuitSubSystem(SDL_INIT_EVENTS);
+			}
 
 			mIsInstalled = false;
 

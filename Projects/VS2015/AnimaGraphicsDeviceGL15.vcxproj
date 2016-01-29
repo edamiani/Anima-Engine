@@ -36,8 +36,8 @@
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline3dGL15.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.h" />
     <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceVertexBufferGL.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceContextGL15_Win.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceManagerGL15_Win.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceContextGL15_Sdl.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceManagerGL15_Sdl.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.cpp" />
@@ -55,8 +55,8 @@
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline3dGL15.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.cpp" />
     <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceVertexBufferGL.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceContextGL15_Win.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\AnimaGraphicsDeviceManagerGL15_Win.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceContextGL15_Sdl.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceManagerGL15_Sdl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AnimaGraphicsDevice.vcxproj">
@@ -154,7 +154,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies;..\..\Dependencies\SDL2-2.0.4\include;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>

@@ -3,13 +3,14 @@
 #include "Anima/AnimaException.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceContext.h"
 #include "Anima/Graphics/Device/AnimaGraphicsDeviceDriver.h"
-#include "Anima/Graphics/Device/GL15/AnimaGraphicsDeviceManagerGL15.h"
+//#include "Anima/Graphics/Device/GL15/AnimaGraphicsDeviceManagerGL15.h"
+#include "Anima/Graphics/Device/GL15/Sdl/AnimaGraphicsDeviceManagerGL15_Sdl.h"
 #include "Anima/Math/AnimaMathPoint2.h"
 #include "Anima/OS/AnimaOSWindowListener.h"
 #include "Anima/AnimaPluginManager.h"
 
 #ifdef AE_PLATFORM_WIN32
-#	include "Anima/OS/Win/AnimaOSWindowManagerWin.h"
+#	include "Anima/OS/Sdl/WindowManagerSdl.h"
 #elif defined AE_PLATFORM_LINUX
 #	include "AnimaOSWindowManagerLinux.h"
 #endif
@@ -39,7 +40,7 @@ void ExampleTestSuite::windowAndContextTest()
 	AE::PluginManager *pluginManager = AE::PluginManager::initialize();
 
 #ifdef AE_PLATFORM_WIN32
-	AE::OS::WindowManager *windowManager = static_cast<AE::OS::WindowManager *>(pluginManager->registerPlugin("windowManager", new AE::OS::WindowManagerWin()));
+	AE::OS::WindowManager *windowManager = static_cast<AE::OS::WindowManager *>(pluginManager->registerPlugin("windowManager", new AE::OS::WindowManagerSdl()));
 #else
 	AE::OS::WindowManager *windowManager = static_cast<AE::OS::WindowManager *>(pluginManager->registerPlugin("windowManager", new AE::OS::WindowManagerLinux()));
 #endif
@@ -61,7 +62,8 @@ void ExampleTestSuite::windowAndContextTest()
 	AE::Graphics::Device::Driver *deviceDriver;
 
 #ifdef AE_PLATFORM_WIN32
-	deviceManager = static_cast<AE::Graphics::Device::Manager *>(pluginManager->registerPlugin("deviceManagerGL15", new AE::Graphics::Device::ManagerGL15()));
+	//deviceManager = static_cast<AE::Graphics::Device::Manager *>(pluginManager->registerPlugin("deviceManagerGL15", new AE::Graphics::Device::ManagerGL15()));
+	deviceManager = static_cast<AE::Graphics::Device::Manager *>(pluginManager->registerPlugin("deviceManagerSDL", new AE::Graphics::Device::ManagerGL15()));
 	pluginManager->getRoot()->attachAndInstall(deviceManager, AE::NO_OPTIONS);
 	deviceDriver = deviceManager->acquireDeviceDriver(0, AE::Graphics::Device::DT_GL_15);
 #else
