@@ -98,7 +98,7 @@
       <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>%(AdditionalDependencies);AnimaBase_d.lib</AdditionalDependencies>
+      <AdditionalDependencies>AnimaBase_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
       <AdditionalLibraryDirectories>Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
@@ -117,7 +117,7 @@
       <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>AnimaBase_x64_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)_x64_d.lib</OutputFile>
       <AdditionalLibraryDirectories>Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
@@ -162,38 +162,37 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Anima\OS\AnimaOSEventQueue.cpp" />
-    <ClCompile Include="..\..\Anima\OS\AnimaOSProcessManager.cpp" />
-    <ClCompile Include="..\..\Anima\OS\AnimaOSTimerManager.cpp" />
-    <ClCompile Include="..\..\Anima\OS\AnimaOSWindow.cpp" />
-    <ClCompile Include="..\..\Anima\OS\AnimaOSWindowManager.cpp" />
+    <ClCompile Include="..\..\Anima\OS\EventQueue.cpp" />
+    <ClCompile Include="..\..\Anima\OS\TimerManager.cpp" />
+    <ClCompile Include="..\..\Anima\OS\Window.cpp" />
+    <ClCompile Include="..\..\Anima\OS\WindowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSApplication.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSAsyncElement.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSEnums.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSEvent.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSEventManager.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSEventQueue.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSKeyListener.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSKeyTranslationListener.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSManager.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSMouseListener.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSMutex.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSProcess.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSProcessManager.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSRenderingContext.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSThread.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimer.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimerFactory.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimerListener.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimerManager.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimerPeriodic.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindow.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindowDesc.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindowListener.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindowManager.h" />
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindowMetrics.h" />
+    <ClInclude Include="..\..\Anima\OS\Application.h" />
+    <ClInclude Include="..\..\Anima\OS\AsyncElement.h" />
+    <ClInclude Include="..\..\Anima\OS\Enums.h" />
+    <ClInclude Include="..\..\Anima\OS\Event.h" />
+    <ClInclude Include="..\..\Anima\OS\EventManager.h" />
+    <ClInclude Include="..\..\Anima\OS\EventQueue.h" />
+    <ClInclude Include="..\..\Anima\OS\KeyListener.h" />
+    <ClInclude Include="..\..\Anima\OS\KeyTranslationListener.h" />
+    <ClInclude Include="..\..\Anima\OS\Manager.h" />
+    <ClInclude Include="..\..\Anima\OS\MouseListener.h" />
+    <ClInclude Include="..\..\Anima\OS\Mutex.h" />
+    <ClInclude Include="..\..\Anima\OS\Process.h" />
+    <ClInclude Include="..\..\Anima\OS\ProcessManager.h" />
+    <ClInclude Include="..\..\Anima\OS\RenderingContext.h" />
+    <ClInclude Include="..\..\Anima\OS\Thread.h" />
+    <ClInclude Include="..\..\Anima\OS\Timer.h" />
+    <ClInclude Include="..\..\Anima\OS\TimerFactory.h" />
+    <ClInclude Include="..\..\Anima\OS\TimerListener.h" />
+    <ClInclude Include="..\..\Anima\OS\TimerManager.h" />
+    <ClInclude Include="..\..\Anima\OS\TimerPeriodic.h" />
+    <ClInclude Include="..\..\Anima\OS\Window.h" />
+    <ClInclude Include="..\..\Anima\OS\WindowDesc.h" />
+    <ClInclude Include="..\..\Anima\OS\WindowListener.h" />
+    <ClInclude Include="..\..\Anima\OS\WindowManager.h" />
+    <ClInclude Include="..\..\Anima\OS\WindowMetrics.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AnimaBase.vcxproj">

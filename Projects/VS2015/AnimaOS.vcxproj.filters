@@ -11,96 +11,93 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Anima\OS\AnimaOSWindowManager.cpp">
+    <ClCompile Include="..\..\Anima\OS\EventQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\OS\AnimaOSWindow.cpp">
+    <ClCompile Include="..\..\Anima\OS\TimerManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\OS\AnimaOSTimerManager.cpp">
+    <ClCompile Include="..\..\Anima\OS\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\OS\AnimaOSProcessManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Anima\OS\AnimaOSEventQueue.cpp">
+    <ClCompile Include="..\..\Anima\OS\WindowManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSApplication.h">
+    <ClInclude Include="..\..\Anima\OS\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSAsyncElement.h">
+    <ClInclude Include="..\..\Anima\OS\AsyncElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSEnums.h">
+    <ClInclude Include="..\..\Anima\OS\Enums.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSEvent.h">
+    <ClInclude Include="..\..\Anima\OS\Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSEventManager.h">
+    <ClInclude Include="..\..\Anima\OS\EventManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSEventQueue.h">
+    <ClInclude Include="..\..\Anima\OS\EventQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSKeyListener.h">
+    <ClInclude Include="..\..\Anima\OS\KeyListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSKeyTranslationListener.h">
+    <ClInclude Include="..\..\Anima\OS\KeyTranslationListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSManager.h">
+    <ClInclude Include="..\..\Anima\OS\Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSMouseListener.h">
+    <ClInclude Include="..\..\Anima\OS\MouseListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSMutex.h">
+    <ClInclude Include="..\..\Anima\OS\Mutex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSProcess.h">
+    <ClInclude Include="..\..\Anima\OS\Process.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSProcessManager.h">
+    <ClInclude Include="..\..\Anima\OS\ProcessManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSRenderingContext.h">
+    <ClInclude Include="..\..\Anima\OS\RenderingContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSThread.h">
+    <ClInclude Include="..\..\Anima\OS\Thread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimer.h">
+    <ClInclude Include="..\..\Anima\OS\Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimerFactory.h">
+    <ClInclude Include="..\..\Anima\OS\TimerFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimerListener.h">
+    <ClInclude Include="..\..\Anima\OS\TimerListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimerManager.h">
+    <ClInclude Include="..\..\Anima\OS\TimerManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSTimerPeriodic.h">
+    <ClInclude Include="..\..\Anima\OS\TimerPeriodic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindow.h">
+    <ClInclude Include="..\..\Anima\OS\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindowDesc.h">
+    <ClInclude Include="..\..\Anima\OS\WindowDesc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindowListener.h">
+    <ClInclude Include="..\..\Anima\OS\WindowListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindowManager.h">
+    <ClInclude Include="..\..\Anima\OS\WindowManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\OS\AnimaOSWindowMetrics.h">
+    <ClInclude Include="..\..\Anima\OS\WindowMetrics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

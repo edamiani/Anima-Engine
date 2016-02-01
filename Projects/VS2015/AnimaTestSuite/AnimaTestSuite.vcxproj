@@ -158,7 +158,7 @@
       </PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>AnimaOSSdl_x64_d.lib;AnimaGraphicsDeviceGL15_x64_d.lib;cpptest_x64_d.lib</AdditionalDependencies>
+      <AdditionalDependencies>AnimaOSWin_x64_d.lib;AnimaGraphicsDeviceGL15_x64_d.lib;cpptest_x64_d.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)_x64_d.exe</OutputFile>
       <AdditionalLibraryDirectories>..\Libs;..\..\..\Dependencies\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>

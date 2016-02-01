@@ -1,7 +1,7 @@
 #ifndef __AE_INPUT_ENUMS__
 #define __AE_INPUT_ENUMS__
 
-#include "Anima/AnimaPlatform.h"
+#include "Anima/Platform.h"
 
 //#ifdef AE_PLATFORM_ALLEGRO
 //#	include "AnimaInputKeyValueAllegro.h"

@@ -1,7 +1,7 @@
-#include "AnimaPluginGroup.h"
-#include "AnimaPluginManager.h"
+#include "Anima/PluginGroup.h"
+#include "Anima/PluginManager.h"
 
-#include "AnimaException.h"
+#include "Anima/Exception.h"
 
 #include <cassert>
 

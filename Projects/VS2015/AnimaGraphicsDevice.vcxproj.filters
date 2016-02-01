@@ -9,117 +9,117 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceColorBuffer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\ColorBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceColorBufferDesc.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\ColorBufferDesc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContext.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\StageTransformation2d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceContextDesc.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\Context.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceDriver.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\ContextDesc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceFrameBuffer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\Driver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceIndexBuffer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\FrameBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceIndexBufferFactory.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\IndexBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceManager.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\IndexBufferFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipeline.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipelineInputState.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\Pipeline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipelineRasterizerState.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\PipelineInputState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipelineStage.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\PipelineRasterizerState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipelineStateGroup.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\PipelineStage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePixelBuffer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\PipelineStateGroup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePixelBufferDesc.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\PixelBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePixelBufferFactory.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\PixelBufferDesc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStage.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\PixelBufferFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageClipping.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\Stage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageClipping2d.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\StageClipping.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageInput2D.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\StageClipping2d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStagePixelOperations.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\StageInput2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageRasterizer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\StagePixelOperations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStageTransformation2d.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\StageRasterizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceStateGroup.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\StateGroup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\Subpipeline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline2d.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\Subpipeline2d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline3d.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\Subpipeline3d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipelineRasterizer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\SubpipelineRasterizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceTransformedColorBuffer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\TransformedColorBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceTransformedPixelBuffer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\TransformedPixelBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceVertexBuffer.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\VertexBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceVertexBufferFactory.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\VertexBufferFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceDriver.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\Driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceManager.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\Manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDevicePipeline.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\Pipeline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\AnimaGraphicsDeviceSubpipeline.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\Subpipeline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

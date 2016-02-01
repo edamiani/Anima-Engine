@@ -3,127 +3,132 @@
   <ItemGroup>
     <Filter Include="Header Files">
       <UniqueIdentifier>{d2119f4e-d807-4c92-88dc-23e7ea4b43c2}</UniqueIdentifier>
+      <Extensions>*.h</Extensions>
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{bf05fea6-b48c-4b56-96f7-e70f4b3d78ca}</UniqueIdentifier>
+      <Extensions>*.cpp</Extensions>
     </Filter>
-    <Filter Include="Header Files\Sdl">
-      <UniqueIdentifier>{6360ac08-af9a-4426-bcaa-f135a5ccee21}</UniqueIdentifier>
+    <Filter Include="Header Files\Win">
+      <UniqueIdentifier>{d61b1056-48c2-415f-a205-d36cfc42da43}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Sdl">
-      <UniqueIdentifier>{06b187ea-d56e-4ca6-bbdc-a9e6a1a63bc1}</UniqueIdentifier>
+    <Filter Include="Source Files\Win">
+      <UniqueIdentifier>{474eb8e7-bdfc-434e-8032-9ea3e69f5125}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\ContextGL_Base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\ContextGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceFrameBufferGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\DriverGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceManagerGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\FrameBufferGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferFactoryGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\GLHeaders.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\IndexBufferGL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageClipping2dGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\ManagerGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageInput2dGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\PixelBufferFactoryGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageRasterizerGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\PixelBufferGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageTransformation2dGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\StageClipping2dGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline2dGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\StageInput2dGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline3dGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\StageRasterizerGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\StageTransformation2dGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceVertexBufferGL.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Subpipeline2dGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Subpipeline3dGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceGLHeaders.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\SubpipelineRasterizerGL15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.h">
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\VertexBufferGL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceContextGL15_Sdl.h">
-      <Filter>Header Files\Sdl</Filter>
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\ContextGL15_Win.h">
+      <Filter>Header Files\Win</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceManagerGL15_Sdl.h">
-      <Filter>Header Files\Sdl</Filter>
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\ManagerGL15_Win.h">
+      <Filter>Header Files\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\PipelineGL15.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\ContextGL_Base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceFrameBufferGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\DriverGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePipelineGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\FrameBufferGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferFactoryGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\IndexBufferGL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\PipelineGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageClipping2dGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\PixelBufferFactoryGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageInput2dGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\PixelBufferGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageRasterizerGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\StageClipping2dGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageTransformation2dGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\StageInput2dGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline2dGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\StageRasterizerGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline3dGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\StageTransformation2dGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Subpipeline2dGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceVertexBufferGL.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Subpipeline3dGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\SubpipelineRasterizerGL15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.cpp">
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\VertexBufferGL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceContextGL15_Sdl.cpp">
-      <Filter>Source Files\Sdl</Filter>
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\ContextGL15_Win.cpp">
+      <Filter>Source Files\Win</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceManagerGL15_Sdl.cpp">
-      <Filter>Source Files\Sdl</Filter>
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\ManagerGL15_Win.cpp">
+      <Filter>Source Files\Win</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

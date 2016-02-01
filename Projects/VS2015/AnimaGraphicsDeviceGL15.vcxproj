@@ -19,44 +19,45 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceFrameBufferGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceGLHeaders.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceManagerGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferFactoryGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageClipping2dGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageInput2dGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageRasterizerGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageTransformation2dGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline2dGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline3dGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceVertexBufferGL.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceContextGL15_Sdl.h" />
-    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceManagerGL15_Sdl.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\PipelineGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\ContextGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\ContextGL_Base.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\DriverGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\FrameBufferGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\IndexBufferGL.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\PixelBufferFactoryGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\PixelBufferGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\StageClipping2dGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\StageInput2dGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\StageRasterizerGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\StageTransformation2dGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Subpipeline2dGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Subpipeline3dGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\SubpipelineRasterizerGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\VertexBufferGL.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\GLHeaders.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\ManagerGL15.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\ContextGL15_Win.h" />
+    <ClInclude Include="..\..\Anima\Graphics\Device\GL15\Win\ManagerGL15_Win.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceContextGL_Base.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceDriverGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceFrameBufferGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceIndexBufferGL.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePipelineGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferFactoryGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDevicePixelBufferGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageClipping2dGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageInput2dGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageRasterizerGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceStageTransformation2dGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline2dGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipeline3dGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceSubpipelineRasterizerGL15.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\AnimaGraphicsDeviceVertexBufferGL.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceContextGL15_Sdl.cpp" />
-    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Sdl\AnimaGraphicsDeviceManagerGL15_Sdl.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\ContextGL_Base.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\DriverGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\FrameBufferGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\IndexBufferGL.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\PipelineGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\PixelBufferFactoryGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\PixelBufferGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\StageClipping2dGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\StageInput2dGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\StageRasterizerGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\StageTransformation2dGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Subpipeline2dGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Subpipeline3dGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\SubpipelineRasterizerGL15.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\VertexBufferGL.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\ContextGL15_Win.cpp" />
+    <ClCompile Include="..\..\Anima\Graphics\Device\GL15\Win\ManagerGL15_Win.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AnimaGraphicsDevice.vcxproj">
@@ -132,7 +133,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -154,7 +155,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies;..\..\Dependencies\SDL2-2.0.4\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\;..\..\Dependencies</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>

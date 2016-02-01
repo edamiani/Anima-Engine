@@ -1,21 +1,21 @@
 #include "AnimaTestSuite.h"
 
-#include "Anima/AnimaException.h"
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceContext.h"
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceDriver.h"
-#include "Anima/Graphics/Device/AnimaGraphicsDeviceFrameBuffer.h"
-#include "Anima/Graphics/Device/GL15/AnimaGraphicsDeviceManagerGL15.h"
-#include "Anima/Graphics/Device/AnimaGraphicsDevicePixelBuffer.h"
-#include "Anima/Math/AnimaMathPoint2.h"
-#include "Anima/OS/AnimaOSWindowListener.h"
+#include "Anima/Exception.h"
+#include "Anima/Graphics/Device/Context.h"
+#include "Anima/Graphics/Device/Driver.h"
+#include "Anima/Graphics/Device/FrameBuffer.h"
+#include "Anima/Graphics/Device/GL15/ManagerGL15.h"
+#include "Anima/Graphics/Device/PixelBuffer.h"
+#include "Anima/Math/Point2.h"
+#include "Anima/OS/WindowListener.h"
 
 #ifdef AE_PLATFORM_WIN32
-#	include "Anima/OS/Win/AnimaOSWindowManagerWin.h"
+#	include "Anima/OS/Win/WindowManagerWin.h"
 #elif defined AE_PLATFORM_LINUX
-#	include "Anima/OS/AnimaOSWindowManagerLinux.h"
+#	include "Anima/OS/Linux/WindowManagerLinux.h"
 #endif
 
-#include "Anima/AnimaPluginManager.h"
+#include "Anima/PluginManager.h"
 
 #include <cassert>
 #include <climits>

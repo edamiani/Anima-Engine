@@ -18,51 +18,51 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\Math\AnimaMath.h">
+    <ClInclude Include="..\..\Anima\Math\Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathAxisAlignedBox.h">
+    <ClInclude Include="..\..\Anima\Math\AxisAlignedBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathMatrix3.h">
+    <ClInclude Include="..\..\Anima\Math\Matrix3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathMatrix4.h">
+    <ClInclude Include="..\..\Anima\Math\Matrix4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathPoint2.h">
+    <ClInclude Include="..\..\Anima\Math\Point2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathQuaternion.h">
+    <ClInclude Include="..\..\Anima\Math\Quaternion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathRectangle.h">
+    <ClInclude Include="..\..\Anima\Math\Rectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathTrigonometry.h">
+    <ClInclude Include="..\..\Anima\Math\Trigonometry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathVector2.h">
+    <ClInclude Include="..\..\Anima\Math\Vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathVector3.h">
+    <ClInclude Include="..\..\Anima\Math\Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\Math\AnimaMathVector4.h">
+    <ClInclude Include="..\..\Anima\Math\Vector4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Anima\Math\AnimaMath.cpp">
+    <ClCompile Include="..\..\Anima\Math\Math.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Math\AnimaMathQuaternion.cpp">
+    <ClCompile Include="..\..\Anima\Math\Quaternion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Math\AnimaMathVector2.cpp">
+    <ClCompile Include="..\..\Anima\Math\Vector2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Anima\Math\AnimaMathVector3.cpp">
+    <ClCompile Include="..\..\Anima\Math\Vector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

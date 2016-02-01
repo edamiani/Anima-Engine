@@ -18,24 +18,24 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSEventQueueWin.h">
+    <ClInclude Include="..\..\..\Anima\OS\Win\EventQueueWin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSWindowManagerWin.h">
+    <ClInclude Include="..\..\..\Anima\OS\Win\WindowManagerWin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSWindowWin.h">
+    <ClInclude Include="..\..\..\Anima\OS\Win\WindowWin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSEventQueueWin.cpp">
+    <ClCompile Include="..\..\..\Anima\OS\Win\EventQueueWin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSWindowManagerWin.cpp">
+    <ClCompile Include="..\..\..\Anima\OS\Win\WindowManagerWin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSWindowWin.cpp">
+    <ClCompile Include="..\..\..\Anima\OS\Win\WindowWin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

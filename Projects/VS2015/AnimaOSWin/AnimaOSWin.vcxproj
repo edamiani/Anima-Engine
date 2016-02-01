@@ -175,14 +175,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSEventQueueWin.h" />
-    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSWindowManagerWin.h" />
-    <ClInclude Include="..\..\..\Anima\OS\Win\AnimaOSWindowWin.h" />
+    <ClInclude Include="..\..\..\Anima\OS\Win\EventQueueWin.h" />
+    <ClInclude Include="..\..\..\Anima\OS\Win\WindowManagerWin.h" />
+    <ClInclude Include="..\..\..\Anima\OS\Win\WindowWin.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSEventQueueWin.cpp" />
-    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSWindowManagerWin.cpp" />
-    <ClCompile Include="..\..\..\Anima\OS\Win\AnimaOSWindowWin.cpp" />
+    <ClCompile Include="..\..\..\Anima\OS\Win\EventQueueWin.cpp" />
+    <ClCompile Include="..\..\..\Anima\OS\Win\WindowManagerWin.cpp" />
+    <ClCompile Include="..\..\..\Anima\OS\Win\WindowWin.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

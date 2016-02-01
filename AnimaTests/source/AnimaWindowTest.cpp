@@ -1,17 +1,17 @@
 #include "AnimaTestSuite.h"
 
-#include "Anima/AnimaException.h"
-#include "Anima/Math/AnimaMathPoint2.h"
-#include "Anima/OS/AnimaOSWindowListener.h"
+#include "Anima/Exception.h"
+#include "Anima/Math/Point2.h"
+#include "Anima/OS/WindowListener.h"
 
 #ifdef AE_PLATFORM_WIN32
-//#	include "Anima/OS/Win/AnimaOSWindowManagerWin.h"
-#	include "Anima/OS/Sdl/WindowManagerSdl.h"
+#	include "Anima/OS/Win/WindowManagerWin.h"
+//#	include "Anima/OS/Sdl/WindowManagerSdl.h"
 #elif defined AE_PLATFORM_LINUX
-#	include "AnimaOSWindowManagerLinux.h"
+#	include "Anima/OS/Linux/WindowManagerLinux.h"
 #endif
 
-#include "Anima/AnimaPluginManager.h"
+#include "Anima/PluginManager.h"
 
 #include <cassert>
 
@@ -37,7 +37,8 @@ void ExampleTestSuite::windowTest()
 	AE::PluginManager *pluginManager = AE::PluginManager::initialize();
 
 #ifdef AE_PLATFORM_WIN32
-	AE::OS::WindowManager *windowManager = static_cast<AE::OS::WindowManager *>(pluginManager->registerPlugin("windowManager", new AE::OS::WindowManagerSdl()));
+	//AE::OS::WindowManager *windowManager = static_cast<AE::OS::WindowManager *>(pluginManager->registerPlugin("windowManager", new AE::OS::WindowManagerSdl()));
+	AE::OS::WindowManager *windowManager = static_cast<AE::OS::WindowManager *>(pluginManager->registerPlugin("windowManager", new AE::OS::WindowManagerWin()));
 #else
 	AE::OS::WindowManager *windowManager = static_cast<AE::OS::WindowManager *>(pluginManager->registerPlugin("windowManager", new AE::OS::WindowManagerLinux()));
 #endif

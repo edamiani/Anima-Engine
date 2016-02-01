@@ -75,6 +75,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>$(ProjectName)_x64_d</TargetName>
     <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)Libs\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -85,6 +86,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -103,6 +105,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,17 +155,17 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\AnimaEnums.h" />
-    <ClInclude Include="..\..\Anima\AnimaException.h" />
-    <ClInclude Include="..\..\Anima\AnimaParameter.h" />
-    <ClInclude Include="..\..\Anima\AnimaParameterInt32.h" />
-    <ClInclude Include="..\..\Anima\AnimaPlatform.h" />
-    <ClInclude Include="..\..\Anima\AnimaPlugin.h" />
-    <ClInclude Include="..\..\Anima\AnimaPluginGroup.h" />
-    <ClInclude Include="..\..\Anima\AnimaPluginManager.h" />
-    <ClInclude Include="..\..\Anima\AnimaPluginRoot.h" />
-    <ClInclude Include="..\..\Anima\AnimaStringUtf8.h" />
-    <ClInclude Include="..\..\Anima\AnimaTypes.h" />
+    <ClInclude Include="..\..\Anima\Enums.h" />
+    <ClInclude Include="..\..\Anima\Exception.h" />
+    <ClInclude Include="..\..\Anima\Parameter.h" />
+    <ClInclude Include="..\..\Anima\ParameterInt32.h" />
+    <ClInclude Include="..\..\Anima\Platform.h" />
+    <ClInclude Include="..\..\Anima\Plugin.h" />
+    <ClInclude Include="..\..\Anima\PluginGroup.h" />
+    <ClInclude Include="..\..\Anima\PluginManager.h" />
+    <ClInclude Include="..\..\Anima\PluginRoot.h" />
+    <ClInclude Include="..\..\Anima\StringUtf8.h" />
+    <ClInclude Include="..\..\Anima\Types.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Anima\AnimaPlugin.cpp" />

@@ -1,7 +1,7 @@
-#include "AnimaPluginManager.h"
+#include "Anima/PluginManager.h"
 
-#include "AnimaException.h"
-#include "AnimaPluginRoot.h"
+#include "Anima/Exception.h"
+#include "Anima/PluginRoot.h"
 
 AE::PluginManager* AE::PluginManager::mInstance = 0;
 

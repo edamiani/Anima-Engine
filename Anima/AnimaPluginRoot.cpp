@@ -1,7 +1,7 @@
-#include "AnimaPluginRoot.h"
-#include "AnimaPluginManager.h"
+#include "Anima/PluginRoot.h"
+#include "Anima/PluginManager.h"
 
-#include "AnimaException.h"
+#include "Anima/Exception.h"
 
 namespace AE
 {

@@ -18,37 +18,37 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Anima\AnimaEnums.h">
+    <ClInclude Include="..\..\Anima\Enums.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaException.h">
+    <ClInclude Include="..\..\Anima\Exception.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaParameter.h">
+    <ClInclude Include="..\..\Anima\Parameter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaParameterInt32.h">
+    <ClInclude Include="..\..\Anima\ParameterInt32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaPlatform.h">
+    <ClInclude Include="..\..\Anima\Platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaPlugin.h">
+    <ClInclude Include="..\..\Anima\Plugin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaPluginGroup.h">
+    <ClInclude Include="..\..\Anima\PluginGroup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaPluginManager.h">
+    <ClInclude Include="..\..\Anima\PluginManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaPluginRoot.h">
+    <ClInclude Include="..\..\Anima\PluginRoot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaStringUtf8.h">
+    <ClInclude Include="..\..\Anima\StringUtf8.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Anima\AnimaTypes.h">
+    <ClInclude Include="..\..\Anima\Types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
