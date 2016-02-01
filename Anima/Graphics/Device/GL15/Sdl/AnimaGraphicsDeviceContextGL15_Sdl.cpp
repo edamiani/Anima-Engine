@@ -26,7 +26,7 @@ namespace AE
 			{
 				AE::OS::WindowSdl *window = static_cast<AE::OS::WindowSdl *>(contextDesc.parentWindow);
 				SDL_Window *sdlWindow = window->_getSdlWindow();
-				sdlWindow->flags |= SDL_VIDEO_OPENGL;
+				//sdlWindow->flags |= SDL_VIDEO_OPENGL;
 
 				//mDeviceContextHandle = ::GetDC(static_cast<AE::OS::WindowWin *>(contextDesc.parentWindow)->_getWindowHandle());
 
@@ -249,7 +249,7 @@ namespace AE
 
 			bool ContextGL15::beginRendering(const AE::Graphics::Color &clearColor)
 			{
-				SDL_RenderClear(mRenderer);
+				//SDL_RenderClear(mRenderer);
 
 				//AE::Graphics::Color backgroundColor = mViewport->getBackgroundColor();
 				glClearColor(clearColor.R / 255.0f, clearColor.G / 255.0f, clearColor.B / 255.0f, 1.0f);
@@ -351,7 +351,12 @@ namespace AE
 				glDrawPixels(1, 1, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, pImage);
 				free(pImage);*/
 
-				SDL_RenderPresent(mRenderer);
+				//SDL_RenderPresent(mRenderer);
+
+				AE::OS::WindowSdl *window = static_cast<AE::OS::WindowSdl *>(mParentWindow);
+				SDL_Window *sdlWindow = window->_getSdlWindow();
+
+				SDL_GL_SwapWindow(sdlWindow);
 			}
 
 			void ContextGL15::render()
