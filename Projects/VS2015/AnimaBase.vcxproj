@@ -152,9 +152,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\Anima\Enums.h" />
     <ClInclude Include="..\..\Anima\Exception.h" />
     <ClInclude Include="..\..\Anima\Parameter.h" />

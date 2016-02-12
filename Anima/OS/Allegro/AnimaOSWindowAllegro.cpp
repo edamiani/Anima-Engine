@@ -1,5 +1,5 @@
-#include "../include/AnimaOSWindowAllegro.h"
-#include "../include/AnimaGraphicsDeviceContextAllegro.h"
+#include "Anima/OS/Allegro/WindowAllegro.h"
+#include "Anima/Graphics/Device/Allegro/ContextAllegro.h"
 
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_windows.h>
