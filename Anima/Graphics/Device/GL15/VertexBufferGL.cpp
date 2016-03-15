@@ -241,13 +241,15 @@ namespace AE
 
 			void VertexBufferGL::addDiffuseColor(const AE::Graphics::Color &diffuseColor)
 			{
-				GLubyte colorChannels[4];
+				/*GLubyte colorChannels[3];
 				colorChannels[0] = diffuseColor.R;
 				colorChannels[1] = diffuseColor.G;
 				colorChannels[2] = diffuseColor.B;
-				colorChannels[3] = diffuseColor.A;
+				colorChannels[3] = diffuseColor.A;*/
 
-				mDiffuseColors.push_back(colorChannels);
+				mDiffuseColors.push_back(diffuseColor.R / 255.0f);
+				mDiffuseColors.push_back(diffuseColor.G / 255.0f);
+				mDiffuseColors.push_back(diffuseColor.B / 255.0f);
 			}
 
 			void VertexBufferGL::addNormal(const AE::Math::Vector3 &normal)
@@ -274,13 +276,15 @@ namespace AE
 
 				if(mVertexDeclaration & VE_DIFFUSE)
 				{
-					GLubyte colorChannels[4];
+					/*GLubyte colorChannels[4];
 					colorChannels[0] = vertex.diffuseColor.R;
 					colorChannels[1] = vertex.diffuseColor.G;
 					colorChannels[2] = vertex.diffuseColor.B;
-					colorChannels[3] = vertex.diffuseColor.A;
+					colorChannels[3] = vertex.diffuseColor.A;*/
 
-					mDiffuseColors.push_back(colorChannels);
+					mDiffuseColors.push_back(vertex.diffuseColor.R / 255.0f);
+					mDiffuseColors.push_back(vertex.diffuseColor.G / 255.0f);
+					mDiffuseColors.push_back(vertex.diffuseColor.B / 255.0f);
 				}
 			}
 
@@ -295,8 +299,9 @@ namespace AE
 				AE::uint currentOffset = 0;
 
 				AE::uint dataSize = sizeof(AE::Math::Vector3) * mPositions.size();
+				currentOffset = sizeof(AE::Math::Vector3) * mPositions.size();
 
-				if(mVertexDeclaration | AE::Graphics::VE_NORMAL)
+				if(mVertexDeclaration & AE::Graphics::VE_NORMAL)
 				{
 					mOffsetNormal = currentOffset;
 					currentOffset += sizeof(AE::Math::Vector3) * mPositions.size();
@@ -304,12 +309,13 @@ namespace AE
 					dataSize += sizeof(AE::Math::Vector3) * mPositions.size();
 				}
 
-				if(mVertexDeclaration | AE::Graphics::VE_DIFFUSE)
+				if(mVertexDeclaration & AE::Graphics::VE_DIFFUSE)
 				{
 					mOffsetDiffuse = currentOffset;
-					currentOffset += 4 * sizeof(GLubyte) * mDiffuseColors.size();
+					currentOffset += sizeof(GLfloat) * mDiffuseColors.size();
 
-					dataSize += 4 * sizeof(GLubyte) * mDiffuseColors.size();
+					int size = sizeof(GLfloat) * mDiffuseColors.size();
+					dataSize += size;
 				}
 
 				// Now allocate the correct size in the buffer
@@ -320,14 +326,14 @@ namespace AE
 
 				currentOffset = sizeof(AE::Math::Vector3) * mPositions.size();
 
-				if(mVertexDeclaration | AE::Graphics::VE_NORMAL)
+				if(mVertexDeclaration & AE::Graphics::VE_NORMAL)
 				{
-					glBufferSubData(GL_ARRAY_BUFFER, currentOffset, sizeof(AE::Math::Vector3) * mNormals.size(), mNormals.data());
+					glBufferSubData(GL_ARRAY_BUFFER, mOffsetNormal, sizeof(AE::Math::Vector3) * mNormals.size(), mNormals.data());
 				}
 
-				if(mVertexDeclaration | AE::Graphics::VE_DIFFUSE)
+				if(mVertexDeclaration & AE::Graphics::VE_DIFFUSE)
 				{
-					glBufferSubData(GL_ARRAY_BUFFER, currentOffset, sizeof(AE::Math::Vector3) * mDiffuseColors.size(), mDiffuseColors.data());
+					glBufferSubData(GL_ARRAY_BUFFER, mOffsetDiffuse, sizeof(GLfloat) * mDiffuseColors.size(), mDiffuseColors.data());
 				}
 
 				glBindBuffer(GL_ARRAY_BUFFER, 0);

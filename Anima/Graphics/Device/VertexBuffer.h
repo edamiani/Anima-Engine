@@ -83,7 +83,7 @@ namespace AE
 				virtual void				lock() = 0;
 				virtual void				unlock() = 0;
 
-				virtual size_t				getOffset() = 0;
+				virtual size_t				getOffset(AE::Graphics::VertexElement vertexElement) = 0;
 				virtual size_t				getSize() = 0;
 				virtual size_t				getStrideInBytes() = 0;
 				AE::uint					getVertexDeclaration() { return mVertexDeclaration; }

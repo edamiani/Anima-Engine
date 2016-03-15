@@ -298,14 +298,32 @@ namespace AE
 
 				glBindBuffer(GL_ARRAY_BUFFER, bufferId);
 				glEnableClientState(GL_VERTEX_ARRAY);
+				glEnableClientState(GL_COLOR_ARRAY);
 
 				glVertexPointer(3, GL_FLOAT, 0, 0);
 
-				std::vector<AE::Math::Vector3> positions = vb->_getPositions();
+				if(vertexBuffer->getVertexDeclaration() | AE::Graphics::VE_DIFFUSE)
+				{
+					glColorPointer(3, GL_FLOAT, 0, (GLubyte *) NULL + vertexBuffer->getOffset(AE::Graphics::VE_DIFFUSE));
+				}
 
-				glDrawArrays(GL_TRIANGLES, 0, positions.size());
+				std::vector<AE::Math::Vector3> positions = vb->_getPositions();
+				
+				switch(operationType)
+				{
+				case AE::Graphics::ROT_TRIANGLE_LIST:
+					glDrawArrays(GL_TRIANGLES, 0, positions.size());
+					break;
+				case AE::Graphics::ROT_LINE_STRIP:
+					glDrawArrays(GL_LINE_STRIP, 0, positions.size());
+					break;
+				case AE::Graphics::ROT_LINE_LOOP:
+					glDrawArrays(GL_LINE_LOOP, 0, positions.size());
+					break;
+				}
 
 				glDisableClientState(GL_VERTEX_ARRAY);
+				glDisableClientState(GL_COLOR_ARRAY);
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
 			}
 

@@ -6,9 +6,9 @@ public:
 	ExampleTestSuite()
 	{
 		//TEST_ADD(ExampleTestSuite::windowTest);
-		TEST_ADD(ExampleTestSuite::windowAndContextTest);
+		//TEST_ADD(ExampleTestSuite::windowAndContextTest);
 		//TEST_ADD(ExampleTestSuite::plotTest);
-		//TEST_ADD(ExampleTestSuite::test3D);
+		TEST_ADD(ExampleTestSuite::test3D);
 		//TEST_ADD(ExampleTestSuite::simpleImageTest);
 		//TEST_ADD(ExampleTestSuite::imageTest);
 		//TEST_ADD(ExampleTestSuite::consoleTest);

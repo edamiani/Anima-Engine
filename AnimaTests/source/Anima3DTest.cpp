@@ -7,6 +7,7 @@
 #include "Anima/Graphics/Device/GL15/ManagerGL15.h"
 #include "Anima/Graphics/Device/PixelBuffer.h"
 #include "Anima/Graphics/Device/VertexBuffer.h"
+#include "Anima/Math/Math.h"
 #include "Anima/Math/Point2.h"
 #include "Anima/OS/WindowListener.h"
 
@@ -203,7 +204,7 @@ void ExampleTestSuite::test3D()
 		0, 1, 2, 2, 3, 0
 	};
 
-	GLfloat colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0, };
+	//GLfloat colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0, };
 
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_COLOR_MATERIAL);
@@ -221,26 +222,71 @@ void ExampleTestSuite::test3D()
 
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
-	AE::Graphics::Device::VertexBuffer *vertexBuffer = deviceDriver->createEmptyVertexBuffer(AE::Graphics::VE_POSITION | AE::Graphics::VE_DIFFUSE, AE::Graphics::BU_USER_READ, AE::Graphics::BCF_STREAM);
+	AE::Graphics::Device::VertexBuffer *circleVB = deviceDriver->createEmptyVertexBuffer(AE::Graphics::VE_POSITION | AE::Graphics::VE_DIFFUSE, AE::Graphics::BU_USER_READ, AE::Graphics::BCF_STREAM);
+	AE::Graphics::Device::VertexBuffer *parabolaVB = deviceDriver->createEmptyVertexBuffer(AE::Graphics::VE_POSITION | AE::Graphics::VE_DIFFUSE, AE::Graphics::BU_USER_READ, AE::Graphics::BCF_STREAM);
 	
-	vertexBuffer->lock();
+	circleVB->lock();
 	{
-		vertexBuffer->addPosition(AE::Math::Vector3(300, 300, 0));
-		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 1));
-		vertexBuffer->addPosition(AE::Math::Vector3(300, 400, 0));
-		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 0));
-		vertexBuffer->addPosition(AE::Math::Vector3(200, 300, 0));
-		vertexBuffer->addDiffuseColor(AE::Graphics::Color(0, 1, 1));
-		vertexBuffer->addPosition(AE::Math::Vector3(300, 400, 0));
-		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 1));
-		vertexBuffer->addPosition(AE::Math::Vector3(300, 500, 0));
-		vertexBuffer->addDiffuseColor(AE::Graphics::Color(1, 1, 0));
-		vertexBuffer->addPosition(AE::Math::Vector3(200, 400, 0));
-		vertexBuffer->addDiffuseColor(AE::Graphics::Color(0, 1, 1));
+		int numOfSides = 128;
+		float center = 100.0f;
+		float radius = 100.0f;
+
+		//glColor3f(1, 0, 0);
+
+		for(int i = 0; i < numOfSides; i++)
+		{
+			float radian = (AE::Math::PI * 10.0f) * (i / (float)numOfSides);
+			AE::Math::Vector3 v(radius * cos(radian) + center + (i * 3), radius * sin(radian) + center, 0);
+			circleVB->addPosition(v);
+			circleVB->addDiffuseColor(AE::Graphics::Color(255, 0, 0));
+		}
 	}
-	vertexBuffer->unlock();
+	circleVB->unlock();
 
+	parabolaVB->lock();
+	{
+		int numOfSteps = 32;
+		float center = 200.0f;
+		float radiusX = 100.0f;
+		float radiusY = 200.0f;
 
+		//glColor3f(0, 1, 0);
+
+		for(int i = 0; i < numOfSteps; i++)
+		{
+			float radian = (2 * (i / ((float)numOfSteps - 1))) - 1;
+			AE::Math::Vector3 v((radiusX * radian) + center, radiusY * (radian * radian) + center, 0);
+			parabolaVB->addPosition(v);
+			parabolaVB->addDiffuseColor(AE::Graphics::Color(0, 255, 0));
+		}
+	}
+	parabolaVB->unlock();
+
+	// Polygon test
+	std::vector<AE::Math::Vector3>	positions;
+	positions.push_back(AE::Math::Vector3(300, 100, 0));
+	positions.push_back(AE::Math::Vector3(300, 300, 0));
+	positions.push_back(AE::Math::Vector3(100, 100, 0));
+
+	std::vector<AE::Math::Vector3>	colors;
+	colors.push_back(AE::Math::Vector3(1, 0, 0));
+	colors.push_back(AE::Math::Vector3(0, 0, 1));
+	colors.push_back(AE::Math::Vector3(0, 1, 0));
+
+	AE::uint id;
+	glGenBuffers(1, (GLuint *)&id);
+
+	size_t positionsSize = sizeof(AE::Math::Vector3) * positions.size();
+	size_t colorsSize = sizeof(AE::Math::Vector3) * colors.size();
+
+	glBindBuffer(GL_ARRAY_BUFFER, id);
+	glBufferData(GL_ARRAY_BUFFER, positionsSize + colorsSize, 0, GL_STREAM_READ);
+
+	glBufferSubData(GL_ARRAY_BUFFER, 0, positionsSize, positions.data());
+	glBufferSubData(GL_ARRAY_BUFFER, positionsSize, colorsSize, colors.data());
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	// End of polygon test
 
 	while(myWindowListener.isRunning())
 	{
@@ -251,28 +297,46 @@ void ExampleTestSuite::test3D()
 		//frameBuffer->clear(red);
 
 		frameBuffer->plot(green.getRGBA(), AE::Math::Point2<AE::int32>(100, 100));
-		
-		//glBegin(GL_POLYGON);            // These vertices form a closed polygon
-		//glColor3f(1.0f, 1.0f, 0.0f); // Yellow
-		//glVertex2f(300.f, 100.f);
-		//glVertex2f(300.f, 300.f);
-		//glVertex2f(100, 100);
-		//glEnd();
 
-		glBindBuffer(GL_ARRAY_BUFFER, buffers[VERTICES]);
+		/*glBindBuffer(GL_ARRAY_BUFFER, buffers[VERTICES]);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, buffers[INDICES]);
 		glEnableClientState(GL_VERTEX_ARRAY);
-		glVertexPointer(3, GL_FLOAT, 0, BUFFER_OFFSET(0));
+		glVertexPointer(3, GL_FLOAT, 0, BUFFER_OFFSET(0));*/
 
 		//glDrawElements(GL_QUADS, 1, GL_UNSIGNED_BYTE, BUFFER_OFFSET(0));
 		//glDrawArrays(GL_TRIANGLES, 0, 3);
-		glDrawElements(GL_TRIANGLES, sizeof(indices), GL_UNSIGNED_BYTE, 0);
+		//glDrawElements(GL_TRIANGLES, sizeof(indices), GL_UNSIGNED_BYTE, 0);
+
+		/*glDisableClientState(GL_VERTEX_ARRAY);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);*/
+
+		deviceContext->draw3dObject(AE::Graphics::ROT_LINE_LOOP, circleVB);
+		deviceContext->draw3dObject(AE::Graphics::ROT_LINE_STRIP, parabolaVB);
+
+		// Polygon test
+		glBindBuffer(GL_ARRAY_BUFFER, id);
+
+		glEnableClientState(GL_VERTEX_ARRAY);
+		glEnableClientState(GL_COLOR_ARRAY);
+
+		glVertexPointer(3, GL_FLOAT, 0, 0);
+		glColorPointer(3, GL_FLOAT, 0, (void *)positionsSize);
+
+		//glDrawArrays(GL_LINE_LOOP, 0, positions.size());
 
 		glDisableClientState(GL_VERTEX_ARRAY);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+		glDisableClientState(GL_COLOR_ARRAY);
 
-		deviceContext->draw3dObject(AE::Graphics::ROT_TRIANGLE_LIST, vertexBuffer);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		// End of polygon test
+
+		glBegin(GL_POLYGON);
+		glVertex3f(20, 20, 0);
+		glVertex3f(80, 20, 0);
+		glVertex3f(80, 80, 0);
+		glVertex3f(20, 80, 0);
+		glEnd();
 
 		frameBuffer->unlock();
 

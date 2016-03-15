@@ -34,7 +34,23 @@ namespace AE
 				void		lock();
 				void		unlock();
 
-				size_t		getOffset() { return mOffset; }
+				size_t		getOffset(AE::Graphics::VertexElement vertexElement) 
+				{ 
+					switch(vertexElement)
+					{
+					case VE_DIFFUSE:
+						return mOffsetDiffuse;
+						break;
+					case VE_NORMAL:
+						return mOffsetNormal;
+						break;
+					case VE_POSITION:
+					default:
+						return mOffset;
+						break;
+					}
+				}
+
 				size_t		getSize() { return mNumberOfVertices; }
 				size_t		getStrideInBytes() { return mOffset; }
 				AE::uchar*	getVertexElement(VertexElement elementType);
@@ -52,7 +68,7 @@ namespace AE
 							mOffsetNormal, mOffsetDiffuse, mOffsetSpecular, mOffsetTextureCoordinate0, mOffsetTextureCoordinate1,
 							mOffsetTextureCoordinate2, mOffsetTextureCoordinate3;
 
-				std::vector<GLubyte *>			mDiffuseColors;
+				std::vector<GLfloat>			mDiffuseColors;
 				std::vector<AE::Math::Vector3>	mNormals;
 				std::vector<AE::Math::Vector3>	mPositions;
 			};
