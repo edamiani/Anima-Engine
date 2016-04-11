@@ -18,7 +18,10 @@ namespace AE
 				IndexBuffer() { }
 				virtual ~IndexBuffer() { }
 
-				virtual size_t getSize() = 0;
+				virtual void	addIndex() = 0;
+				virtual size_t	getSize() = 0;
+				virtual void	lock() = 0;
+				virtual void	unlock() = 0;
 			};
 		}
 	}

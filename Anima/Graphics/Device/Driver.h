@@ -2,7 +2,6 @@
 #define __AE_GRAPHICS_DEVICE_DRIVER__
 
 #include "Anima/Graphics/Device/ContextDesc.h"
-#include "Anima/Graphics/Device/VertexBuffer.h"
 
 #include "Anima/Graphics/Enums.h"
 #include "Anima/Math/Point2.h"
@@ -23,8 +22,10 @@ namespace AE
 		namespace Device
 		{
 			class Context;
+			class IndexBuffer;
 			class Pipeline;
 			class PixelBuffer;
+			class VertexBuffer;
 
 			class Driver
 			{
@@ -34,6 +35,7 @@ namespace AE
 				~Driver() {}
 
 				virtual AE::Graphics::Device::Context*		createDeviceContext(AE::Graphics::Device::ContextDesc &contextDesc, const std::string &contextName = "") = 0;
+				virtual AE::Graphics::Device::IndexBuffer*	createEmptyIndexBuffer() = 0;
 				virtual AE::Graphics::Device::VertexBuffer*	createEmptyVertexBuffer(AE::uint vertexDeclaration, AE::Graphics::BufferUsage bufferUsage, AE::Graphics::BufferChangeFrequency bufferChangeFrequency) = 0;
 				virtual void								destroyVertexBuffer(AE::Graphics::Device::VertexBuffer *vertexBuffer) = 0;
 				AE::Graphics::Device::Context*				getDeviceContext(AE::uint index) { return mDeviceContexts[index]; }

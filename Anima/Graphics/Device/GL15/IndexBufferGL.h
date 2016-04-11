@@ -21,7 +21,7 @@ namespace AE
 			class IndexBufferGL : public IndexBuffer
 			{
 			public:
-				IndexBufferGL(std::vector<AE::ushort> &indices, BufferUsage bufferUsage, BufferChangeFrequency bufferChangeFrequency);
+				IndexBufferGL(std::vector<AE::ushort> &indices);
 				~IndexBufferGL() {  }
 
 				size_t getSize() { return mNumberOfIndices; }
@@ -30,6 +30,7 @@ namespace AE
 
 			private:
 				GLuint mBufferId;
+				std::vector<AE::ushort> mIndices;
 				size_t mNumberOfIndices;
 			};
 		}

@@ -1,5 +1,6 @@
 #include "Anima/Graphics/Device/GL15/DriverGL15.h"
 #include "Anima/Graphics/Device/GL15/ContextGL15.h"
+#include "Anima/Graphics/Device/GL15/IndexBufferGL.h"
 #include "Anima/Graphics/Device/GL15/VertexBufferGL.h"
 
 #include "Anima/Graphics/AxesConvention2d.h"
@@ -33,6 +34,21 @@ namespace AE
 				mDeviceContexts.push_back(deviceContext);
 
 				return deviceContext;
+			}
+
+			AE::Graphics::Device::IndexBuffer* DriverGL15::createEmptyIndexBuffer()
+			{
+				AE::uint id;
+				glGenBuffers(1, (GLuint *)&id);
+
+				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
+				glBufferData(GL_ELEMENT_ARRAY_BUFFER, 0, 0, GL_STREAM_READ);
+
+				AE::Graphics::Device::IndexBuffer *indexBuffer = new AE::Graphics::Device::IndexBufferGL(id);
+
+				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
+				return indexBuffer;
 			}
 
 			AE::Graphics::Device::VertexBuffer* DriverGL15::createEmptyVertexBuffer(AE::uint vertexDeclaration, AE::Graphics::BufferUsage bufferUsage, AE::Graphics::BufferChangeFrequency bufferChangeFrequency)
