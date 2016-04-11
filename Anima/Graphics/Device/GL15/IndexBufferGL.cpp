@@ -46,10 +46,10 @@ namespace AE
 				mBufferId = bufferId[0];
 
 				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mBufferId);
-				glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(AE::uchar), 0, bufferUsageGL);
+				glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(AE::uchar), &indices[0], bufferUsageGL);
 
 				// Buffer filling process
-				AE::uchar *pIndices = (AE::uchar *)glMapBuffer(GL_ELEMENT_ARRAY_BUFFER, GL_WRITE_ONLY);
+				/*AE::uchar *pIndices = (AE::uchar *)glMapBuffer(GL_ELEMENT_ARRAY_BUFFER, GL_WRITE_ONLY);
 				{
 					for (AE::uint i = 0; i < indices.size(); i++)
 					{
@@ -57,7 +57,7 @@ namespace AE
 					}
 
 					glUnmapBuffer(GL_ELEMENT_ARRAY_BUFFER);
-				}
+				}*/
 
 				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 

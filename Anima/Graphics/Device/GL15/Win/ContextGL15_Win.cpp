@@ -1,5 +1,7 @@
-#include "Anima/Graphics/Device/GL15/ContextGL15.h"
+#include "Anima/Graphics/Device/GL15/Win/ContextGL15_Win.h"
+
 #include "Anima/Graphics/Device/GL15/DriverGL15.h"
+#include "Anima/Graphics/Device/GL15/IndexBufferGL.h"
 #include "Anima/Graphics/Device/GL15/ManagerGL15.h"
 #include "Anima/Graphics/Device/GL15/PipelineGL15.h"
 #include "Anima/Graphics/Device/GL15/FrameBufferGL15.h"
@@ -298,13 +300,19 @@ namespace AE
 
 				glBindBuffer(GL_ARRAY_BUFFER, bufferId);
 				glEnableClientState(GL_VERTEX_ARRAY);
-				glEnableClientState(GL_COLOR_ARRAY);
 
 				glVertexPointer(3, GL_FLOAT, 0, 0);
 
-				if(vertexBuffer->getVertexDeclaration() | AE::Graphics::VE_DIFFUSE)
+				if(vertexBuffer->getVertexDeclaration() & AE::Graphics::VE_DIFFUSE)
 				{
+					glEnableClientState(GL_COLOR_ARRAY);
 					glColorPointer(3, GL_FLOAT, 0, (GLubyte *) NULL + vertexBuffer->getOffset(AE::Graphics::VE_DIFFUSE));
+				}
+
+				if(vertexBuffer->getVertexDeclaration() & AE::Graphics::VE_NORMAL)
+				{
+					glEnableClientState(GL_NORMAL_ARRAY);
+					glNormalPointer(GL_FLOAT, 0, (GLubyte *)NULL + vertexBuffer->getOffset(AE::Graphics::VE_NORMAL));
 				}
 
 				std::vector<AE::Math::Vector3> positions = vb->_getPositions();
@@ -323,8 +331,75 @@ namespace AE
 				}
 
 				glDisableClientState(GL_VERTEX_ARRAY);
-				glDisableClientState(GL_COLOR_ARRAY);
+
+				if(vertexBuffer->getVertexDeclaration() | AE::Graphics::VE_DIFFUSE)
+				{
+					glDisableClientState(GL_COLOR_ARRAY);
+				}
+
+				if(vertexBuffer->getVertexDeclaration() | AE::Graphics::VE_NORMAL)
+				{
+					glDisableClientState(GL_NORMAL_ARRAY);
+				}
+
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
+			}
+
+			void ContextGL15::draw3dObject(AE::Graphics::RenderOperationType operationType, AE::Graphics::Device::VertexBuffer *vertexBuffer, AE::Graphics::Device::IndexBuffer *indexBuffer)
+			{
+				AE::Graphics::Device::VertexBufferGL *vb = static_cast<AE::Graphics::Device::VertexBufferGL *>(vertexBuffer);
+				AE::Graphics::Device::IndexBufferGL *ib = static_cast<AE::Graphics::Device::IndexBufferGL *>(indexBuffer);
+
+				int vbId = vb->_getBufferId();
+				int ibId = ib->_getBufferId();
+
+				glBindBuffer(GL_ARRAY_BUFFER, vbId);
+				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibId);
+				glEnableClientState(GL_VERTEX_ARRAY);
+
+				glVertexPointer(3, GL_FLOAT, 0, 0);
+
+				if(vertexBuffer->getVertexDeclaration() & AE::Graphics::VE_DIFFUSE)
+				{
+					glEnableClientState(GL_COLOR_ARRAY);
+					glColorPointer(3, GL_FLOAT, 0, (GLubyte *)NULL + vertexBuffer->getOffset(AE::Graphics::VE_DIFFUSE));
+				}
+
+				if(vertexBuffer->getVertexDeclaration() & AE::Graphics::VE_NORMAL)
+				{
+					glEnableClientState(GL_NORMAL_ARRAY);
+					glNormalPointer(GL_FLOAT, 0, (GLubyte *)NULL + vertexBuffer->getOffset(AE::Graphics::VE_NORMAL));
+				}
+
+				std::vector<AE::Math::Vector3> positions = vb->_getPositions();
+
+				switch(operationType)
+				{
+				case AE::Graphics::ROT_TRIANGLE_LIST:
+					glDrawArrays(GL_TRIANGLES, 0, positions.size());
+					break;
+				case AE::Graphics::ROT_LINE_STRIP:
+					glDrawArrays(GL_LINE_STRIP, 0, positions.size());
+					break;
+				case AE::Graphics::ROT_LINE_LOOP:
+					glDrawArrays(GL_LINE_LOOP, 0, positions.size());
+					break;
+				}
+
+				glDisableClientState(GL_VERTEX_ARRAY);
+				
+				if(vertexBuffer->getVertexDeclaration() | AE::Graphics::VE_DIFFUSE)
+				{
+					glDisableClientState(GL_COLOR_ARRAY);
+				}
+
+				if(vertexBuffer->getVertexDeclaration() | AE::Graphics::VE_NORMAL)
+				{
+					glDisableClientState(GL_NORMAL_ARRAY);
+				}
+
+				glBindBuffer(GL_ARRAY_BUFFER, 0);
+				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 			}
 
 			void ContextGL15::endRendering()

@@ -1,8 +1,6 @@
 #ifndef __AE_GRAPHICS_DEVICE_CONTEXT__
 #define __AE_GRAPHICS_DEVICE_CONTEXT__
 
-#include "Anima/Graphics/Device/VertexBuffer.h"
-
 #include "Anima/Types.h"
 #include "Anima/Graphics/Surface.h"
 
@@ -23,7 +21,9 @@ namespace AE
 		{
 			class Driver;
 			class FrameBuffer;
+			class IndexBuffer;
 			class Pipeline;
+			class VertexBuffer;
 
 			class Context
 			{
@@ -34,6 +34,7 @@ namespace AE
 				virtual bool						beginRendering() = 0;
 				virtual bool						beginRendering(const AE::Graphics::Color &clearColor) = 0;
 				virtual void						draw3dObject(AE::Graphics::RenderOperationType operationType, AE::Graphics::Device::VertexBuffer *vertexBuffer) = 0;
+				virtual void						draw3dObject(AE::Graphics::RenderOperationType operationType, AE::Graphics::Device::VertexBuffer *vertexBuffer, AE::Graphics::Device::IndexBuffer *indexBuffer) = 0;
 				virtual void						endRendering() = 0;
 				AE::Graphics::Device::Driver*		getDeviceDriver() { return mDeviceDriver; }
 				AE::Graphics::Device::FrameBuffer*	getFrameBuffer() { return mFrameBuffer; }

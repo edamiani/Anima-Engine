@@ -26,7 +26,7 @@ namespace AE
 
 				size_t getSize() { return mNumberOfIndices; }
 
-				GLuint _getIndexBuffer() { return mBufferId; }
+				GLuint _getBufferId() { return mBufferId; }
 
 			private:
 				GLuint mBufferId;

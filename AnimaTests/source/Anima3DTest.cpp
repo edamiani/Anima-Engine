@@ -26,6 +26,101 @@
 #include <map>
 #include <vector>
 
+AE::Graphics::Device::VertexBuffer* createCube(AE::Graphics::Device::Driver *deviceDriver, float size, const AE::Graphics::Color &color)
+{
+	AE::Graphics::Device::VertexBuffer *cubeVB = deviceDriver->createEmptyVertexBuffer(AE::Graphics::VE_POSITION | AE::Graphics::VE_DIFFUSE | AE::Graphics::VE_NORMAL, AE::Graphics::BU_USER_READ, AE::Graphics::BCF_STREAM);
+
+	cubeVB->lock();
+	{
+		// Top
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+
+		// Bottom
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, -size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, -1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, -size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, -1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, -size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, -1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, -size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, -1, 0));
+		cubeVB->addDiffuseColor(color);
+
+		// Front
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, -size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, -size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+
+		// Back
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, -size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, -size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+
+		// Left
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, -size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(-size / 2, -size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+
+		// Right
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, -size / 2, size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+		cubeVB->addPosition(AE::Math::Vector3(size / 2, -size / 2, -size / 2));
+		cubeVB->addNormal(AE::Math::Vector3(0, 1, 0));
+		cubeVB->addDiffuseColor(color);
+	}
+	cubeVB->unlock();
+
+	return cubeVB;
+}
+
 class Test3DListener : public AE::OS::WindowListener, AE::OS::KeyListener
 {
 public:
@@ -224,6 +319,7 @@ void ExampleTestSuite::test3D()
 
 	AE::Graphics::Device::VertexBuffer *circleVB = deviceDriver->createEmptyVertexBuffer(AE::Graphics::VE_POSITION | AE::Graphics::VE_DIFFUSE, AE::Graphics::BU_USER_READ, AE::Graphics::BCF_STREAM);
 	AE::Graphics::Device::VertexBuffer *parabolaVB = deviceDriver->createEmptyVertexBuffer(AE::Graphics::VE_POSITION | AE::Graphics::VE_DIFFUSE, AE::Graphics::BU_USER_READ, AE::Graphics::BCF_STREAM);
+	AE::Graphics::Device::VertexBuffer *triangleVB = deviceDriver->createEmptyVertexBuffer(AE::Graphics::VE_POSITION | AE::Graphics::VE_DIFFUSE, AE::Graphics::BU_USER_READ, AE::Graphics::BCF_STREAM);
 	
 	circleVB->lock();
 	{
@@ -257,10 +353,21 @@ void ExampleTestSuite::test3D()
 			float radian = (2 * (i / ((float)numOfSteps - 1))) - 1;
 			AE::Math::Vector3 v((radiusX * radian) + center, radiusY * (radian * radian) + center, 0);
 			parabolaVB->addPosition(v);
-			parabolaVB->addDiffuseColor(AE::Graphics::Color(0, 255, 0));
+			parabolaVB->addDiffuseColor(AE::Graphics::Color((int)((i / (float)numOfSteps) * 255), 255, (int)(((numOfSteps - i) / (float)numOfSteps) * 255)));
 		}
 	}
 	parabolaVB->unlock();
+
+	triangleVB->lock();
+	{
+		triangleVB->addPosition(AE::Math::Vector3(500, 300, 0));
+		triangleVB->addDiffuseColor(AE::Graphics::Color(255, 0, 0));
+		triangleVB->addPosition(AE::Math::Vector3(500, 400, 0));
+		triangleVB->addDiffuseColor(AE::Graphics::Color(0, 255, 0));
+		triangleVB->addPosition(AE::Math::Vector3(400, 400, 0));
+		triangleVB->addDiffuseColor(AE::Graphics::Color(0, 0, 255));
+	}
+	triangleVB->unlock();
 
 	// Polygon test
 	std::vector<AE::Math::Vector3>	positions;
@@ -311,8 +418,9 @@ void ExampleTestSuite::test3D()
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);*/
 
-		deviceContext->draw3dObject(AE::Graphics::ROT_LINE_LOOP, circleVB);
+		deviceContext->draw3dObject(AE::Graphics::ROT_LINE_STRIP, circleVB);
 		deviceContext->draw3dObject(AE::Graphics::ROT_LINE_STRIP, parabolaVB);
+		deviceContext->draw3dObject(AE::Graphics::ROT_TRIANGLE_LIST, triangleVB);		
 
 		// Polygon test
 		glBindBuffer(GL_ARRAY_BUFFER, id);
