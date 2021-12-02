@@ -21,10 +21,14 @@ namespace AE
 			class IndexBufferGL : public IndexBuffer
 			{
 			public:
-				IndexBufferGL(std::vector<AE::ushort> &indices);
+				IndexBufferGL(std::vector<AE::ushort>& indices, BufferUsage bufferUsage = BU_DYNAMIC_WRITE, BufferChangeFrequency bufferChangeFrequency = BCF_DYNAMIC);
 				~IndexBufferGL() {  }
 
 				size_t getSize() { return mNumberOfIndices; }
+
+				virtual void	addIndex() {}
+				virtual void	lock() {}
+				virtual void	unlock() {}
 
 				GLuint _getBufferId() { return mBufferId; }
 

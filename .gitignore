@@ -17,3 +17,5 @@
 *.sdf
 *.suo
 .suo
+/build
+/Projects/VS2015/.vs/Anima/v16

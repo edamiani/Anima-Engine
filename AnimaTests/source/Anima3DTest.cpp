@@ -294,10 +294,10 @@ void ExampleTestSuite::test3D()
 	{ 1, 5, 6, 2 }
 	};*/
 
-	/*GLubyte indices[] =
+	GLubyte indices[] =
 	{
 		0, 1, 2, 2, 3, 0
-	};*/
+	};
 
 	//GLfloat colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0, };
 
@@ -369,10 +369,10 @@ void ExampleTestSuite::test3D()
 	}
 	triangleVB->unlock();
 
-	std::vector<AE::ushort> indices;
-	indices.push_back(0);
-	indices.push_back(1);
-	indices.push_back(2);
+	std::vector<AE::ushort> indices2;
+	indices2.push_back(0);
+	indices2.push_back(1);
+	indices2.push_back(2);
 
 	// Polygon test
 	std::vector<AE::Math::Vector3>	positions;

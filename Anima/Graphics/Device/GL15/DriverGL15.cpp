@@ -44,7 +44,7 @@ namespace AE
 				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
 				glBufferData(GL_ELEMENT_ARRAY_BUFFER, 0, 0, GL_STREAM_READ);
 
-				AE::Graphics::Device::IndexBuffer *indexBuffer = new AE::Graphics::Device::IndexBufferGL(id);
+				AE::Graphics::Device::IndexBuffer *indexBuffer = new AE::Graphics::Device::IndexBufferGL(std::vector<AE::ushort>());
 
 				glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 

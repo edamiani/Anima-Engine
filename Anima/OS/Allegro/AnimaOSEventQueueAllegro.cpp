@@ -1,11 +1,11 @@
 //#include "../include/AnimaOSProcessManagerWin32.h"
 //#include "../include/AnimaOSProcessWin32.h"
-#include "../include/AnimaOSEventQueueAllegro.h"
-#include "../include/AnimaOSEvent.h"
-#include "../include/AnimaOSWindowAllegro.h"
-#include "../include/AnimaOSWindowManagerAllegro.h"
-#include "../include/AnimaGraphicsManager.h"
-#include "../include/AnimaInputKeyInfo.h"
+#include "Anima/include/AnimaOSEventQueueAllegro.h"
+#include "Anima/include/AnimaOSEvent.h"
+#include "Anima/include/AnimaOSWindowAllegro.h"
+#include "Anima/include/AnimaOSWindowManagerAllegro.h"
+#include "Anima/include/AnimaGraphicsManager.h"
+#include "Anima/include/AnimaInputKeyInfo.h"
 #include <cassert>
 
 namespace AE

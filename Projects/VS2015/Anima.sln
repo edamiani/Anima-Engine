@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaOS", "AnimaOS.vcxproj", "{0A55C928-C7D6-4950-B934-5F8E7B56F816}"
 EndProject
@@ -32,8 +32,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaGraphicsDeviceGL15", "AnimaGraphicsDeviceGL15.vcxproj", "{884207E1-63BE-45FD-97C0-6C1A214EB2BD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaOsSdl", "AnimaOsSdl\AnimaOsSdl.vcxproj", "{D9A5EB8A-CDB8-480F-BC9E-832415E56530}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimaOsAllegro", "AnimaOsAllegro\AnimaOsAllegro.vcxproj", "{B449CCA4-E892-4C56-831C-D4D08926A494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -152,16 +150,11 @@ Global
 		{D9A5EB8A-CDB8-480F-BC9E-832415E56530}.Release|Win32.Build.0 = Release|Win32
 		{D9A5EB8A-CDB8-480F-BC9E-832415E56530}.Release|x64.ActiveCfg = Release|x64
 		{D9A5EB8A-CDB8-480F-BC9E-832415E56530}.Release|x64.Build.0 = Release|x64
-		{B449CCA4-E892-4C56-831C-D4D08926A494}.Debug|Win32.ActiveCfg = Debug|Win32
-		{B449CCA4-E892-4C56-831C-D4D08926A494}.Debug|Win32.Build.0 = Debug|Win32
-		{B449CCA4-E892-4C56-831C-D4D08926A494}.Debug|x64.ActiveCfg = Debug|x64
-		{B449CCA4-E892-4C56-831C-D4D08926A494}.Debug|x64.Build.0 = Debug|x64
-		{B449CCA4-E892-4C56-831C-D4D08926A494}.Release|Win32.ActiveCfg = Release|Win32
-		{B449CCA4-E892-4C56-831C-D4D08926A494}.Release|Win32.Build.0 = Release|Win32
-		{B449CCA4-E892-4C56-831C-D4D08926A494}.Release|x64.ActiveCfg = Release|x64
-		{B449CCA4-E892-4C56-831C-D4D08926A494}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41B350B0-D1CE-4D03-8D06-2379F2CDB376}
 	EndGlobalSection
 EndGlobal

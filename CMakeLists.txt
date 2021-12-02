@@ -4,7 +4,7 @@ cmake_minimum_required (VERSION 2.6)
 
 # Set up the environment and variables
 set (INCLUDES_FOLDER"${PROJECT_SOURCE_DIR}Anima/include/")
-set (SOURCES_FOLDER "${PROJECT_SOURCE_DIR}Anima/source/")
+set (SOURCES_FOLDER "${PROJECT_SOURCE_DIR}Anima/)
 set (DEPENDENCIES_FOLDER "${PROJECT_SOURCE_DIR}Dependencies/")
 set (STATIC_LIBS_FOLDER "${PROJECT_BINARY_DIR}libs/static/")
 set (LIBS_FOLDER "${PROJECT_BINARY_DIR}libs/")
@@ -28,27 +28,27 @@ set (ANIMA_CORE_FILES
 set (ANIMA_GRAPHICS AnimaGraphics)
 set (ANIMA_GRAPHICS_OUTPUT AnimaGraphics)
 set (ANIMA_GRAPHICS_FILES
-        "${SOURCES_FOLDER}AnimaGraphicsAxesConvention2d.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsCamera.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsDeviceDriver.cpp" #TODO not in Codeblocks
-        "${SOURCES_FOLDER}AnimaGraphicsDeviceManager.cpp"
-#        "${SOURCES_FOLDER}AnimaGraphicsDevicePipeline.cpp" #TODO not in Codeblocks
-#        "${SOURCES_FOLDER}AnimaGraphicsDeviceSubpipeline.cpp" #TODO not in Codeblocks
-        "${SOURCES_FOLDER}AnimaGraphicsFontFaceFT.cpp" #TODO not in VS2008
-        "${SOURCES_FOLDER}AnimaGraphicsFontFactory.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsFontFactoryFT.cpp" #TODO not in VS2008
-        "${SOURCES_FOLDER}AnimaGraphicsFontManager.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsFontManagerFT.cpp" #TODO not in VS2008
-        "${SOURCES_FOLDER}AnimaGraphicsGeometryFactory.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsImageFactory.cpp" #TODO not in VS2008
-        "${SOURCES_FOLDER}AnimaGraphicsImageLoaderPNG.cpp" #TODO not in VS2008
-        "${SOURCES_FOLDER}AnimaGraphicsManager.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsPrimitiveFactory.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsRasterFactory.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsSurfaceFactory.cpp"
-        "${SOURCES_FOLDER}AnimaGraphicsSurfaceFactoryGL1_5.cpp" #TODO not in VS2008
-        "${SOURCES_FOLDER}AnimaGraphicsSurfaceGL1_5.cpp" #TODO not in VS2008
-        "${SOURCES_FOLDER}AnimaGraphicsViewport.cpp"
+        "${SOURCES_FOLDER}Graphics/AxesConvention2d.cpp"
+        "${SOURCES_FOLDER}Graphics/Camera.cpp"
+        "${SOURCES_FOLDER}Graphics/DeviceDriver.cpp" #TODO not in Codeblocks
+        "${SOURCES_FOLDER}Graphics/DeviceManager.cpp"
+#        "${SOURCES_FOLDER}Graphics/DevicePipeline.cpp" #TODO not in Codeblocks
+#        "${SOURCES_FOLDER}Graphics/DeviceSubpipeline.cpp" #TODO not in Codeblocks
+        "${SOURCES_FOLDER}Graphics/FontFaceFT.cpp" #TODO not in VS2008
+        "${SOURCES_FOLDER}Graphics/FontFactory.cpp"
+        "${SOURCES_FOLDER}Graphics/FontFactoryFT.cpp" #TODO not in VS2008
+        "${SOURCES_FOLDER}Graphics/FontManager.cpp"
+        "${SOURCES_FOLDER}Graphics/FontManagerFT.cpp" #TODO not in VS2008
+        "${SOURCES_FOLDER}Graphics/GeometryFactory.cpp"
+        "${SOURCES_FOLDER}Graphics/ImageFactory.cpp" #TODO not in VS2008
+        "${SOURCES_FOLDER}Graphics/ImageLoaderPNG.cpp" #TODO not in VS2008
+        "${SOURCES_FOLDER}Graphics/Manager.cpp"
+        "${SOURCES_FOLDER}Graphics/PrimitiveFactory.cpp"
+        "${SOURCES_FOLDER}Graphics/RasterFactory.cpp"
+        "${SOURCES_FOLDER}Graphics/SurfaceFactory.cpp"
+        "${SOURCES_FOLDER}Graphics/SurfaceFactoryGL1_5.cpp" #TODO not in VS2008
+        "${SOURCES_FOLDER}Graphics/SurfaceGL1_5.cpp" #TODO not in VS2008
+        "${SOURCES_FOLDER}Graphics/Viewport.cpp"
         )
 set (ANIMA_GRAPHICS_LINK_LIBS "")    #TODO remove this -> only use as example
 set (ANIMA_GRAPHICS_DEPENDENCIES "") #TODO remove this -> only use as example
